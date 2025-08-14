@@ -222,7 +222,13 @@
       "Bash(mkdir:*)",
       "Bash(npm run lint)",
       "Bash(npm run typecheck:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "mcp__ide__executeCode",
+      "Bash(curl:*)",
+      "Bash(find:*)",
+      "Bash(npm run dev:*)",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_close"
     ],
     "deny": []
   },

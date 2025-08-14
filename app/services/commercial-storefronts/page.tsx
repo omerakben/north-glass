@@ -64,8 +64,7 @@ export default function CommercialStorefrontsPage() {
       </p>
       <a
         href="/request-quote"
-        className="inline-flex items-center h-11 px-5 rounded-md text-white"
-        style={{ backgroundColor: "var(--brand-turquoise)", color: "#00353f" }}
+         className="btn-primary"
       >
         Get a Free Estimate
       </a>
