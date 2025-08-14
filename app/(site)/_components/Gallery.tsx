@@ -113,6 +113,7 @@ export default function Gallery() {
           {categories.map((category) => (
             <button
               key={category.id}
+              type="button"
               onClick={() => setSelectedCategory(category.id)}
               className={`px-4 py-2 rounded-full transition-colors ${
                 selectedCategory === category.id
@@ -177,8 +178,10 @@ export default function Gallery() {
                   <p className="text-gray-600">{selectedImage.location}</p>
                 </div>
                 <button
+                  type="button"
                   onClick={() => setSelectedImage(null)}
                   className="p-2 hover:bg-gray-100 rounded-full"
+                  aria-label="Close gallery modal"
                 >
                   <svg
                     width="24"

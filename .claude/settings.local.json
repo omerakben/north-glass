@@ -228,7 +228,8 @@
       "Bash(find:*)",
       "Bash(npm run dev:*)",
       "mcp__playwright__browser_resize",
-      "mcp__playwright__browser_close"
+      "mcp__playwright__browser_close",
+      "mcp__playwright__browser_type"
     ],
     "deny": [],
     "defaultMode": "acceptEdits"

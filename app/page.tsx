@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Gallery from "./(site)/_components/Gallery";
+import ScrollAnimations from "./(site)/_components/ScrollAnimations";
 
 export const metadata: Metadata = {
   title: "North Glass LLC – Glass Shower Doors, Windows, Mirrors | Raleigh–Durham",
@@ -104,9 +105,10 @@ const serviceAreas = [
 export default function Home() {
   return (
     <main>
+      <ScrollAnimations />
       {/* Hero Section */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="text-center md:text-left">
+      <section className="hero-section container mx-auto px-6 py-20">
+        <div className="hero-content text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Clearly Better Glass Solutions for Your Home or Business
           </h1>
@@ -126,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="bg-white py-16">
+      <section className="services-section bg-white py-16 fade-in-section">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
             Residential & Commercial Services
