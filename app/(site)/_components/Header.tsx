@@ -133,6 +133,7 @@ export default function Header() {
               backgroundColor: "var(--brand-turquoise)",
               color: "#00353f",
             }}
+            data-cta="header_nav"
           >
             Request a Quote
           </Link>
@@ -143,6 +144,7 @@ export default function Header() {
             aria-label="Call North Glass"
             className="p-2"
             style={{ color: "var(--brand-teal)" }}
+            data-placement="header_mobile"
           >
             <Phone size={22} />
           </a>

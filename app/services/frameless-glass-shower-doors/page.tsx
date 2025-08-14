@@ -1,3 +1,4 @@
+import FAQ from "@/app/(site)/_components/FAQ";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -66,6 +67,25 @@ export default function FramelessShowersPage() {
       >
         Get a Free Estimate
       </a>
+      <FAQ
+        items={[
+          {
+            question: "Do frameless shower doors leak?",
+            answer:
+              "When properly measured and installed, frameless enclosures are designed with minimal gaps and seals to keep water in.",
+          },
+          {
+            question: "How long does installation take?",
+            answer:
+              "Most projects are installed in a day after glass fabrication (typically 1–2 weeks from measure).",
+          },
+          {
+            question: "What thickness of glass do you use?",
+            answer:
+              'Typically 3/8" or 1/2" tempered safety glass, depending on configuration and size.',
+          },
+        ]}
+      />
       <ServiceJsonLd />
     </main>
   );

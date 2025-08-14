@@ -20,12 +20,14 @@ export default function Home() {
                 backgroundColor: "var(--brand-turquoise)",
                 color: "#00353f",
               }}
+              data-cta="home_hero"
             >
               Request a Free Quote
             </a>
             <a
               href="/services"
               className="inline-flex items-center h-11 px-5 rounded-md border border-black/10"
+              data-cta="home_hero_secondary"
             >
               View Services
             </a>

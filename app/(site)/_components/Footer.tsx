@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -8,10 +8,20 @@ export default function Footer() {
           <div className="font-semibold">North Glass LLC</div>
           <div className="text-sm mt-2">Raleigh–Durham–Cary, NC</div>
           <div className="text-sm">
-            Phone: <a className="underline" href="tel:919-000-0000">919-000-0000</a>
+            Phone:{" "}
+            <a
+              className="underline"
+              href="tel:919-000-0000"
+              data-placement="footer"
+            >
+              919-000-0000
+            </a>
           </div>
           <div className="text-sm">
-            Email: <a className="underline" href="mailto:info@northglassnc.com">info@northglassnc.com</a>
+            Email:{" "}
+            <a className="underline" href="mailto:info@northglassnc.com">
+              info@northglassnc.com
+            </a>
           </div>
         </div>
         <nav className="grid gap-2 content-start" aria-label="Footer">
@@ -19,14 +29,18 @@ export default function Footer() {
           <Link href="/about">About</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/contact">Contact</Link>
-          <Link href="/request-quote">Request a Quote</Link>
+          <Link href="/request-quote" data-cta="footer">
+            Request a Quote
+          </Link>
         </nav>
         <nav className="grid gap-2 content-start" aria-label="Legal">
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
         </nav>
       </div>
-      <div className="text-center text-xs py-4">© {new Date().getFullYear()} North Glass LLC</div>
+      <div className="text-center text-xs py-4">
+        © {new Date().getFullYear()} North Glass LLC
+      </div>
     </footer>
-  )
+  );
 }

@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import AnalyticsEvents from "./(site)/_components/AnalyticsEvents";
 import ConsentBanner from "./(site)/_components/ConsentBanner";
 import Footer from "./(site)/_components/Footer";
 import Header from "./(site)/_components/Header";
@@ -131,6 +132,7 @@ export default function RootLayout({
           <Footer />
         </ScrollProvider>
         <ConsentBanner />
+        <AnalyticsEvents />
         <Analytics />
         <script
           type="application/ld+json"
