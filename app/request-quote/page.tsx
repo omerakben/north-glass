@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import QuoteForm from "./QuoteForm";
 
 export const metadata: Metadata = {
   title: "Request a Free Quote",
@@ -13,9 +14,12 @@ export default function RequestQuotePage() {
       <h1 className="text-3xl font-bold mb-6">Request a Free Quote</h1>
       <p className="max-w-prose text-[17px]">
         We typically respond within one business day. Prefer to talk? Call
-        <a className="underline ml-1" href="tel:919-000-0000">919-000-0000</a>.
+        <a className="underline ml-1" href="tel:919-000-0000">
+          919-000-0000
+        </a>
+        .
       </p>
-      {/* TODO: Implement quote form (single-page first) with validation, honeypot, CAPTCHA-ready */}
+      <QuoteForm />
     </main>
   );
 }

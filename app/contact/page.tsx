@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact North Glass",
@@ -12,10 +13,17 @@ export default function ContactPage() {
     <main className="container mx-auto px-6 py-16">
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
       <p className="max-w-prose text-[17px]">
-        Prefer to talk now? Call us at <a className="underline" href="tel:919-000-0000">919-000-0000</a> or email
-        <a className="underline ml-1" href="mailto:info@northglassnc.com">info@northglassnc.com</a>.
+        Prefer to talk now? Call us at{" "}
+        <a className="underline" href="tel:919-000-0000">
+          919-000-0000
+        </a>{" "}
+        or email
+        <a className="underline ml-1" href="mailto:info@northglassnc.com">
+          info@northglassnc.com
+        </a>
+        .
       </p>
-      {/* TODO: Contact form per PRD */}
+      <ContactForm />
     </main>
   );
 }
