@@ -1,4 +1,5 @@
 import FAQ from "@/app/(site)/_components/FAQ";
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -55,18 +56,39 @@ export default function WindowReplacementPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4">Window Replacement & Repair</h1>
-      <p className="max-w-prose text-[17px] mb-6">
+      <h1 className="text-3xl font-bold mb-4 text-center">Window Replacement & Repair</h1>
+      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Restore clarity and efficiency to your windows. We replace foggy
         dual-pane glass, repair broken windows, and upgrade to energy-efficient
         solutions that reduce your utility costs.
       </p>
-      <a
-        href="/request-quote"
-         className="btn-primary"
-      >
-        Get a Free Estimate
-      </a>
+      
+      {/* Image Carousel */}
+      <div className="flex justify-center my-8">
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/window-replacement/after-window-replacement.png",
+              alt: "New energy-efficient windows",
+            },
+            {
+              src: "/images/window-replacement/windows-replacment.png",
+              alt: "Window replacement process",
+            },
+          ]}
+          interval={2000}
+          className="max-w-4xl w-full"
+        />
+      </div>
+      
+      <div className="text-center mb-8">
+        <a
+          href="/request-quote"
+          className="btn-primary inline-block"
+        >
+          Get a Free Estimate
+        </a>
+      </div>
       <FAQ
         items={[
           {

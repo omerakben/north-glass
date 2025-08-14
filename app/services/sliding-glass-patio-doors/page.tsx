@@ -1,4 +1,5 @@
 import FAQ from "@/app/(site)/_components/FAQ";
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -55,18 +56,39 @@ export default function SlidingPatioDoorPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4">Sliding Glass Patio Doors</h1>
-      <p className="max-w-prose text-[17px] mb-6">
+      <h1 className="text-3xl font-bold mb-4 text-center">Sliding Glass Patio Doors</h1>
+      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Open your home to the outdoors with beautiful sliding glass doors. We
         install and replace patio doors with smooth-gliding, energy-efficient
         units that provide seamless indoor-outdoor living.
       </p>
-      <a
-        href="/request-quote"
-         className="btn-primary"
-      >
-        Get a Free Estimate
-      </a>
+      
+      {/* Image Carousel */}
+      <div className="flex justify-center my-8">
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/sliding-glass-patio-doors/after-stairs.png",
+              alt: "Modern sliding glass patio door",
+            },
+            {
+              src: "/images/sliding-glass-patio-doors/before-stairs.png",
+              alt: "Patio door installation",
+            },
+          ]}
+          interval={2000}
+          className="max-w-4xl w-full"
+        />
+      </div>
+      
+      <div className="text-center mb-8">
+        <a
+          href="/request-quote"
+          className="btn-primary inline-block"
+        >
+          Get a Free Estimate
+        </a>
+      </div>
       <FAQ
         items={[
           {

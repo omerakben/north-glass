@@ -1,4 +1,5 @@
 import FAQ from "@/app/(site)/_components/FAQ";
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -55,18 +56,39 @@ export default function TableTopsShelvesPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4">Glass Table Tops & Shelves</h1>
-      <p className="max-w-prose text-[17px] mb-6">
+      <h1 className="text-3xl font-bold mb-4 text-center">Glass Table Tops & Shelves</h1>
+      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Protect your furniture or create stunning displays with custom glass.
         We fabricate table tops, protective covers, and floating shelves in any
         size or shape with beautifully polished edges.
       </p>
-      <a
-        href="/request-quote"
-         className="btn-primary"
-      >
-        Get a Free Estimate
-      </a>
+      
+      {/* Image Carousel */}
+      <div className="flex justify-center my-8">
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/glass-table-tops-and-shelves/commercial-front.png",
+              alt: "Custom glass table top",
+            },
+            {
+              src: "/images/glass-table-tops-and-shelves/before-shower-door.png",
+              alt: "Glass shelving display",
+            },
+          ]}
+          interval={2000}
+          className="max-w-4xl w-full"
+        />
+      </div>
+      
+      <div className="text-center mb-8">
+        <a
+          href="/request-quote"
+          className="btn-primary inline-block"
+        >
+          Get a Free Estimate
+        </a>
+      </div>
       <FAQ
         items={[
           {

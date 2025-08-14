@@ -1,4 +1,5 @@
 import FAQ from "@/app/(site)/_components/FAQ";
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -55,18 +56,39 @@ export default function MirrorsPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4">Custom Mirrors & Mirrored Walls</h1>
-      <p className="max-w-prose text-[17px] mb-6">
+      <h1 className="text-3xl font-bold mb-4 text-center">Custom Mirrors & Mirrored Walls</h1>
+      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Transform your space with custom mirrors. From elegant bathroom vanity
         mirrors to full gym walls, we cut, polish, and install mirrors that
         enhance light and create the illusion of space.
       </p>
-      <a
-        href="/request-quote"
-         className="btn-primary"
-      >
-        Get a Free Estimate
-      </a>
+      
+      {/* Image Carousel */}
+      <div className="flex justify-center my-8">
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/mirrors/custom-bathroom-mirror.png",
+              alt: "Custom bathroom vanity mirror",
+            },
+            {
+              src: "/images/mirrors/before-shower-door.png",
+              alt: "Mirror installation",
+            },
+          ]}
+          interval={2000}
+          className="max-w-4xl w-full"
+        />
+      </div>
+      
+      <div className="text-center mb-8">
+        <a
+          href="/request-quote"
+          className="btn-primary inline-block"
+        >
+          Get a Free Estimate
+        </a>
+      </div>
       <FAQ
         items={[
           {

@@ -1,4 +1,5 @@
 import FAQ from "@/app/(site)/_components/FAQ";
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -55,19 +56,40 @@ export default function GlassOfficeDoorsPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4">Glass Office Doors & Partitions</h1>
-      <p className="max-w-prose text-[17px] mb-6">
+      <h1 className="text-3xl font-bold mb-4 text-center">Glass Office Doors & Partitions</h1>
+      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Transform your workspace with modern glass office solutions. We install
         frameless glass doors, conference room partitions, and interior glass
         walls that maintain privacy while creating an open, collaborative
         environment.
       </p>
-      <a
-        href="/request-quote"
-         className="btn-primary"
-      >
-        Get a Free Estimate
-      </a>
+      
+      {/* Image Carousel */}
+      <div className="flex justify-center my-8">
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/glass-office-doors/commercial-front.png",
+              alt: "Modern glass office entrance",
+            },
+            {
+              src: "/images/glass-office-doors/before-shower-door.png",
+              alt: "Glass office partition",
+            },
+          ]}
+          interval={2000} // 2 seconds as requested
+          className="max-w-4xl w-full"
+        />
+      </div>
+      
+      <div className="text-center mb-8">
+        <a
+          href="/request-quote"
+          className="btn-primary inline-block"
+        >
+          Get a Free Estimate
+        </a>
+      </div>
       <FAQ
         items={[
           {

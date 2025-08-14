@@ -1,4 +1,5 @@
 import FAQ from "@/app/(site)/_components/FAQ";
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -55,18 +56,39 @@ export default function ScreensPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4">Window & Door Screens</h1>
-      <p className="max-w-prose text-[17px] mb-6">
+      <h1 className="text-3xl font-bold mb-4 text-center">Window & Door Screens</h1>
+      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Keep bugs out and fresh air in with properly fitted screens. We repair
         torn screens, build custom sizes, and offer upgrades like pet-resistant
         mesh and solar screening to reduce heat and UV rays.
       </p>
-      <a
-        href="/request-quote"
-         className="btn-primary"
-      >
-        Get a Free Estimate
-      </a>
+      
+      {/* Image Carousel */}
+      <div className="flex justify-center my-8">
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/window-and-door-screens/before-windows.png",
+              alt: "Window screen installation",
+            },
+            {
+              src: "/images/window-and-door-screens/before-stairs.png",
+              alt: "Door screen repair",
+            },
+          ]}
+          interval={2000}
+          className="max-w-4xl w-full"
+        />
+      </div>
+      
+      <div className="text-center mb-8">
+        <a
+          href="/request-quote"
+          className="btn-primary inline-block"
+        >
+          Get a Free Estimate
+        </a>
+      </div>
       <FAQ
         items={[
           {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 interface BeforeAfterSliderProps {
   beforeImage: string;
@@ -11,6 +12,10 @@ interface BeforeAfterSliderProps {
 }
 
 export default function BeforeAfterSlider({
+  beforeImage,
+  afterImage,
+  beforeAlt,
+  afterAlt,
   className = "",
 }: BeforeAfterSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -62,25 +67,35 @@ export default function BeforeAfterSlider({
       className={`relative overflow-hidden rounded-lg ${className}`}
       style={{ touchAction: "none" }}
     >
-      {/* After Image (bottom layer) - Placeholder */}
-      <div className="relative w-full h-full bg-gray-300">
-        <div className="absolute inset-0 flex items-center justify-center text-gray-600">
-          After Image Placeholder
-        </div>
-        <span className="absolute top-4 right-4 bg-white/90 px-2 py-1 rounded text-sm font-medium">
+      {/* After Image (bottom layer) */}
+      <div className="relative w-full h-full">
+        <Image
+          src={afterImage}
+          alt={afterAlt}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
+        />
+        <span className="absolute top-4 right-4 bg-white/90 px-2 py-1 rounded text-sm font-medium shadow-md">
           After
         </span>
       </div>
 
-      {/* Before Image (top layer with clip) - Placeholder */}
+      {/* Before Image (top layer with clip) */}
       <div
-        className="absolute top-0 left-0 w-full h-full bg-gray-400"
+        className="absolute top-0 left-0 w-full h-full"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
-        <div className="absolute inset-0 flex items-center justify-center text-gray-700">
-          Before Image Placeholder
-        </div>
-        <span className="absolute top-4 left-4 bg-white/90 px-2 py-1 rounded text-sm font-medium">
+        <Image
+          src={beforeImage}
+          alt={beforeAlt}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
+        />
+        <span className="absolute top-4 left-4 bg-white/90 px-2 py-1 rounded text-sm font-medium shadow-md">
           Before
         </span>
       </div>

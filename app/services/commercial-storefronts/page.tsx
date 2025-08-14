@@ -1,4 +1,5 @@
 import FAQ from "@/app/(site)/_components/FAQ";
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -55,19 +56,40 @@ export default function CommercialStorefrontsPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4">Commercial Storefronts</h1>
-      <p className="max-w-prose text-[17px] mb-6">
+      <h1 className="text-3xl font-bold mb-4 text-center">Commercial Storefronts</h1>
+      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Keep your business looking professional with our storefront glass
         services. From new installations to emergency repairs, we help retail
         stores, restaurants, and offices maintain an inviting appearance that
         attracts customers.
       </p>
-      <a
-        href="/request-quote"
-         className="btn-primary"
-      >
-        Get a Free Estimate
-      </a>
+      
+      {/* Image Carousel */}
+      <div className="flex justify-center my-8">
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/commercial-storefronts/commercial-front.png",
+              alt: "Commercial glass storefront",
+            },
+            {
+              src: "/images/commercial-storefronts/shower-big.png",
+              alt: "Storefront installation",
+            },
+          ]}
+          interval={2000}
+          className="max-w-4xl w-full"
+        />
+      </div>
+      
+      <div className="text-center mb-8">
+        <a
+          href="/request-quote"
+          className="btn-primary inline-block"
+        >
+          Get a Free Estimate
+        </a>
+      </div>
       <FAQ
         items={[
           {

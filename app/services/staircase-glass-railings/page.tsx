@@ -1,4 +1,5 @@
 import FAQ from "@/app/(site)/_components/FAQ";
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -55,18 +56,39 @@ export default function GlassRailingsPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4">Staircase Glass Railings</h1>
-      <p className="max-w-prose text-[17px] mb-6">
+      <h1 className="text-3xl font-bold mb-4 text-center">Staircase Glass Railings</h1>
+      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Elevate your space with sleek glass railings. Perfect for modern homes
         and commercial buildings, our tempered glass balustrades provide safety
         without sacrificing views or natural light flow.
       </p>
-      <a
-        href="/request-quote"
-         className="btn-primary"
-      >
-        Get a Free Estimate
-      </a>
+      
+      {/* Image Carousel */}
+      <div className="flex justify-center my-8">
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/staircase-glass-railings/after-stairs.png",
+              alt: "Modern glass staircase railing",
+            },
+            {
+              src: "/images/staircase-glass-railings/before-stairs.png",
+              alt: "Glass railing installation",
+            },
+          ]}
+          interval={2000}
+          className="max-w-4xl w-full"
+        />
+      </div>
+      
+      <div className="text-center mb-8">
+        <a
+          href="/request-quote"
+          className="btn-primary inline-block"
+        >
+          Get a Free Estimate
+        </a>
+      </div>
       <FAQ
         items={[
           {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 
 interface GalleryItem {
@@ -19,7 +20,7 @@ interface GalleryItem {
   afterAlt?: string;
 }
 
-// Placeholder gallery data - replace with actual images
+// Gallery data with actual images from public directory
 const galleryItems: GalleryItem[] = [
   {
     id: "1",
@@ -27,10 +28,10 @@ const galleryItems: GalleryItem[] = [
     title: "Frameless Shower Transformation",
     location: "Cary, NC",
     category: "shower",
-    beforeImage: "/images/gallery/shower-before-1.jpg",
-    afterImage: "/images/gallery/shower-after-1.jpg",
+    beforeImage: "/before-shower-door.png",
+    afterImage: "/after-shower-door.png",
     beforeAlt: "Outdated framed shower",
-    afterAlt: "Modern frameless glass shower",
+    afterAlt: "Modern frameless glass shower enclosure",
   },
   {
     id: "2",
@@ -38,17 +39,19 @@ const galleryItems: GalleryItem[] = [
     title: "Commercial Storefront",
     location: "Raleigh, NC",
     category: "storefront",
-    image: "/images/gallery/storefront-1.jpg",
-    alt: "Glass storefront installation",
+    image: "/commercial-front.png",
+    alt: "Modern glass storefront installation",
   },
   {
     id: "3",
-    type: "single",
+    type: "before-after",
     title: "Glass Staircase Railing",
     location: "Durham, NC",
     category: "railing",
-    image: "/images/gallery/railing-1.jpg",
-    alt: "Modern glass staircase railing",
+    beforeImage: "/before-stairs.png",
+    afterImage: "/after-stairs.png",
+    beforeAlt: "Traditional staircase",
+    afterAlt: "Modern glass staircase railing",
   },
   {
     id: "4",
@@ -56,10 +59,10 @@ const galleryItems: GalleryItem[] = [
     title: "Window Replacement",
     location: "Chapel Hill, NC",
     category: "window",
-    beforeImage: "/images/gallery/window-before-1.jpg",
-    afterImage: "/images/gallery/window-after-1.jpg",
-    beforeAlt: "Foggy dual-pane window",
-    afterAlt: "Clear energy-efficient window",
+    beforeImage: "/before-windows.png",
+    afterImage: "/after-window-replacement.png",
+    beforeAlt: "Old inefficient windows",
+    afterAlt: "New energy-efficient windows",
   },
   {
     id: "5",
@@ -67,17 +70,17 @@ const galleryItems: GalleryItem[] = [
     title: "Custom Bathroom Mirror",
     location: "Apex, NC",
     category: "mirror",
-    image: "/images/gallery/mirror-1.jpg",
-    alt: "Large custom bathroom mirror",
+    image: "/custom-bathroom-mirror.png",
+    alt: "Large custom bathroom mirror installation",
   },
   {
     id: "6",
     type: "single",
-    title: "Glass Office Doors",
+    title: "Luxury Shower Enclosure",
     location: "Morrisville, NC",
-    category: "door",
-    image: "/images/gallery/office-door-1.jpg",
-    alt: "Modern glass office doors",
+    category: "shower",
+    image: "/shower-big.png",
+    alt: "Premium frameless glass shower enclosure",
   },
 ];
 
@@ -145,13 +148,14 @@ export default function Gallery() {
                   />
                 </div>
               ) : (
-                <div className="aspect-w-16 aspect-h-12 relative h-64 bg-gray-200">
-                  {/* Placeholder for single images */}
-                  <div className="flex items-center justify-center h-full">
-                    <span className="text-gray-500">
-                      {item.title}
-                    </span>
-                  </div>
+                <div className="relative h-64 bg-gray-200">
+                  <Image
+                    src={item.image!}
+                    alt={item.alt!}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
               )}
               <div className="p-4">
@@ -219,12 +223,14 @@ export default function Gallery() {
                     />
                   </div>
                 ) : (
-                  <div className="aspect-w-16 aspect-h-9 relative h-96 bg-gray-200">
-                    <div className="flex items-center justify-center h-full">
-                      <span className="text-gray-500">
-                        {selectedImage.title} - Full Size
-                      </span>
-                    </div>
+                  <div className="relative h-96 bg-gray-200">
+                    <Image
+                      src={selectedImage.image!}
+                      alt={selectedImage.alt!}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 1024px) 100vw, 80vw"
+                    />
                   </div>
                 )}
               </div>
