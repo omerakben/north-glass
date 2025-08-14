@@ -21,6 +21,19 @@ export default function ScrollAnimations() {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
 
+    // Wait a bit to ensure Lenis is initialized (if it's being used)
+    const initTimeout = setTimeout(() => {
+      // Configure ScrollTrigger to work with or without Lenis
+      ScrollTrigger.config({
+        syncInterval: 999999999, // Prevent automatic refresh
+      });
+      
+      // Manually refresh ScrollTrigger after a delay to ensure proper initialization
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 500);
+    }, 200);
+
     // Create GSAP context for cleanup
     const ctx = gsap.context(() => {
       // Hero section fade in
@@ -209,6 +222,7 @@ export default function ScrollAnimations() {
 
     // Cleanup on unmount
     return () => {
+      clearTimeout(initTimeout);
       ctx.revert();
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
