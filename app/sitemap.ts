@@ -1,7 +1,28 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://northglassnc.com";
+  const baseUrl = "https://northglassnc.com";
+  const currentDate = new Date();
+
+  // Define priorities based on page importance for lead generation
+  const getPriority = (path: string): number => {
+    if (path === "") return 1.0; // Homepage
+    if (path === "/contact" || path === "/request-quote") return 0.9; // High conversion pages
+    if (path === "/services") return 0.9; // Service index
+    if (path.startsWith("/services/")) return 0.8; // Individual service pages
+    if (path === "/about") return 0.7; // About page
+    if (path === "/blog") return 0.6; // Blog
+    if (path === "/privacy" || path === "/terms") return 0.3; // Legal pages
+    return 0.5; // Default
+  };
+
+  // Define change frequency based on content type
+  const getChangeFrequency = (path: string): "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" => {
+    if (path === "" || path === "/blog") return "weekly";
+    if (path === "/privacy" || path === "/terms") return "yearly";
+    return "monthly";
+  };
+
   const routes = [
     "",
     "/services",
@@ -21,5 +42,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy",
     "/terms",
   ];
-  return routes.map((path) => ({ url: `${base}${path}`, changeFrequency: "weekly", priority: path === "" ? 1 : 0.7 }));
+
+  return routes.map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: currentDate,
+    changeFrequency: getChangeFrequency(path),
+    priority: getPriority(path),
+  }));
 }

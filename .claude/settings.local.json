@@ -230,7 +230,8 @@
       "mcp__playwright__browser_resize",
       "mcp__playwright__browser_close"
     ],
-    "deny": []
+    "deny": [],
+    "defaultMode": "acceptEdits"
   },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [

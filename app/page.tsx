@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Gallery from "./(site)/_components/Gallery";
 
 export const metadata: Metadata = {
   title: "North Glass LLC – Glass Shower Doors, Windows, Mirrors | Raleigh–Durham",
@@ -245,33 +246,7 @@ export default function Home() {
       </section>
 
       {/* Gallery/Featured Projects */}
-      <section className="py-16 bg-[var(--brand-grey)]">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-4">Our Work in Action</h2>
-          <p className="text-center text-gray-600 mb-12">
-            Quality glass installations across the Triangle
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg p-4">
-              <div className="h-48 bg-gray-300 rounded mb-3"></div>
-              <p className="text-sm font-medium">Modern Shower – Cary, NC</p>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <div className="h-48 bg-gray-300 rounded mb-3"></div>
-              <p className="text-sm font-medium">Storefront – Raleigh, NC</p>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <div className="h-48 bg-gray-300 rounded mb-3"></div>
-              <p className="text-sm font-medium">Glass Railing – Durham, NC</p>
-            </div>
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/services" className="text-[var(--brand-turquoise)] font-medium hover:underline">
-              View More Projects →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Gallery />
 
       {/* Testimonials */}
       <section className="py-16 bg-white">
