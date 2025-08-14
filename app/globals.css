@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Palette per PRD */
+  --brand-turquoise: #40e0d0; /* primary action */
+  --brand-teal: #005f73; /* dark backgrounds */
+  --brand-grey: #dce3e6; /* surfaces */
+  --brand-white: #f8fafb; /* frosted white */
+  --brand-charcoal: #333b3e; /* body text */
+  --brand-copper: #b87333; /* accent */
+
+  --background: var(--brand-white);
+  --foreground: var(--brand-charcoal);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--brand-turquoise);
+  --color-brand-teal: var(--brand-teal);
+  --color-brand-grey: var(--brand-grey);
+  --color-brand-copper: var(--brand-copper);
+  --font-sans: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Accessible focus styles */
+:where(a, button, [role="button"], input, select, textarea):focus-visible {
+  outline: 2px solid var(--brand-turquoise);
+  outline-offset: 2px;
+}
+
+/* Minimum tap target size */
+:where(a, button, [role="button"]) {
+  min-height: 44px;
+}

@@ -1,0 +1,32 @@
+# Initial Scaffold Checklist
+
+- [ ] Node 22 LTS set in engines and `.nvmrc`
+- [ ] Install deps: `motion`, `gsap`, `lenis`, `lucide-react`
+- [ ] Switch fonts to Inter; remove Geist
+- [ ] Tailwind v4 tokens for brand palette defined
+- [ ] Accessible focus styles and target sizes added
+- [ ] `Header` (desktop dropdowns, mobile drawer, sticky, CTA)
+- [ ] `Footer` (NAP, links, social)
+- [ ] `Button` variants
+- [ ] Routes scaffolded: `/services`, all service details, `/about`, `/blog`, `/blog/[slug]`, `/contact`, `/request-quote`, `/privacy`, `/terms`
+- [ ] Page metadata + breadcrumbs structure
+- [ ] Quote form UI + server handler (Nodemailer to Google SMTP)
+- [ ] Contact form UI + server handler
+- [ ] Validation, sanitization, honeypot, CAPTCHA-ready
+- [ ] Auto-reply to user and internal notification
+- [ ] Mailto fallback provided
+- [ ] Vercel Analytics integrated
+- [ ] GA4 with Consent Mode v2 (post-consent load)
+- [ ] Events wired: `lead_submit`, `contact_submit`, `cta_click`, `call_click`, `quote_start_step`, `quote_complete`, `gallery_interaction`
+- [ ] JSON-LD: LocalBusiness, Service, FAQ, BreadcrumbList
+- [ ] `sitemap.xml` and `robots.txt`
+- [ ] Lenis initialized with reduced-motion handling
+- [ ] Reusable `FadeIn` (motion); GSAP lazy-loaded where needed
+- [ ] Playwright smokes for key journeys
+- [ ] Lighthouse CI thresholds configured
+- [ ] Scripts: lint, typecheck, build, test:e2e, lhci
+- [ ] Lint passes
+- [ ] Typecheck passes
+- [ ] Build passes
+- [ ] Playwright passes
+- [ ] Lighthouse meets targets (mobile)

@@ -1,0 +1,15 @@
+---
+description: Use MCP tools wisely (no hallucinations)
+alwaysApply: false
+---
+Tooling discipline:
+
+- **Context7 MCP** — when you need up-to-date library docs or examples, invoke Context7 to fetch version-specific, authoritative snippets. Prefer this over guessing or stale memory.
+- **Sequential Thinking MCP** — produce/refresh the plan *before* coding and when scope changes.
+- **Playwright MCP** — after implementation, validate the main PRD flows (desktop and mobile). Save output (screens, snapshots, logs) to the PR for audit.
+
+Rules of evidence:
+
+- Cite @PRD.md line/section numbers in your plan and PR.
+- If an MCP response conflicts with PRD, PRD wins—open a PCR rather than improvising.
+- No assumptions. If something isn’t in PRD, escalate with a PCR draft and stop coding.

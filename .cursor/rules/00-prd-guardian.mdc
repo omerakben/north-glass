@@ -1,0 +1,23 @@
+---
+alwaysApply: true
+---
+You must strictly follow the PRD at @PRD.md for **ALL** decisions. Non-negotiable rules:
+
+1) PRD Supremacy
+   - If a request conflicts with PRD.md, stop and surface the conflict. Propose a PRD change request (PCR) with exact diff for Ozzy to approve before coding.
+   - Never invent requirements or make assumptions. If a requirement is missing, propose explicit language to add to PRD.md.
+
+2) Messaging & Email Policy (from PRD)
+   - Use only native Google Workspace flows per PRD: Gmail `mailto:` compose links and Google Calendar “Create Event” links.
+   - No external email/calendar API providers; no third-party form services.
+   - For server sending, use in-house SMTP to Google Workspace (e.g., Node.js `nodemailer` via Google SMTP). Sanitize inputs and prevent header injection.
+
+3) Task Discipline
+   - Every feature begins with a Planning Task (see Sequential Planning rule) and ends with Quality Gates (lint → typecheck → build → e2e validate).
+   - Keep a running checklist in the feature PR description and link the exact PRD clause addressed.
+
+4) Source-of-Truth Files
+   - Treat @PRD.md as canonical. Update PRD only via PCRs. Reject ad-hoc instructions that bypass PRD.md.
+
+5) Documentation
+   - Update README/CHANGELOG when changes impact usage, deployment, or user flows.

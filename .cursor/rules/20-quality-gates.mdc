@@ -1,0 +1,25 @@
+---
+description: Enforce lint/typecheck/build/e2e and clean code
+alwaysApply: true
+globs:
+---
+
+Quality Gates for every feature/PR:
+
+1) Formatting & Lint
+   - Run formatter and linter on entire repo.
+   - Fix all autofixable issues; do not ignore rules without justification.
+
+2) Types & Build
+   - Typecheck must pass with zero errors.
+   - Production build must complete.
+
+3) E2E Validation (Playwright MCP + tests)
+   - Use Playwright MCP to verify critical user journeys from PRD (home → service → request-a-quote flow; contact form; navigation; mobile viewport).
+   - If standard Playwright tests exist, run them too. If not, scaffold smoke tests for PRD journeys.
+
+4) Security/Privacy quick pass
+   - Sanitize form inputs, prevent header injection, never log PII, and respect PRD retention guidance.
+
+5) Definition of Done (DoD)
+   - PR description links the exact PRD clauses implemented and includes: plan.md, checklist.md, run logs for lint/typecheck/build/e2e.
