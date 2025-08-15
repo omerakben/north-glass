@@ -9,7 +9,12 @@ import Header from "./(site)/_components/Header";
 import "./globals.css";
 import { ScrollProvider } from "./providers";
 
-const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
+const inter = Inter({ 
+  variable: "--font-inter", 
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"]
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://northglassnc.com"),

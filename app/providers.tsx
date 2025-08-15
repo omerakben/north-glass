@@ -67,8 +67,11 @@ export function ScrollProvider({ children }: { children: React.ReactNode }) {
             
             // Set up GSAP ScrollTrigger update on Lenis scroll
             lenis.on('scroll', () => {
-              if (typeof window !== 'undefined' && (window as any).ScrollTrigger) {
-                (window as any).ScrollTrigger.update()
+              if (typeof window !== 'undefined' && 'ScrollTrigger' in window) {
+                const ScrollTrigger = (window as { ScrollTrigger?: { update: () => void } }).ScrollTrigger
+                if (ScrollTrigger) {
+                  ScrollTrigger.update()
+                }
               }
             })
           }
