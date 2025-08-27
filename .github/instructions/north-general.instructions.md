@@ -4,6 +4,122 @@ applyTo: "**"
 
 Provide project context and coding guidelines that AI should follow when generating code, answering questions, or reviewing changes.
 
+## North Glass Project-Specific Adaptive Guidelines (Overrides & Additions)
+
+These augment (not replace) the universal guidelines below. Follow these FIRST when working in this repository.
+
+### 1. Domain & Positioning Essentials
+
+- Always describe North Glass as a "glass and aluminum company" serving ALL of North Carolina (statewide), while preserving existing Triangle city mentions for local SEO (Raleigh, Durham, Cary, Chapel Hill, etc.).
+- We differentiate via: Professional Interior Architects, AutoCAD architectural design workflow, Complete System delivery (not just installation), Community-focused values, Dual expertise (glass + aluminum).
+- When updating copy, weave in “aluminum” naturally; avoid keyword stuffing (≤ 1 aluminum mention per short paragraph unless clearly value-adding).
+
+### 2. Tech Stack Signals (Do Not Assume Otherwise)
+
+- Framework: Next.js 15 (App Router) with React 19; TypeScript everywhere.
+- Styling: Tailwind CSS v4 tokens (brand colors already defined in `globals.css`). Prefer utility classes; minimal custom CSS.
+- Animation: GSAP (scroll/advanced), Framer Motion replacement via `motion` lib; Lenis for smooth scroll. Respect `prefers-reduced-motion` (skip heavy animations when set).
+- Email: `nodemailer` via Google Workspace SMTP ONLY (no third‑party email APIs: disallow SendGrid, Mailgun, etc.).
+- Analytics: GA4 (consent mode) + Vercel Analytics. Events pattern: `quote_start`, `quote_submit`, `contact_submit`, `email_send_success|error`.
+
+### 3. Content & SEO Update Rules
+
+- Meta Descriptions & Titles: If editing or creating pages, ensure inclusion (where sensible) of service + geographic + aluminum reference for Priority 1 tasks.
+- Structured Data: Maintain / extend JSON-LD in `layout.tsx` (LocalBusiness) to include statewide coverage plus social profiles. Service pages may include `Service` schema; ensure phone + URL sync with root schema.
+- Sitemap (`app/sitemap.ts`): Keep prioritized list; add new high-impact pages (e.g., Architectural Design Services) when created. Do NOT spam aluminum variations as thin pages—prefer consolidated enriched content unless unique value exists.
+- Robots (`app/robots.txt/route.ts`): Keep permissive; only modify when adding disallow rules for staging/test paths.
+- Image Alts: Enrich with descriptive, human-readable phrases (“custom aluminum and glass storefront in Raleigh”)—no comma keyword dumps.
+
+### 4. Form & Lead Handling
+
+- All forms include: honeypot field (`company` present already), client-side validation, spam resilience potential (add CAPTCHA only if abuse reported).
+- Do not introduce external form SaaS. Use existing API routes under `/api/*` and sanitize inputs (no header injection: strip CRLF in email fields if touched).
+- Adding new form fields: update BOTH front-end component and corresponding API route + analytics events.
+- Quote forms should allow “Architectural Design Consultation” service selection for analytics segmentation (glass vs aluminum vs design consult).
+
+### 5. Performance & Accessibility Guardrails
+
+- Leverage Server Components by default; convert to Client Components only for stateful/interactive UI (sliders, carousels, scroll effects, forms).
+- Code-split heavy animation libs (dynamic import if used on limited routes).
+- Respect Core Web Vitals targets: LCP ≤ 2.5s, CLS ≤ 0.1, INP ≤ 200ms. Before adding new large dependencies, justify footprint.
+- Accessibility: Ensure focus management for modals/menus (`Header` mobile drawer), aria labels for navigation groups, alt text for all images added.
+
+### 6. Aluminum Integration Checklist (Priority 1–2 Alignment)
+
+When touching: Home, About, Services index, Service pages, Metadata.
+
+1. Insert aluminum positioning phrase once near top.
+2. Confirm statewide wording present (“serving all of North Carolina”).
+3. Add Interior Architect + AutoCAD mention (About + relevant CTAs).
+4. Schema areaServed updated if not already.
+5. Phone number matches authoritative value (+1 (984) 268-8490).
+
+### 7. Phone & Social Consistency
+
+- Canonical phone: `+1 (984) 268-8490` tel link must be `tel:+19842688490`.
+- Add / maintain social links: Facebook & Instagram from PRD in Footer + LocalBusiness `sameAs`. Keep them DRY via a shared constant if reused.
+
+### 8. Tool Invocation (Repository-Tailored)
+
+- Start every non-trivial change with `#think` or `#sequential-thinking` (complex multi-file edits) before patches.
+- Use codebase scans (search for existing patterns) before introducing new components: e.g., find existing schema injection before adding duplicates.
+- Call `#mcp_context7_resolve-library-id` and `#mcp_context7_get-library-docs` only if adding or upgrading external libs (rare here); not needed for existing stack usage.
+- Avoid redundant file reads; batch when assessing multiple components.
+
+### 9. Safe Change Protocol (Concrete for This Repo)
+
+Before editing:
+
+1. List target files (e.g., `app/layout.tsx`, `app/page.tsx`).
+2. Note change type: metadata, copy, schema, component prop, form field.
+3. Ensure phone/social & aluminum insertion remain consistent (run grep for old placeholder `919-000-0000` and remove).
+4. Keep diffs minimal: do not reorder unrelated imports or rewrap paragraphs unnecessarily.
+
+### 10. Copy Editing Heuristics
+
+- Tone: professional, clear, benefit-forward; avoid hype adjectives without substance.
+- Prefer short sentences (<20 words) for hero/CTA sections.
+- Use parallel structure in bullet lists (start each bullet with active verb or noun phrase consistently).
+
+### 11. New Page Template (e.g., Architectural Design Services)
+
+Include: Hero (glass & aluminum design value), Process (AutoCAD steps), Differentiators (architect expertise), CTAs, Service schema referencing design service, internal links to related services.
+
+### 12. Prohibited / Must NOT
+
+- No third-party email API introduction.
+- No removal of consent initialization script.
+- No duplication of LocalBusiness schema (extend existing object instead).
+- No large asset commits (images/videos) without optimization pipeline (Next Image usage assumed).
+
+### 13. Validation Checklist (Run Mentally or via Tools Post-Edit)
+
+- Pages build (no TS errors).
+- Updated metadata reflects aluminum & statewide once (no repetition).
+- Schema valid JSON (quick JSON.parse mental check for inserted blocks).
+- All new links resolve to existing or newly created routes.
+
+### 14. Suggested Future Enhancements (Defer Unless Asked)
+
+- Architectural Design Services page route & content.
+- Aluminum category filtering in Gallery component.
+- Test suite scaffolding (none present) for API routes + basic component render.
+- PWA manifest & offline caching once image-heavy pages grow.
+
+### 15. Response Pattern Example (Project-Specific)
+
+When user requests "Update homepage hero for aluminum":
+
+1. Analyze: Confirm current hero in `app/page.tsx` lacks aluminum.
+2. Plan: Edit hero heading + subheading + metadata description.
+3. Implement: Minimal diff patch.
+4. Validate: Ensure no other hero text regressions.
+5. Summarize: Map to TODO tasks (task-002, task-003, task-004, task-005).
+
+---
+
+The universal adaptive guidelines follow for any gaps not covered above.
+
 Layering Model (do not repeat project specifics here):
 
 1. Project overrides live in repository `.github/prompts/`
