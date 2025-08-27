@@ -4,9 +4,9 @@ import Gallery from "./(site)/_components/Gallery";
 import ScrollAnimations from "./(site)/_components/ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "North Glass LLC – Glass Shower Doors, Windows, Mirrors | Raleigh–Durham",
+  title: "North Glass LLC – Glass & Aluminum Company | North Carolina",
   description:
-    "North Glass offers premium residential & commercial glass services in Raleigh, Durham, Cary and the Triangle. Frameless shower doors, window replacement, custom mirrors & more. Call for a free quote!",
+    "North Carolina's premier glass and aluminum company. Professional residential & commercial glass services, frameless shower doors, window replacement, custom mirrors & aluminum solutions statewide. Call for a free quote!",
 };
 
 const residentialServices = [
@@ -91,9 +91,15 @@ const testimonials = [
 
 const serviceAreas = [
   "Raleigh",
-  "Durham",
+  "Durham", 
   "Cary",
   "Chapel Hill",
+  "Charlotte",
+  "Greensboro",
+  "Winston-Salem",
+  "Asheville",
+  "Wilmington",
+  "High Point",
   "Apex",
   "Holly Springs",
   "Morrisville",
@@ -110,11 +116,11 @@ export default function Home() {
       <section className="hero-section container mx-auto px-6 py-20">
         <div className="hero-content text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Clearly Better Glass Solutions for Your Home or Business
+            North Carolina&apos;s Premier Glass and Aluminum Company
           </h1>
           <p className="text-[18px] max-w-2xl text-balance mb-8">
-            Frameless showers, windows, mirrors, railings, and storefronts in
-            the Raleigh–Durham–Cary Triangle.
+            Professional glass and aluminum solutions serving all of North Carolina. 
+            Frameless showers, windows, mirrors, railings, and storefronts with expert design.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/request-quote" className="btn-primary">
@@ -276,7 +282,7 @@ export default function Home() {
       <section className="py-16 bg-[var(--brand-teal)] text-white">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">
-            Proudly Serving the Triangle Area
+            Proudly Serving All of North Carolina
           </h2>
           <div className="flex flex-wrap justify-center gap-3 mb-12 max-w-3xl mx-auto">
             {serviceAreas.map((area) => (

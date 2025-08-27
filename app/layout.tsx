@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://northglassnc.com"),
   title: {
     default:
-      "North Glass LLC – Residential & Commercial Glass in Raleigh–Durham",
+      "North Glass LLC – Glass & Aluminum Company | North Carolina",
     template: "%s | North Glass LLC",
   },
   description:
-    "Premium glass services in the Triangle: frameless shower doors, window replacement, mirrors, storefronts. Free estimates.",
+    "North Carolina's premier glass and aluminum company. Professional residential & commercial solutions: frameless shower doors, window replacement, mirrors, storefronts. Free estimates statewide.",
   applicationName: "North Glass LLC",
   icons: { icon: "/favicon.ico" },
   alternates: { canonical: "/" },
@@ -32,23 +32,23 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://northglassnc.com/",
     title:
-      "North Glass LLC – Glass Shower Doors, Windows, Mirrors | Raleigh–Durham",
+      "North Glass LLC – Glass & Aluminum Company | North Carolina",
     description:
-      "Residential & commercial glass: frameless showers, window replacement, mirrors, storefronts. Request a free quote.",
+      "North Carolina's premier glass and aluminum company. Professional residential & commercial solutions statewide. Request a free quote.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "North Glass – custom glass solutions",
+        alt: "North Glass – custom glass and aluminum solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "North Glass LLC – Custom Glass in Raleigh–Durham",
+    title: "North Glass LLC – Glass & Aluminum Company | North Carolina",
     description:
-      "Frameless showers, windows, mirrors, storefronts. Get a free estimate from North Glass.",
+      "Professional glass and aluminum solutions across North Carolina. Get a free estimate from North Glass.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -67,7 +67,7 @@ export default function RootLayout({
     "@type": "LocalBusiness",
     name: "North Glass LLC",
     url: "https://northglassnc.com/",
-    telephone: "919-000-0000",
+    telephone: "+1-984-268-8490",
     email: "mailto:info@northglassnc.com",
     address: {
       "@type": "PostalAddress",
@@ -75,7 +75,12 @@ export default function RootLayout({
       addressRegion: "NC",
       addressCountry: "US",
     },
-    areaServed: "Raleigh–Durham–Cary, NC",
+    areaServed: "North Carolina",
+    sameAs: [
+      "https://www.facebook.com/profile.php?id=61580048543297",
+      "https://www.instagram.com/northglassraleigh"
+    ],
+    description: "North Carolina's premier glass and aluminum company providing professional residential and commercial glass solutions statewide.",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

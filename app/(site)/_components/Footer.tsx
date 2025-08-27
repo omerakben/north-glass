@@ -6,21 +6,39 @@ export default function Footer() {
       <div className="container mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
         <div>
           <div className="font-semibold">North Glass LLC</div>
-          <div className="text-sm mt-2">Raleigh–Durham–Cary, NC</div>
+          <div className="text-sm mt-2">Serving All of North Carolina</div>
           <div className="text-sm">
             Phone:{" "}
             <a
               className="underline"
-              href="tel:919-000-0000"
+              href="tel:+19842688490"
               data-placement="footer"
             >
-              919-000-0000
+              (984) 268-8490
             </a>
           </div>
           <div className="text-sm">
             Email:{" "}
             <a className="underline" href="mailto:info@northglassnc.com">
               info@northglassnc.com
+            </a>
+          </div>
+          <div className="text-sm mt-2">
+            <a
+              href="https://www.facebook.com/profile.php?id=61580048543297"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline mr-4"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/northglassraleigh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Instagram
             </a>
           </div>
         </div>

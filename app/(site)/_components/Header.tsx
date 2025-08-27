@@ -140,7 +140,7 @@ export default function Header() {
         </nav>
         <div className="md:hidden flex items-center gap-3">
           <a
-            href="tel:919-000-0000"
+            href="tel:+19842688490"
             aria-label="Call North Glass"
             className="p-2"
             style={{ color: "var(--brand-teal)" }}
