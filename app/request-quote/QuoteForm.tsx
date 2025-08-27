@@ -75,6 +75,7 @@ export default function QuoteForm() {
           className="h-11 px-3 rounded-md border border-black/15"
         >
           <option value="">Select a service</option>
+          <option>Architectural Design Consultation</option>
           <option>Frameless Shower</option>
           <option>Window Replacement</option>
           <option>Mirrors</option>
@@ -84,6 +85,7 @@ export default function QuoteForm() {
           <option>Glass Office Doors</option>
           <option>Staircase Glass Railings</option>
           <option>Commercial Storefronts</option>
+          <option>Aluminum Systems</option>
           <option>Other</option>
         </select>
       </div>
@@ -94,6 +96,7 @@ export default function QuoteForm() {
           name="message"
           rows={5}
           className="px-3 py-2 rounded-md border border-black/15"
+          placeholder="Tell us about your project. For architectural design consultations, include project scope, timeline, and any specific requirements."
         />
       </div>
       <div className="flex gap-3 items-center">
@@ -105,7 +108,7 @@ export default function QuoteForm() {
             color: "#00353f",
           }}
         >
-          {status === "submitting" ? "Submitting..." : "Request Quote"}
+          {status === "submitting" ? "Submitting..." : "Request Quote + Design"}
         </button>
         <a
           href="mailto:info@northglassnc.com?subject=Quote%20Request"

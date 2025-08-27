@@ -48,7 +48,7 @@ export default function Footer() {
           <Link href="/blog">Blog</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/request-quote" data-cta="footer">
-            Request a Quote
+            Free Quote + Design
           </Link>
         </nav>
         <nav className="grid gap-2 content-start" aria-label="Legal">

@@ -124,7 +124,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/request-quote" className="btn-primary">
-              Request a Free Quote
+              Request Free Quote + AutoCAD Design
             </Link>
             <Link href="/services" className="btn-secondary">
               View Services
@@ -296,13 +296,13 @@ export default function Home() {
           </div>
           <div className="text-center">
             <p className="text-xl mb-8">
-              Ready to add beauty & value with custom glass?
+              Ready to add beauty & value with custom glass and aluminum?
             </p>
             <Link
               href="/request-quote"
               className="inline-flex items-center px-8 py-3 bg-white text-[var(--brand-teal)] rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get Your Free Quote Today
+              Get Your Free Quote + AutoCAD Design Today
             </Link>
           </div>
         </div>

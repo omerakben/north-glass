@@ -101,7 +101,7 @@ export default function AboutPage() {
                 href="/request-quote"
                 className="inline-flex items-center px-6 py-3 border border-[var(--brand-teal)] text-[var(--brand-teal)] rounded-md font-semibold hover:bg-[var(--brand-teal)] hover:text-white transition-colors"
               >
-                Request Free Quote
+                Request Free Quote + AutoCAD Design
               </a>
             </div>
           </div>
