@@ -24,11 +24,31 @@
 
 ## PRD Core Content
 
-# North Glass LLC – Website Product Requirements Document (PRD)
+## Company Profile Update
+
+### About North Glass
+
+North Glass is a glass and aluminum company based in the Triangle area, proudly serving all of North Carolina.
+
+We specialize in complete shower enclosure systems with tempered glass, offering modern, durable and elegant solutions. With custom-made designs and professional installation, we bring both style and functionality to your bathrooms. In addition, we deliver high-quality and long-lasting services in aluminum applications, glass, windows, doors and mirrors.
+
+We consider it our responsibility to support not only our customers but also our employees, their families and the community as a whole. This principle is one of the core values that makes us stand out in the industry.
+
+In architectural interior design projects, our professional interior architects provide innovative solutions, setting us apart from the competition. We offer free estimates for all projects and enrich the process with detailed designs using AutoCAD architectural programs, ensuring a transparent and professional experience for our clients.
+
+At North Glass, our mission is to combine trust, aesthetics and quality in every project, adding value to your living spaces.
+
+### Contact Information
+
+- Phone: +1 (984) 268-8490
+- Facebook: North Glass Raleigh - <https://www.facebook.com/profile.php?id=61580048543297>
+- Instagram: @northglassraleigh - <https://www.instagram.com/northglassraleigh>
+
+## Website Product Requirements Document (PRD)
 
 ## Executive Summary
 
-North Glass LLC is a new local glass services company in the Raleigh–Durham–Cary “Triangle” region of North Carolina. This PRD outlines the requirements for a static marketing website that will position North Glass as a premium, modern provider of residential and commercial glass solutions. The website’s core purpose is lead generation – driving visitors to request a quote, call, or contact the company. To achieve this, the site must deliver an exceptional user experience, showcase North Glass’s services and craftsmanship, and establish credibility through content and design.
+North Glass LLC is a specialized glass and aluminum company in the Raleigh–Durham–Cary “Triangle” region of North Carolina. This PRD outlines the requirements for a static marketing website that will position North Glass as a premium, modern provider of residential and commercial glass and aluminum solutions. The website’s core purpose is lead generation – driving visitors to request a quote, call, or contact the company. To achieve this, the site must deliver an exceptional user experience, showcase North Glass’s services and craftsmanship, and establish credibility through content and design.
 Project Scope: The website will be a static Next.js 13 site deployed on Vercel, comprising a polished homepage, service category pages for Residential and Commercial offerings, individual service detail pages, an About page, a Contact page, a “Request a Quote” form page, and a Blog section for content marketing. All content will be statically rendered (with Incremental Static Regeneration for new blog posts or updates), ensuring fast performance and reliability. There is no complex web application functionality – the focus is on informative content, rich visuals (photos of work, etc.), and conversion-oriented elements (forms, CTAs).
 Competitive Landscape & Inspiration: Several example websites have been analyzed to inform North Glass’s IA, tone, and features:
 Glass Depots (Raleigh, NC): An established local glass company site, it exemplifies a well-structured information architecture with separate pages for each product/service and strong credibility signals (e.g. emphasizing a large showroom and “top choice” status). North Glass should similarly highlight its local expertise and any unique assets (e.g. decades of experience or warranty offers). Glass Depots also uses an effective tagline (“Triangle’s premier custom-fit glass shower doors and enclosures”) to immediately convey specialization.
@@ -51,6 +71,26 @@ Engagement with Content: Track interactions such as gallery views, clicks on bef
 Bounce Rate / Dwell Time: A secondary goal is to keep bounce rates low on key landing pages (especially service pages from search) by providing the info users need. Aim for bounce rate < 50% on service pages and an average session duration > 1.5 minutes, indicating users are exploring rather than leaving immediately.
 Indexed Pages & Rich Results: Within the first week of launch, ensure all pages are indexed by Google (via sitemap & Search Console). Within 30 days, the site should show enhanced results: e.g. FAQ rich snippets on pages where Q&A is provided, Breadcrumbs in search results, and brand knowledge graph card (via LocalBusiness schema and Google Business Profile integration). We will measure the presence of these rich results as a success indicator for SEO implementation.
 These goals align the team on delivering not just a beautiful site, but one that performs and converts effectively. Next, we identify who our users are and their key use cases, to ensure the site’s content and features meet their needs.
+
+## Competitive Differentiators & Value Propositions
+
+North Glass distinguishes itself from competitors through several key differentiators that should be prominently featured throughout the website:
+
+**Professional Interior Architects**: Unlike typical glass contractors, North Glass employs professional interior architects who provide innovative design solutions for architectural interior design projects. This expertise should be prominently featured as a unique selling proposition.
+
+**AutoCAD Architectural Design Process**: The company uses AutoCAD architectural programs to create detailed designs for all projects, ensuring precision and professional presentation. This technical capability sets them apart from competitors who may rely on basic measurements and sketches.
+
+**Specialization in Complete Shower Enclosure Systems**: North Glass specializes in complete shower enclosure systems with tempered glass, positioning them as shower specialists rather than general glass contractors.
+
+**Glass and Aluminum Expertise**: The dual specialization in both glass and aluminum applications expands their service capability beyond glass-only competitors.
+
+**Statewide Coverage**: Serving all of North Carolina from their Triangle base provides broader market reach than typical local competitors.
+
+**Free Professional Estimates**: All projects include free estimates with detailed AutoCAD designs, adding value to the consultation process.
+
+**Community-Focused Values**: The company's commitment to supporting customers, employees, families, and the community differentiates them on values and local engagement.
+
+These differentiators should be woven throughout the site content, from the homepage value proposition to individual service pages and About page messaging.
 
 ## Personas & User Journeys
 
@@ -125,7 +165,7 @@ For clarity, here is a routes table summarizing each major page and its purpose:
 
 Navigation Structure: The top navigation bar will surface key sections as follows: - Residential (with dropdown menu listing the residential service pages: Frameless Showers, Windows, Mirrors, etc.) - Commercial (dropdown listing the commercial service pages: Office Glass, Railings, Storefronts) - All Services (links to the /services index page – for users who want a single list or to ensure none are missed) - About - Blog - Contact - Request a Quote (this item will be styled as a primary CTA button in the nav, to stand out)
 On mobile, the nav will collapse into a hamburger menu that slides out a panel with the above items (including accordions or indents for the Residential/Commercial sub-links). Additionally, a top-bar on mobile may show the phone number or a “Call” icon for quick access.
-The footer will contain quick links (duplicate some of the main nav like Services, About, Contact, Blog), the company Name/Address/Phone (NAP) for local SEO, email link, and social media icons (Instagram, Facebook). It will also mention the service area (e.g., “Serving the greater Raleigh, Durham, Cary NC area”) and link to the privacy/terms. This helps both users and SEO (Google looks for NAP consistency and service area info on the site).
+The footer will contain quick links (duplicate some of the main nav like Services, About, Contact, Blog), the company Name/Address/Phone (NAP) for local SEO, email link, and social media icons (Instagram, Facebook). It will also mention the service area (e.g., “Serving all of North Carolina from our Triangle base”) and link to the privacy/terms. This helps both users and SEO (Google looks for NAP consistency and service area info on the site).
 Breadcrumb navigation will be used on sub-pages (like service detail pages and blog posts) for UX and SEO. For example, on the Frameless Shower Doors page, a breadcrumb might display: Home > Services > Frameless Glass Shower Doors. This will also be marked up with structured data (BreadcrumbList) for rich snippets.
 Overall, the IA is designed to be shallow (mostly 2 levels deep) and easily crawlable. Every service page links back to the Services index (and/or their category page) and also cross-links to related services (e.g., Shower Doors page might have “Related: Mirrors for your bathroom” link). This internal linking and clear hierarchy will help users discover additional services and signal to search engines how the content is grouped.
 
@@ -348,7 +388,7 @@ Each post should be at least ~800+ words (for SEO depth), include images if poss
 ### Contact Page (/contact)
 
 Purpose: Provide all the ways a customer can reach North Glass and allow them to send a quick inquiry. Some people prefer direct communication vs filling the detailed quote form, so this page should be welcoming and straightforward.
-Content & Layout: - Header: Title “Contact Us”. Possibly subtext: “We’re here to answer your questions or schedule a free estimate.” - Contact Information: List the key contact details prominently: - Phone: “Phone: 919-XXX-XXXX”. This should be a clickable link on mobile that triggers a call. Possibly label “Call or Text” if texting is an option. - Email: “Email: <info@northglassnc.com>”. Clickable mailto link. - Address: If we have an office or showroom location, list it: “1234 Glass St, Raleigh, NC 27601”. Possibly embed a Google Map below or an image of a map. If no public location, we might omit this or just say “Based in Raleigh, NC – serving the Triangle” without a full address. - Hours: If we have official business hours (e.g., Mon-Fri 8am-5pm), list them so people know when they can expect a response or visit. - Service Area: Reiterate service area coverage if not a specific address. Could say “We come to you anywhere in Raleigh, Durham, Cary, and nearby areas.” - Contact Form: A simple form for general inquiries (distinct from the detailed quote form). Fields: - Name, Email, Phone, Message textbox. Possibly a dropdown for “How can we help?” if we want (or subject, like “New Project Inquiry, Question, etc.”). - If needed: a checkbox for mailing list or just a consent “You agree to our privacy policy”. - This form, when submitted, can go to the same backend as quote form, but flagged as general contact. A thank-you message or redirect to a thank-you page. - Map (optional): If a physical location, an embedded Google Map showing the location for credibility. If not, perhaps a static image indicating the region or simply skip map. - Social Media: If North Glass has social profiles (Facebook, Instagram), include icons/links saying “Connect with us on [FB] and [IG]” – often in footer anyway, but contact page is another logical spot. - CTA: Encourage: “Prefer email or phone? Feel free to call during business hours or drop an email anytime. We typically respond within one business day.” - Possibly an FAQ snippet: sometimes contact pages include quick answers like “Q: What areas do you serve? A: [list]” but we might skip if covered elsewhere.
+Content & Layout: - Header: Title “Contact Us”. Possibly subtext: “We’re here to answer your questions or schedule a free estimate.” - Contact Information: List the key contact details prominently: - Phone: “Phone: "+1 (984) 268-8490"”. This should be a clickable link on mobile that triggers a call. Possibly label “Call or Text” if texting is an option. - Email: “Email: <info@northglassnc.com>”. Clickable mailto link. - Address: If we have an office or showroom location, list it: “1234 Glass St, Raleigh, NC 27601”. Possibly embed a Google Map below or an image of a map. If no public location, we might omit this or just say “Based in Raleigh, NC – serving the Triangle” without a full address. - Hours: If we have official business hours (e.g., Mon-Fri 8am-5pm), list them so people know when they can expect a response or visit. - Service Area: Reiterate service area coverage if not a specific address. Could say “We come to you anywhere in Raleigh, Durham, Cary, and nearby areas.” - Contact Form: A simple form for general inquiries (distinct from the detailed quote form). Fields: - Name, Email, Phone, Message textbox. Possibly a dropdown for “How can we help?” if we want (or subject, like “New Project Inquiry, Question, etc.”). - If needed: a checkbox for mailing list or just a consent “You agree to our privacy policy”. - This form, when submitted, can go to the same backend as quote form, but flagged as general contact. A thank-you message or redirect to a thank-you page. - Map (optional): If a physical location, an embedded Google Map showing the location for credibility. If not, perhaps a static image indicating the region or simply skip map. - Social Media: If North Glass has social profiles (Facebook, Instagram), include icons/links saying “Connect with us on [FB] and [IG]” – often in footer anyway, but contact page is another logical spot. - CTA: Encourage: “Prefer email or phone? Feel free to call during business hours or drop an email anytime. We typically respond within one business day.” - Possibly an FAQ snippet: sometimes contact pages include quick answers like “Q: What areas do you serve? A: [list]” but we might skip if covered elsewhere.
 SEO: - Title: “Contact North Glass | Get a Free Glass Service Estimate”. - Meta desc: “Contact North Glass for a free estimate or with any questions. Call 919-XXX-XXXX, email <info@northglassnc.com>, or send us a message. We serve Raleigh, Durham, Cary and the NC Triangle area.” - Include NAP information in schema (LocalBusiness markup) on this page explicitly (address, geo coords if available, etc.), as Google often looks at contact pages for confirming local info. - Also, this page can rank for “North Glass contact” but more importantly provides the info for Google’s knowledge panel (especially if we link it with GMB).
 
 ### Request a Quote Page (/request-quote)

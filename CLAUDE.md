@@ -13,19 +13,24 @@ North Glass LLC is a Next.js 15 web application for a glass installation busines
 ## Development Workflow & Rules
 
 ### 1. PRD Supremacy (.cursor/rules/00-prd-guardian.mdc)
+
 - Never invent requirements or make assumptions
 - If requirement is missing, propose explicit language to add to PRD
 - Every feature must link to exact PRD clause in PR description
 
 ### 2. Plan Before Code (.cursor/rules/10-sequential-planning.mdc)
+
 Before writing any feature/bugfix:
+
 1. Create a plan citing PRD sections
 2. Define constraints (performance, SEO, accessibility, security)
 3. Generate task list in `repo/tasks/<feature-kebab>/{plan.md, checklist.md}`
 4. Only then start coding
 
 ### 3. Quality Gates (.cursor/rules/20-quality-gates.mdc)
+
 Every feature must pass:
+
 1. Lint and formatting (entire repo)
 2. TypeScript check (zero errors)
 3. Production build success
@@ -33,6 +38,7 @@ Every feature must pass:
 5. Security/privacy validation
 
 ### 4. MCP Tool Usage (.cursor/rules/30-mcp-usage.mdc)
+
 - Use Context7 MCP for up-to-date library docs
 - Use Sequential Thinking MCP for planning
 - Use Playwright MCP for E2E validation
@@ -56,18 +62,21 @@ npm run typecheck    # TypeScript type checking (tsc --noEmit)
 ## Business Requirements (from PRD)
 
 ### Primary Goals & KPIs
+
 - **Lead Generation**: Convert 5-8% mobile, 3-5% desktop visitors
 - **Local SEO**: Top 10 rankings for key terms within 60-90 days
 - **Performance**: LCP ≤2.5s, CLS ≤0.1, INP ≤200ms
 - **Lighthouse**: Performance ≥90, Accessibility ≥95, SEO ≥90
 
 ### Target Personas
+
 1. **Homeowner** ("The Renovator"): 30-60 years, seeking bathroom/home upgrades
 2. **Interior Designer/Remodeler** ("The Specifier"): Need reliable glass subcontractor
 3. **Property Manager/Business Owner** ("The Problem-Solver"): Need commercial glass services
 4. **General Contractor**: Need glass subcontracting for projects
 
 ### Critical User Journeys (Must E2E Test)
+
 1. Home → Service → Request Quote flow
 2. Contact form submission
 3. Phone call conversion (mobile)
@@ -88,6 +97,7 @@ npm run typecheck    # TypeScript type checking (tsc --noEmit)
 ### Email & Messaging Policy (PRD Final Decision)
 
 **CRITICAL: Only Google Workspace native flows allowed**
+
 - Use `mailto:` links for Gmail compose
 - Google Calendar "Create Event" links for scheduling
 - Server-side: Nodemailer + Google SMTP (OAuth2 or App Password)
@@ -114,6 +124,7 @@ npm run typecheck    # TypeScript type checking (tsc --noEmit)
 ### Form Handling Requirements
 
 Contact and quote forms must:
+
 1. Sanitize ALL inputs to prevent injection attacks
 2. Include honeypot field (`company`) for spam prevention
 3. Implement time-to-complete checks
@@ -125,6 +136,7 @@ Contact and quote forms must:
 ### Environment Variables
 
 Required for email functionality:
+
 - `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` - Google Workspace SMTP only
 - `LEADS_TO`, `LEADS_FROM` - Email addresses for lead notifications
 - Configure SPF, DKIM, DMARC on domain for deliverability
@@ -177,6 +189,7 @@ Required for email functionality:
 ### Component Requirements
 
 All components must include:
+
 - **Accessibility**: WCAG 2.1 AA compliance, keyboard navigation, ARIA labels
 - **Responsive**: Mobile-first design with Tailwind breakpoints (sm, md, lg)
 - **Motion**: Respect `prefers-reduced-motion`, use Framer Motion for UI transitions
@@ -186,26 +199,26 @@ All components must include:
 
 ### Primary Routes
 
-| Route | Purpose | Primary CTA |
-|-------|---------|-------------|
-| `/` | Homepage with value prop & services overview | Request Quote |
-| `/services` | All services index (Residential & Commercial) | Service-specific CTAs |
-| `/services/frameless-glass-shower-doors` | Service detail page | Request Quote |
-| `/services/window-replacement` | Service detail page | Request Quote |
-| `/services/mirrors` | Service detail page | Request Quote |
-| `/services/sliding-glass-patio-doors` | Service detail page | Request Quote |
-| `/services/window-and-door-screens` | Service detail page | Request Quote |
-| `/services/glass-table-tops-and-shelves` | Service detail page | Request Quote |
-| `/services/glass-office-doors` | Commercial service | Contact/Quote |
-| `/services/staircase-glass-railings` | Commercial service | Contact/Quote |
-| `/services/commercial-storefronts` | Commercial service | Contact/Quote |
-| `/about` | Company info, testimonials, team | Contact Us |
-| `/blog` | Blog index | Read Articles |
-| `/blog/[slug]` | Individual blog posts | Related CTAs |
-| `/contact` | Contact info & form | Submit Form |
-| `/request-quote` | Quote request form | Submit Quote |
-| `/privacy` | Privacy policy | N/A |
-| `/terms` | Terms of service | N/A |
+| Route                                    | Purpose                                       | Primary CTA           |
+| ---------------------------------------- | --------------------------------------------- | --------------------- |
+| `/`                                      | Homepage with value prop & services overview  | Request Quote         |
+| `/services`                              | All services index (Residential & Commercial) | Service-specific CTAs |
+| `/services/frameless-glass-shower-doors` | Service detail page                           | Request Quote         |
+| `/services/window-replacement`           | Service detail page                           | Request Quote         |
+| `/services/mirrors`                      | Service detail page                           | Request Quote         |
+| `/services/sliding-glass-patio-doors`    | Service detail page                           | Request Quote         |
+| `/services/window-and-door-screens`      | Service detail page                           | Request Quote         |
+| `/services/glass-table-tops-and-shelves` | Service detail page                           | Request Quote         |
+| `/services/glass-office-doors`           | Commercial service                            | Contact/Quote         |
+| `/services/staircase-glass-railings`     | Commercial service                            | Contact/Quote         |
+| `/services/commercial-storefronts`       | Commercial service                            | Contact/Quote         |
+| `/about`                                 | Company info, testimonials, team              | Contact Us            |
+| `/blog`                                  | Blog index                                    | Read Articles         |
+| `/blog/[slug]`                           | Individual blog posts                         | Related CTAs          |
+| `/contact`                               | Contact info & form                           | Submit Form           |
+| `/request-quote`                         | Quote request form                            | Submit Quote          |
+| `/privacy`                               | Privacy policy                                | N/A                   |
+| `/terms`                                 | Terms of service                              | N/A                   |
 
 ### SEO Implementation Requirements
 
@@ -250,6 +263,7 @@ All components must include:
 ## Pre-Commit Checklist
 
 Before ANY commit or PR:
+
 1. ✅ Cite PRD section being addressed
 2. ✅ Run `npm run lint` and fix all issues
 3. ✅ Run `npm run typecheck` - must pass with zero errors
@@ -261,4 +275,5 @@ Before ANY commit or PR:
 9. ✅ Run accessibility check (WAVE or axe)
 10. ✅ Test on mobile viewport
 11. ✅ Verify SEO meta tags are present
+
 - to memorize
