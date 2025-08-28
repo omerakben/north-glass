@@ -1,5 +1,5 @@
-import FAQ from "@/app/(site)/_components/FAQ";
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
+import FAQ from "@/app/(site)/_components/FAQ";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -16,11 +16,11 @@ function ServiceJsonLd() {
     "@type": "Service",
     name: "Commercial Glass Office Doors & Partitions",
     category: "Commercial Glass Service",
-    areaServed: { "@type": "AreaServed", name: "Raleigh–Durham–Cary, NC" },
+    areaServed: { "@type": "AreaServed", name: "North Carolina" },
     provider: {
       "@type": "LocalBusiness",
       name: "North Glass LLC",
-      telephone: "919-000-0000",
+      telephone: "+1 (984) 268-8490",
     },
     url: "https://northglassnc.com/services/glass-office-doors",
     description:
@@ -56,14 +56,16 @@ export default function GlassOfficeDoorsPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4 text-center">Glass Office Doors & Partitions</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">
+        Glass Office Doors & Partitions
+      </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Transform your workspace with modern glass office solutions. We install
         frameless glass doors, conference room partitions, and interior glass
         walls that maintain privacy while creating an open, collaborative
         environment.
       </p>
-      
+
       {/* Image Carousel */}
       <div className="flex justify-center my-8">
         <AutoCarousel
@@ -81,12 +83,9 @@ export default function GlassOfficeDoorsPage() {
           className="max-w-4xl w-full"
         />
       </div>
-      
+
       <div className="text-center mb-8">
-        <a
-          href="/request-quote"
-          className="btn-primary inline-block"
-        >
+        <a href="/request-quote" className="btn-primary inline-block">
           Get a Free Estimate
         </a>
       </div>

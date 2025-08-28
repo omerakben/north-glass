@@ -1,5 +1,5 @@
-import FAQ from "@/app/(site)/_components/FAQ";
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
+import FAQ from "@/app/(site)/_components/FAQ";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -16,11 +16,11 @@ function ServiceJsonLd() {
     "@type": "Service",
     name: "Custom Glass Table Tops & Shelves",
     category: "Residential Glass Service",
-    areaServed: { "@type": "AreaServed", name: "Raleigh–Durham–Cary, NC" },
+    areaServed: { "@type": "AreaServed", name: "North Carolina" },
     provider: {
       "@type": "LocalBusiness",
       name: "North Glass LLC",
-      telephone: "919-000-0000",
+      telephone: "+1 (984) 268-8490",
     },
     url: "https://northglassnc.com/services/glass-table-tops-and-shelves",
     description:
@@ -56,13 +56,15 @@ export default function TableTopsShelvesPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4 text-center">Glass Table Tops & Shelves</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">
+        Glass Table Tops & Shelves
+      </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Protect your furniture or create stunning displays with custom glass.
-        We fabricate table tops, protective covers, and floating shelves in any
+        Protect your furniture or create stunning displays with custom glass. We
+        fabricate table tops, protective covers, and floating shelves in any
         size or shape with beautifully polished edges.
       </p>
-      
+
       {/* Image Carousel */}
       <div className="flex justify-center my-8">
         <AutoCarousel
@@ -80,12 +82,9 @@ export default function TableTopsShelvesPage() {
           className="max-w-4xl w-full"
         />
       </div>
-      
+
       <div className="text-center mb-8">
-        <a
-          href="/request-quote"
-          className="btn-primary inline-block"
-        >
+        <a href="/request-quote" className="btn-primary inline-block">
           Get a Free Estimate
         </a>
       </div>
@@ -94,7 +93,7 @@ export default function TableTopsShelvesPage() {
           {
             question: "What thickness glass should I choose for a table top?",
             answer:
-              "For most dining and coffee tables, we recommend 3/8\" to 1/2\" tempered glass. Smaller accent tables can use 1/4\" glass. We'll help you choose based on your table size and use.",
+              'For most dining and coffee tables, we recommend 3/8" to 1/2" tempered glass. Smaller accent tables can use 1/4" glass. We\'ll help you choose based on your table size and use.',
           },
           {
             question: "Can you cut glass to match my table shape?",

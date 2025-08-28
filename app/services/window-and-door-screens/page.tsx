@@ -1,5 +1,5 @@
-import FAQ from "@/app/(site)/_components/FAQ";
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
+import FAQ from "@/app/(site)/_components/FAQ";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -16,11 +16,11 @@ function ServiceJsonLd() {
     "@type": "Service",
     name: "Window & Door Screen Repair",
     category: "Residential Glass Service",
-    areaServed: { "@type": "AreaServed", name: "Raleigh–Durham–Cary, NC" },
+    areaServed: { "@type": "AreaServed", name: "North Carolina" },
     provider: {
       "@type": "LocalBusiness",
       name: "North Glass LLC",
-      telephone: "919-000-0000",
+      telephone: "+1 (984) 268-8490",
     },
     url: "https://northglassnc.com/services/window-and-door-screens",
     description:
@@ -56,13 +56,15 @@ export default function ScreensPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4 text-center">Window & Door Screens</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">
+        Window & Door Screens
+      </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Keep bugs out and fresh air in with properly fitted screens. We repair
         torn screens, build custom sizes, and offer upgrades like pet-resistant
         mesh and solar screening to reduce heat and UV rays.
       </p>
-      
+
       {/* Image Carousel */}
       <div className="flex justify-center my-8">
         <AutoCarousel
@@ -80,12 +82,9 @@ export default function ScreensPage() {
           className="max-w-4xl w-full"
         />
       </div>
-      
+
       <div className="text-center mb-8">
-        <a
-          href="/request-quote"
-          className="btn-primary inline-block"
-        >
+        <a href="/request-quote" className="btn-primary inline-block">
           Get a Free Estimate
         </a>
       </div>

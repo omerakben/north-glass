@@ -10,9 +10,12 @@ These augment (not replace) the universal guidelines below. Follow these FIRST w
 
 ### 1. Domain & Positioning Essentials
 
-- Always describe North Glass as a "glass and aluminum company" serving ALL of North Carolina (statewide), while preserving existing Triangle city mentions for local SEO (Raleigh, Durham, Cary, Chapel Hill, etc.).
-- We differentiate via: Professional Interior Architects, AutoCAD architectural design workflow, Complete System delivery (not just installation), Community-focused values, Dual expertise (glass + aluminum).
-- When updating copy, weave in “aluminum” naturally; avoid keyword stuffing (≤ 1 aluminum mention per short paragraph unless clearly value-adding).
+- PRIMARY FOCUS: Premium residential glass solutions (frameless shower doors, window replacement, custom mirrors) for homeowners across ALL of North Carolina (statewide) while still mentioning core Triangle cities (Raleigh, Durham, Cary, Chapel Hill, etc.) for local SEO.
+- SECONDARY (supporting) capabilities: Commercial glass projects, aluminum system solutions, architectural design (Interior Architects + AutoCAD) – highlight only when contextually relevant or explicitly requested.
+- Value differentiators (use sparingly, rotate for variety): Interior Architect involvement, AutoCAD precision design workflow, Complete System delivery (measure → design → fabrication → install), Community-focused values, Dual material expertise (glass + aluminum).
+- Do NOT automatically prepend “glass and aluminum company” to every hero. Instead, lead with the specific residential service value unless the task scope is explicitly broader.
+- Aluminum mentions: Integrate only where it adds decision-making clarity or supports cross‑service breadth. Keep to ≤ 1 mention in short sections unless page topic is aluminum-specific.
+- Hero & first paragraph rule: Prioritize homeowner clarity (what problem we solve) before secondary differentiators.
 
 ### 2. Tech Stack Signals (Do Not Assume Otherwise)
 
@@ -24,11 +27,11 @@ These augment (not replace) the universal guidelines below. Follow these FIRST w
 
 ### 3. Content & SEO Update Rules
 
-- Meta Descriptions & Titles: If editing or creating pages, ensure inclusion (where sensible) of service + geographic + aluminum reference for Priority 1 tasks.
-- Structured Data: Maintain / extend JSON-LD in `layout.tsx` (LocalBusiness) to include statewide coverage plus social profiles. Service pages may include `Service` schema; ensure phone + URL sync with root schema.
-- Sitemap (`app/sitemap.ts`): Keep prioritized list; add new high-impact pages (e.g., Architectural Design Services) when created. Do NOT spam aluminum variations as thin pages—prefer consolidated enriched content unless unique value exists.
-- Robots (`app/robots.txt/route.ts`): Keep permissive; only modify when adding disallow rules for staging/test paths.
-- Image Alts: Enrich with descriptive, human-readable phrases (“custom aluminum and glass storefront in Raleigh”)—no comma keyword dumps.
+- Meta Titles & Descriptions: Start with the primary residential service (or page topic) + geographic coverage. Add aluminum ONLY if (a) page scope includes aluminum offerings or (b) strategic statewide positioning copy (Home/About). Avoid forcing aluminum into narrow residential long-tail pages (e.g., a shower door page can omit it if it dilutes clarity).
+- Structured Data: Maintain / extend JSON-LD in `layout.tsx` (LocalBusiness) to reflect statewide coverage AND keep existing local city relevance. Keep phone + social `sameAs` consistent. Add `Service` schema only when the page has sufficient unique service content (avoid duplicate generic blocks).
+- Sitemap (`app/sitemap.ts`): Add new substantial pages (e.g., Architectural Design Services). Do NOT add thin aluminum permutations; enrich existing slugs first.
+- Robots (`app/robots.txt/route.ts`): Leave permissive; only adjust for staging/test exclusions.
+- Image Alts: Lead with the concrete subject (e.g., “frameless glass shower in Cary master bath”) then optionally add an aluminum or design qualifier if truly present; never stack raw keywords.
 
 ### 4. Form & Lead Handling
 
@@ -44,15 +47,16 @@ These augment (not replace) the universal guidelines below. Follow these FIRST w
 - Respect Core Web Vitals targets: LCP ≤ 2.5s, CLS ≤ 0.1, INP ≤ 200ms. Before adding new large dependencies, justify footprint.
 - Accessibility: Ensure focus management for modals/menus (`Header` mobile drawer), aria labels for navigation groups, alt text for all images added.
 
-### 6. Aluminum Integration Checklist (Priority 1–2 Alignment)
+### 6. Aluminum & Design Secondary Integration (Context-Driven)
 
-When touching: Home, About, Services index, Service pages, Metadata.
+Apply ONLY when page scope, user request, or strategic positioning benefits from broader capability emphasis (Home, About, Services index, new design-focused page):
 
-1. Insert aluminum positioning phrase once near top.
-2. Confirm statewide wording present (“serving all of North Carolina”).
-3. Add Interior Architect + AutoCAD mention (About + relevant CTAs).
-4. Schema areaServed updated if not already.
-5. Phone number matches authoritative value (+1 (984) 268-8490).
+1. If adding aluminum, keep residential hero/service clarity first (glass benefit first sentence, aluminum breadth second sentence if space permits).
+2. Statewide wording (“serving all of North Carolina”) appears once in prominent copy (prefer About/Home) – do not echo redundantly on every service detail page.
+3. Interior Architect + AutoCAD mention: About page always; other pages only if design workflow materially enhances user trust for that context (e.g., complex custom systems, design services page, large remodel case study).
+4. Schema: Extend `areaServed` to statewide without removing existing local city signals; never duplicate the entire LocalBusiness block—modify the single source in `layout.tsx`.
+5. Phone number matches authoritative value (+1 (984) 268-8490) everywhere; replace legacy placeholder.
+6. If aluminum not substantively addressed on a page, omit; do not force token mentions just to “check the box.”
 
 ### 7. Phone & Social Consistency
 

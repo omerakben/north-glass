@@ -1,12 +1,12 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Gallery from "./(site)/_components/Gallery";
 import ScrollAnimations from "./(site)/_components/ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "North Glass LLC – Glass & Aluminum Company | North Carolina",
+  title: "North Glass LLC – Residential Glass (Showers, Windows, Mirrors) NC",
   description:
-    "North Carolina's premier glass and aluminum company. Professional residential & commercial glass services, frameless shower doors, window replacement, custom mirrors & aluminum solutions statewide. Call for a free quote!",
+    "Frameless shower doors, window replacement & custom mirrors across North Carolina. Residential glass specialists with optional design & aluminum capabilities. Free quote.",
 };
 
 const residentialServices = [
@@ -91,7 +91,7 @@ const testimonials = [
 
 const serviceAreas = [
   "Raleigh",
-  "Durham", 
+  "Durham",
   "Cary",
   "Chapel Hill",
   "Charlotte",
@@ -116,15 +116,16 @@ export default function Home() {
       <section className="hero-section container mx-auto px-6 py-20">
         <div className="hero-content text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            North Carolina&apos;s Premier Glass and Aluminum Company
+            Custom Residential Glass Across North Carolina
           </h1>
           <p className="text-[18px] max-w-2xl text-balance mb-8">
-            Professional glass and aluminum solutions serving all of North Carolina. 
-            Frameless showers, windows, mirrors, railings, and storefronts with expert design.
+            Frameless showers, efficient window replacement & custom mirrors for
+            homeowners statewide. Commercial & aluminum capabilities available
+            when your project needs them.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/request-quote" className="btn-primary">
-              Request Free Quote + AutoCAD Design
+              Request a Free Quote
             </Link>
             <Link href="/services" className="btn-secondary">
               View Services
@@ -139,7 +140,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-12">
             Residential & Commercial Services
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12">
             {/* Residential Services */}
             <div>
@@ -154,7 +155,9 @@ export default function Home() {
                     className="block p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
                   >
                     <h4 className="font-semibold mb-1">{service.title}</h4>
-                    <p className="text-sm text-gray-600">{service.description}</p>
+                    <p className="text-sm text-gray-600">
+                      {service.description}
+                    </p>
                   </Link>
                 ))}
               </div>
@@ -179,7 +182,9 @@ export default function Home() {
                     className="block p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
                   >
                     <h4 className="font-semibold mb-1">{service.title}</h4>
-                    <p className="text-sm text-gray-600">{service.description}</p>
+                    <p className="text-sm text-gray-600">
+                      {service.description}
+                    </p>
                   </Link>
                 ))}
               </div>
@@ -207,7 +212,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Licensed & Insured</h3>
               <p className="text-gray-600">
-                Fully licensed professionals with comprehensive insurance for your peace of mind
+                Fully licensed professionals with comprehensive insurance for
+                your peace of mind
               </p>
             </div>
             <div className="text-center">
@@ -216,7 +222,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Quality Guaranteed</h3>
               <p className="text-gray-600">
-                Premium materials and expert craftsmanship backed by our satisfaction guarantee
+                Premium materials and expert craftsmanship backed by our
+                satisfaction guarantee
               </p>
             </div>
             <div className="text-center">
@@ -225,7 +232,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Fast & Reliable</h3>
               <p className="text-gray-600">
-                Quick turnaround times with professional service you can count on
+                Quick turnaround times with professional service you can count
+                on
               </p>
             </div>
           </div>
@@ -237,7 +245,8 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-4">Our Process</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            From consultation to installation, we make glass services simple and stress-free
+            From consultation to installation, we make glass services simple and
+            stress-free
           </p>
           <div className="grid md:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
@@ -264,11 +273,18 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-[var(--brand-grey)] rounded-lg p-6">
+              <div
+                key={index}
+                className="bg-[var(--brand-grey)] rounded-lg p-6"
+              >
                 <div className="mb-4">
-                  <span className="text-[var(--brand-turquoise)] text-2xl">★★★★★</span>
+                  <span className="text-[var(--brand-turquoise)] text-2xl">
+                    ★★★★★
+                  </span>
                 </div>
-                <p className="text-gray-700 mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
+                <p className="text-gray-700 mb-4 italic">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </p>
                 <p className="font-semibold">
                   – {testimonial.author}, {testimonial.location}
                 </p>

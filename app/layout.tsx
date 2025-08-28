@@ -9,32 +9,31 @@ import Header from "./(site)/_components/Header";
 import "./globals.css";
 import { ScrollProvider } from "./providers";
 
-const inter = Inter({ 
-  variable: "--font-inter", 
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"]
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://northglassnc.com"),
   title: {
     default:
-      "North Glass LLC – Glass & Aluminum Company | North Carolina",
+      "North Glass LLC – Residential Glass Experts Across North Carolina",
     template: "%s | North Glass LLC",
   },
   description:
-    "North Carolina's premier glass and aluminum company. Professional residential & commercial solutions: frameless shower doors, window replacement, mirrors, storefronts. Free estimates statewide.",
+    "Premium residential glass solutions across North Carolina: frameless shower doors, window replacement, custom mirrors. Commercial & aluminum capabilities when needed. Free estimates.",
   applicationName: "North Glass LLC",
   icons: { icon: "/favicon.ico" },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "https://northglassnc.com/",
-    title:
-      "North Glass LLC – Glass & Aluminum Company | North Carolina",
+    title: "North Glass LLC – Residential Glass (Showers, Windows, Mirrors) NC",
     description:
-      "North Carolina's premier glass and aluminum company. Professional residential & commercial solutions statewide. Request a free quote.",
+      "Frameless showers, window replacement & custom mirrors statewide. Residential-first specialists with design support. Free quote.",
     images: [
       {
         url: "/og-image.jpg",
@@ -46,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "North Glass LLC – Glass & Aluminum Company | North Carolina",
+    title: "North Glass LLC – Residential Glass Specialists NC",
     description:
-      "Professional glass and aluminum solutions across North Carolina. Get a free estimate from North Glass.",
+      "Residential glass: showers, windows, mirrors across North Carolina. Design & aluminum support when projects need it.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -67,7 +66,7 @@ export default function RootLayout({
     "@type": "LocalBusiness",
     name: "North Glass LLC",
     url: "https://northglassnc.com/",
-    telephone: "+1-984-268-8490",
+    telephone: "+1 (984) 268-8490",
     email: "mailto:info@northglassnc.com",
     address: {
       "@type": "PostalAddress",
@@ -75,12 +74,13 @@ export default function RootLayout({
       addressRegion: "NC",
       addressCountry: "US",
     },
-    areaServed: "North Carolina",
+    areaServed: ["North Carolina", "Raleigh", "Durham", "Cary", "Chapel Hill"],
     sameAs: [
       "https://www.facebook.com/profile.php?id=61580048543297",
-      "https://www.instagram.com/northglassraleigh"
+      "https://www.instagram.com/northglassraleigh",
     ],
-    description: "North Carolina's premier glass and aluminum company providing professional residential and commercial glass solutions statewide.",
+    description:
+      "Residential glass specialists (frameless showers, windows, mirrors) serving all of North Carolina with supporting commercial & aluminum capabilities.",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
