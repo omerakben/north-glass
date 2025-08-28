@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <div className="font-semibold">North Glass LLC</div>
           <div className="text-sm mt-2">Serving All of North Carolina</div>
-          <div className="text-sm flex items-center gap-2">
+          <div className="text-sm flex items-center gap-2 mt-2">
             <Phone className="h-4 w-4 text-blue-600" />
             Phone:{" "}
             <a
@@ -19,7 +19,7 @@ export default function Footer() {
               (984) 268-8490
             </a>
           </div>
-          <div className="text-sm flex items-center gap-2">
+          <div className="text-sm flex items-center gap-2 mt-2">
             <Mail className="h-4 w-4 text-blue-600" />
             Email:{" "}
             <a className="underline" href="mailto:info@northglassnc.com">

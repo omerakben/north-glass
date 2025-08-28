@@ -97,7 +97,7 @@ export default function Home() {
       <HomeHero />
 
       {/* Services Overview */}
-      <section className="services-section bg-gradient-to-b from-white to-gray-50/50 py-20 fade-in-section">
+      <section className="services-section bg-gradient-to-b from-slate-100 to-slate-200 py-20 fade-in-section">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -113,8 +113,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Residential Services */}
             <div className="relative">
-              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-br from-[var(--brand-teal)]/5 to-[var(--brand-turquoise)]/5 rounded-2xl" />
-              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-8">
+              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-br from-[var(--brand-teal)]/30 to-[var(--brand-turquoise)]/30 rounded-2xl" />
+              <div className="relative bg-white/80 backdrop-blur-lg border border-white/60 rounded-2xl p-8 shadow-xl ring-1 ring-black/5">
                 <h3 className="text-2xl font-semibold mb-6 text-[var(--brand-teal)] flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-lg flex items-center justify-center">
                     <CheckCircle className="w-5 h-5 text-white" />
@@ -126,17 +126,17 @@ export default function Home() {
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="group block p-6 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-xl hover:shadow-lg hover:bg-white/80 transition-all duration-300 hover:scale-[1.02]"
+                      className="group block p-6 bg-white/95 backdrop-blur-sm border border-gray-200/60 rounded-xl hover:shadow-lg hover:bg-white transition-all duration-300 hover:scale-[1.02] shadow-sm"
                     >
                       <div className="flex items-start gap-4">
                         <div className="w-12 h-12 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-lg flex items-center justify-center flex-shrink-0">
                           <CheckCircle className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-semibold text-lg mb-2 group-hover:text-[var(--brand-teal)] transition-colors">
+                          <h4 className="font-semibold text-lg mb-2 text-gray-900 group-hover:text-[var(--brand-teal)] transition-colors">
                             {service.title}
                           </h4>
-                          <p className="text-sm text-gray-600 leading-relaxed">
+                          <p className="text-sm text-gray-800 leading-relaxed">
                             {service.description}
                           </p>
                           <div className="flex items-center gap-2 mt-3 text-[var(--brand-turquoise)] font-medium">
@@ -160,8 +160,8 @@ export default function Home() {
 
             {/* Commercial Services */}
             <div className="relative">
-              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-br from-[var(--brand-teal)]/5 to-[var(--brand-turquoise)]/5 rounded-2xl" />
-              <div className="relative bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-8">
+              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-br from-[var(--brand-teal)]/30 to-[var(--brand-turquoise)]/30 rounded-2xl" />
+              <div className="relative bg-white/80 backdrop-blur-lg border border-white/60 rounded-2xl p-8 shadow-xl ring-1 ring-black/5">
                 <h3 className="text-2xl font-semibold mb-6 text-[var(--brand-teal)] flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-lg flex items-center justify-center">
                     <CheckCircle className="w-5 h-5 text-white" />
@@ -173,17 +173,17 @@ export default function Home() {
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="group block p-6 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-xl hover:shadow-lg hover:bg-white/80 transition-all duration-300 hover:scale-[1.02]"
+                      className="group block p-6 bg-white/95 backdrop-blur-sm border border-gray-200/60 rounded-xl hover:shadow-lg hover:bg-white transition-all duration-300 hover:scale-[1.02] shadow-sm"
                     >
                       <div className="flex items-start gap-4">
                         <div className="w-12 h-12 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-lg flex items-center justify-center flex-shrink-0">
                           <CheckCircle className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-semibold text-lg mb-2 group-hover:text-[var(--brand-teal)] transition-colors">
+                          <h4 className="font-semibold text-lg mb-2 text-gray-900 group-hover:text-[var(--brand-teal)] transition-colors">
                             {service.title}
                           </h4>
-                          <p className="text-sm text-gray-600 leading-relaxed">
+                          <p className="text-sm text-gray-800 leading-relaxed">
                             {service.description}
                           </p>
                           <div className="flex items-center gap-2 mt-3 text-[var(--brand-turquoise)] font-medium">
