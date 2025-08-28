@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Glass Table Tops & Shelves – Raleigh–Durham",
+  title: "Glass Table Tops & Aluminum Shelving | North Glass",
   description:
-    "Custom glass table tops, protective covers, and floating shelves. Cut to size with polished edges and various thickness options.",
+    "Custom glass table tops and aluminum shelving systems across North Carolina. Professional design and precision installation.",
   alternates: { canonical: "/services/glass-table-tops-and-shelves" },
 };
 
@@ -60,9 +60,10 @@ export default function TableTopsShelvesPage() {
         Glass Table Tops & Shelves
       </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Protect your furniture or create stunning displays with custom glass. We
-        fabricate table tops, protective covers, and floating shelves in any
-        size or shape with beautifully polished edges.
+        Complete custom glass furniture systems designed for functionality and
+        style. From concept and AutoCAD design through precision fabrication and
+        installation, we deliver comprehensive glass table and shelving
+        solutions.
       </p>
 
       {/* Image Carousel */}
@@ -85,7 +86,7 @@ export default function TableTopsShelvesPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get a Free Estimate
+          Get Free Quote + AutoCAD Design
         </a>
       </div>
       <FAQ

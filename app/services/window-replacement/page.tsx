@@ -1,12 +1,13 @@
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
+import ProcessStepper from "@/components/ProcessStepper";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Window Replacement & Repair – Raleigh–Durham",
+  title: "Window Replacement & Repair – North Glass | North Carolina",
   description:
-    "Energy-efficient window glass replacement. Fix foggy windows, broken panes, and improve insulation. Free estimates.",
+    "Energy-efficient window glass replacement across North Carolina. Fix foggy windows, broken panes by professional glass and aluminum company. Free estimates.",
   alternates: { canonical: "/services/window-replacement" },
 };
 
@@ -60,9 +61,9 @@ export default function WindowReplacementPage() {
         Window Replacement & Repair
       </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Restore clarity and efficiency to your windows. We replace foggy
-        dual-pane glass, repair broken windows, and upgrade to energy-efficient
-        solutions that reduce your utility costs.
+        Complete window replacement systems delivered by our expert team. From
+        energy efficiency consulting and AutoCAD design through precision
+        installation, we provide comprehensive solutions for your home.
       </p>
 
       {/* Image Carousel */}
@@ -71,11 +72,11 @@ export default function WindowReplacementPage() {
           images={[
             {
               src: "/images/window-replacement/after-window-replacement.png",
-              alt: "New energy-efficient windows",
+              alt: "Energy-efficient window replacement with modern aluminum framing and architectural design precision",
             },
             {
               src: "/images/window-replacement/windows-replacment.png",
-              alt: "Window replacement process",
+              alt: "Professional window replacement process with interior architect consultation and aluminum system integration",
             },
           ]}
           interval={2000}
@@ -85,25 +86,115 @@ export default function WindowReplacementPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get a Free Estimate
+          Get Free Quote + AutoCAD Design
         </a>
       </div>
+
+      <ProcessStepper
+        title="Our Professional Window Replacement Process"
+        steps={[
+          {
+            title: "Initial Energy Assessment & Consultation",
+            description:
+              "We evaluate your current windows, assess energy efficiency needs, and discuss replacement options that meet your goals.",
+            details: [
+              "Comprehensive window condition assessment",
+              "Energy efficiency analysis and recommendations",
+              "Style and performance requirements discussion",
+              "Budget planning and financing options",
+            ],
+          },
+          {
+            title: "Professional AutoCAD Design & Planning",
+            description:
+              "Our team creates detailed technical drawings and specifications to ensure perfect fit and optimal performance.",
+            details: [
+              "Precise window measurements and specifications",
+              "AutoCAD technical drawings and plans",
+              "Window type and configuration selection",
+              "Integration planning with existing architecture",
+            ],
+          },
+          {
+            title: "Window Selection & Energy Optimization",
+            description:
+              "We help you choose the ideal windows for your climate, style preferences, and energy efficiency goals.",
+            details: [
+              "Glass type and coating selection (Low-E, triple-pane options)",
+              "Frame material and style choices",
+              "Energy efficiency rating optimization",
+              "Hardware and operation mechanism selection",
+            ],
+          },
+          {
+            title: "Custom Fabrication & Quality Control",
+            description:
+              "Your windows are manufactured to exact specifications with premium materials and rigorous quality testing.",
+            details: [
+              "Custom manufacturing to AutoCAD specifications",
+              "Multi-point quality inspections during production",
+              "Energy performance testing and certification",
+              "Pre-installation fit and finish verification",
+            ],
+          },
+          {
+            title: "Professional Installation & Weatherproofing",
+            description:
+              "Our certified installers ensure proper fit, weatherproofing, and optimal performance for years to come.",
+            details: [
+              "Expert removal of existing windows",
+              "Precision installation with proper shimming and leveling",
+              "Complete weatherproofing and insulation",
+              "Operation adjustment and performance testing",
+            ],
+          },
+          {
+            title: "Final Inspection & Performance Verification",
+            description:
+              "We conduct thorough testing and provide you with warranties and maintenance guidance for lasting performance.",
+            details: [
+              "Complete functionality and energy performance testing",
+              "Final quality inspection and adjustments",
+              "Client education on operation and maintenance",
+              "Warranty documentation and care instructions",
+            ],
+          },
+        ]}
+      />
+
       <FAQ
         items={[
           {
+            question:
+              "Do you offer architectural design consultation for window replacement?",
+            answer:
+              "Yes, our professional Interior Architects provide AutoCAD design consultations for window replacement projects across North Carolina, ensuring optimal energy performance, aesthetic integration, and code compliance.",
+          },
+          {
+            question: "What's included in your free window replacement quote?",
+            answer:
+              "Every free quote includes on-site measurement, AutoCAD design specifications, energy performance analysis, and detailed installation timeline. Our Interior Architect approach ensures no hidden surprises.",
+          },
+          {
             question: "Can you fix foggy windows without replacing the frame?",
             answer:
-              "Yes, we can replace just the glass unit (IGU) in most cases, saving you money while restoring clarity and insulation.",
+              "Yes, we can replace just the glass unit (IGU) in most cases, saving you money while restoring clarity and insulation. Our AutoCAD analysis determines the most cost-effective solution.",
+          },
+          {
+            question:
+              "Do you work with aluminum window frames as well as glass?",
+            answer:
+              "Absolutely. We specialize in both aluminum and glass window systems, often combining materials for optimal performance. Our complete system approach covers everything from frame to glass.",
           },
           {
             question: "How much does window glass replacement cost?",
             answer:
-              "Cost varies by size and glass type. Single pane repairs start around $150-300, while dual-pane units range from $300-600. We provide free estimates.",
+              "Cost varies by size and glass type. Single pane repairs start around $150-300, while dual-pane units range from $300-600. We provide free estimates with detailed AutoCAD specifications.",
           },
           {
             question: "Do you offer energy-efficient glass options?",
             answer:
-              "Absolutely. We offer Low-E coatings, argon gas fills, and other energy-saving options that can reduce heating and cooling costs.",
+              "Absolutely. We offer Low-E coatings, argon gas fills, and thermal-break aluminum frames that can significantly reduce heating and cooling costs across North Carolina's varied climate.",
           },
         ]}
       />

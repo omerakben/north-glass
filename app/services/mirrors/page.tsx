@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Custom Mirrors & Mirrored Walls – Raleigh–Durham",
+  title: "Custom Mirrors | North Glass | Interior Design Solutions",
   description:
-    "Custom-cut mirrors for bathrooms, gyms, and decor. Wall-to-wall mirrors, framed options, and professional installation.",
+    "Professional custom mirror design and installation from North Glass. Interior architect-designed solutions across North Carolina.",
   alternates: { canonical: "/services/mirrors" },
 };
 
@@ -60,9 +60,9 @@ export default function MirrorsPage() {
         Custom Mirrors & Mirrored Walls
       </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Transform your space with custom mirrors. From elegant bathroom vanity
-        mirrors to full gym walls, we cut, polish, and install mirrors that
-        enhance light and create the illusion of space.
+        Complete custom mirror solutions designed to transform your space. Our
+        Interior Architects create precision AutoCAD designs for mirrors that
+        enhance both function and aesthetics throughout your home.
       </p>
 
       {/* Image Carousel */}
@@ -71,11 +71,11 @@ export default function MirrorsPage() {
           images={[
             {
               src: "/images/mirrors/custom-bathroom-mirror.png",
-              alt: "Custom bathroom vanity mirror",
+              alt: "Custom bathroom vanity mirror with precision-cut edges and architectural design by interior architects",
             },
             {
               src: "/images/mirrors/before-shower-door.png",
-              alt: "Mirror installation",
+              alt: "Professional mirror installation with aluminum mounting system and architectural integration",
             },
           ]}
           interval={2000}
@@ -85,7 +85,7 @@ export default function MirrorsPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get a Free Estimate
+          Get Free Quote + AutoCAD Design
         </a>
       </div>
       <FAQ

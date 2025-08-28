@@ -1,3 +1,4 @@
+import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -7,7 +8,8 @@ export default function Footer() {
         <div>
           <div className="font-semibold">North Glass LLC</div>
           <div className="text-sm mt-2">Serving All of North Carolina</div>
-          <div className="text-sm">
+          <div className="text-sm flex items-center gap-2">
+            <Phone className="h-4 w-4 text-blue-600" />
             Phone:{" "}
             <a
               className="underline"
@@ -17,27 +19,30 @@ export default function Footer() {
               (984) 268-8490
             </a>
           </div>
-          <div className="text-sm">
+          <div className="text-sm flex items-center gap-2">
+            <Mail className="h-4 w-4 text-blue-600" />
             Email:{" "}
             <a className="underline" href="mailto:info@northglassnc.com">
               info@northglassnc.com
             </a>
           </div>
-          <div className="text-sm mt-2">
+          <div className="text-sm mt-2 flex items-center gap-4">
             <a
               href="https://www.facebook.com/profile.php?id=61580048543297"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline mr-4"
+              className="underline flex items-center gap-1"
             >
+              <Facebook className="h-4 w-4" />
               Facebook
             </a>
             <a
               href="https://www.instagram.com/northglassraleigh"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline"
+              className="underline flex items-center gap-1"
             >
+              <Instagram className="h-4 w-4" />
               Instagram
             </a>
           </div>

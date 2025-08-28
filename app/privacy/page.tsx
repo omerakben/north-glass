@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Our privacy practices and how we handle your data.",
+  title: "Privacy Policy – North Glass LLC",
+  description:
+    "North Glass privacy practices and how we handle your data across our glass and aluminum services in North Carolina.",
   alternates: { canonical: "/privacy" },
   robots: { index: true, follow: true },
 };

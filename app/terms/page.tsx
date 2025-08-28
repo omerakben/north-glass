@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Website terms and conditions for North Glass LLC.",
+  title: "Terms of Service – North Glass LLC",
+  description:
+    "Terms and conditions for our glass and aluminum services across North Carolina. Professional installation and design.",
   alternates: { canonical: "/terms" },
   robots: { index: true, follow: true },
 };

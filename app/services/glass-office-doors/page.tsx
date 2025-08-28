@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Glass Office Doors & Partitions – Raleigh–Durham",
+  title: "Glass Office Doors & Aluminum Partitions | North Glass",
   description:
-    "Modern glass office doors, conference room partitions, and interior glass walls. Create open, bright commercial spaces.",
+    "Professional glass office doors and aluminum partition systems across North Carolina. Modern commercial interior solutions.",
   alternates: { canonical: "/services/glass-office-doors" },
 };
 
@@ -60,10 +60,10 @@ export default function GlassOfficeDoorsPage() {
         Glass Office Doors & Partitions
       </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Transform your workspace with modern glass office solutions. We install
-        frameless glass doors, conference room partitions, and interior glass
-        walls that maintain privacy while creating an open, collaborative
-        environment.
+        Complete glass office systems designed for modern workspaces. Our
+        comprehensive approach includes space planning, AutoCAD design,
+        precision glass fabrication, and professional installation for doors,
+        partitions, and interior walls.
       </p>
 
       {/* Image Carousel */}
@@ -86,15 +86,31 @@ export default function GlassOfficeDoorsPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get a Free Estimate
+          Get Free Quote + AutoCAD Design
         </a>
       </div>
       <FAQ
         items={[
           {
+            question: "Do you offer aluminum office partitions and doors?",
+            answer:
+              "Yes, we design and install both aluminum and glass office systems across North Carolina. Our Interior Architects create integrated aluminum-glass solutions using AutoCAD for modern, functional workplace environments.",
+          },
+          {
+            question:
+              "What's better for offices: aluminum or glass partitions?",
+            answer:
+              "Both have advantages. Aluminum partitions offer superior durability and privacy options, while glass maximizes natural light. We often combine materials in our complete system designs for optimal performance.",
+          },
+          {
             question: "Can glass office doors provide privacy?",
             answer:
               "Yes, we offer frosted, textured, and decorative film options that maintain privacy while allowing natural light. Smart glass that switches from clear to opaque is also available.",
+          },
+          {
+            question: "How does your design process work for office projects?",
+            answer:
+              "Our professional Interior Architects create detailed AutoCAD plans for every office project, ensuring optimal workflow, code compliance, and aesthetic integration with your existing space.",
           },
           {
             question: "Are glass partitions soundproof?",
@@ -102,9 +118,9 @@ export default function GlassOfficeDoorsPage() {
               "Our commercial-grade glass partitions significantly reduce sound transmission. For complete acoustic isolation, we can install double-glazed systems with specialized seals.",
           },
           {
-            question: "Do you handle office buildouts?",
+            question: "Do you handle office buildouts across North Carolina?",
             answer:
-              "We work with contractors and directly with businesses for office renovations, handling everything from single door replacements to complete glass partition systems.",
+              "We work with contractors and directly with businesses for office renovations statewide, handling everything from single door replacements to complete glass and aluminum partition systems.",
           },
         ]}
       />

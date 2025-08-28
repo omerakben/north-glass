@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Commercial Storefront Glass – Raleigh–Durham",
+  title: "Commercial Glass & Aluminum Systems | North Glass",
   description:
-    "Storefront glass installation and repair for businesses. Emergency board-up, glass replacement, and new storefront systems.",
+    "Professional commercial glass and aluminum storefronts across North Carolina. Emergency repairs and complete system design.",
   alternates: { canonical: "/services/commercial-storefronts" },
 };
 
@@ -60,10 +60,10 @@ export default function CommercialStorefrontsPage() {
         Commercial Storefronts
       </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Keep your business looking professional with our storefront glass
-        services. From new installations to emergency repairs, we help retail
-        stores, restaurants, and offices maintain an inviting appearance that
-        attracts customers.
+        Complete commercial glass storefront systems designed for durability and
+        visual impact. From architectural consultation and AutoCAD design
+        through fabrication and installation, we deliver comprehensive business
+        solutions.
       </p>
 
       {/* Image Carousel */}
@@ -72,11 +72,11 @@ export default function CommercialStorefrontsPage() {
           images={[
             {
               src: "/images/commercial-storefronts/commercial-front.png",
-              alt: "Commercial glass storefront",
+              alt: "Modern glass and aluminum commercial storefront with architectural design integration",
             },
             {
               src: "/images/commercial-storefronts/shower-big.png",
-              alt: "Storefront installation",
+              alt: "Professional aluminum storefront installation with custom glass panels",
             },
           ]}
           interval={2000}
@@ -86,25 +86,43 @@ export default function CommercialStorefrontsPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get a Free Estimate
+          Get Free Quote + AutoCAD Design
         </a>
       </div>
       <FAQ
         items={[
           {
-            question: "Do you offer emergency glass repair?",
+            question:
+              "Do you offer aluminum storefront systems in addition to glass?",
             answer:
-              "Yes, we provide emergency board-up services and expedited glass replacement to secure your business and minimize downtime.",
+              "Yes, we specialize in both aluminum and glass storefront systems across North Carolina. Our Interior Architects design integrated aluminum-glass solutions using AutoCAD precision for optimal performance and aesthetics.",
+          },
+          {
+            question:
+              "What's the difference between aluminum and glass storefront systems?",
+            answer:
+              "Aluminum systems provide superior structural strength and thermal performance, while glass systems maximize visibility. We often combine both materials in our complete system designs for the best of both worlds.",
           },
           {
             question: "Can you match existing storefront systems?",
             answer:
-              "We work with all major storefront systems and can source matching materials to maintain your building's consistent appearance.",
+              "We work with all major storefront systems and can source matching materials to maintain your building's consistent appearance. Our AutoCAD design process ensures perfect integration.",
+          },
+          {
+            question:
+              "Do you provide architectural design services for commercial projects?",
+            answer:
+              "Absolutely. Our professional Interior Architects create detailed AutoCAD designs for every commercial project, ensuring code compliance, aesthetic appeal, and optimal functionality from concept to installation.",
           },
           {
             question: "What about energy-efficient options?",
             answer:
-              "We offer insulated glass units, Low-E coatings, and tinted options that reduce energy costs while maintaining visibility and aesthetics.",
+              "We offer insulated glass units, Low-E coatings, thermal-break aluminum frames, and tinted options that reduce energy costs while maintaining visibility and aesthetics.",
+          },
+          {
+            question: "Do you offer emergency glass repair?",
+            answer:
+              "Yes, we provide emergency board-up services and expedited glass replacement across North Carolina to secure your business and minimize downtime.",
           },
         ]}
       />

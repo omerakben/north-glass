@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Staircase Glass Railings – Raleigh–Durham",
+  title: "Glass Railings & Aluminum Systems | North Glass",
   description:
-    "Modern glass railings for stairs and balconies. Frameless glass balustrades that enhance safety without blocking views.",
+    "Professional glass railings with aluminum mounting systems across North Carolina. Modern safety solutions for stairs and balconies.",
   alternates: { canonical: "/services/staircase-glass-railings" },
 };
 
@@ -60,9 +60,10 @@ export default function GlassRailingsPage() {
         Staircase Glass Railings
       </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Elevate your space with sleek glass railings. Perfect for modern homes
-        and commercial buildings, our tempered glass balustrades provide safety
-        without sacrificing views or natural light flow.
+        Complete glass railing systems designed for safety and elegance. Our
+        Interior Architects create custom AutoCAD designs for staircase,
+        balcony, and deck railings that enhance your home&apos;s architectural
+        beauty.
       </p>
 
       {/* Image Carousel */}
@@ -71,11 +72,11 @@ export default function GlassRailingsPage() {
           images={[
             {
               src: "/images/staircase-glass-railings/after-stairs.png",
-              alt: "Modern glass staircase railing",
+              alt: "Modern tempered glass staircase railing with aluminum framework and architectural integration",
             },
             {
               src: "/images/staircase-glass-railings/before-stairs.png",
-              alt: "Glass railing installation",
+              alt: "Traditional staircase before glass railing installation with interior architect design planning",
             },
           ]}
           interval={2000}
@@ -85,7 +86,7 @@ export default function GlassRailingsPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get a Free Estimate
+          Get Free Quote + AutoCAD Design
         </a>
       </div>
       <FAQ

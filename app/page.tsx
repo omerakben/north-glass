@@ -3,11 +3,12 @@ import Link from "next/link";
 import Gallery from "./(site)/_components/Gallery";
 import { HomeHero } from "./(site)/_components/HomeHero";
 import ScrollAnimations from "./(site)/_components/ScrollAnimations";
+import TestimonialCarousel from "./(site)/_components/TestimonialCarousel";
 
 export const metadata: Metadata = {
-  title: "North Glass LLC – Residential Glass (Showers, Windows, Mirrors) NC",
+  title: "North Glass LLC – Glass and Aluminum Company | North Carolina",
   description:
-    "Frameless shower doors, window replacement & custom mirrors across North Carolina. Residential glass specialists with optional design & aluminum capabilities. Free quote.",
+    "Glass and aluminum company serving all of North Carolina. Frameless showers, windows, mirrors with professional interior architect design. Free quote.",
 };
 
 const residentialServices = [
@@ -66,27 +67,6 @@ const processSteps = [
     step: "4",
     title: "Quality Guarantee",
     description: "Backed by our warranty and commitment to excellence",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "North Glass did an amazing job on our shower enclosure – professional, on time, and the result is gorgeous. Highly recommend!",
-    author: "Jane D.",
-    location: "Raleigh",
-  },
-  {
-    quote:
-      "Excellent service replacing our storefront glass after storm damage. Quick response and quality work.",
-    author: "Mike T.",
-    location: "Durham",
-  },
-  {
-    quote:
-      "The team was professional and the custom mirrors they installed look fantastic. Great attention to detail.",
-    author: "Sarah L.",
-    location: "Cary",
   },
 ];
 
@@ -247,31 +227,12 @@ export default function Home() {
       <Gallery />
 
       {/* Testimonials */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[var(--brand-grey)]">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
             What Our Customers Say
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-[var(--brand-grey)] rounded-lg p-6"
-              >
-                <div className="mb-4">
-                  <span className="text-[var(--brand-turquoise)] text-2xl">
-                    ★★★★★
-                  </span>
-                </div>
-                <p className="text-gray-700 mb-4 italic">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <p className="font-semibold">
-                  – {testimonial.author}, {testimonial.location}
-                </p>
-              </div>
-            ))}
-          </div>
+          <TestimonialCarousel className="max-w-5xl mx-auto" />
         </div>
       </section>
 

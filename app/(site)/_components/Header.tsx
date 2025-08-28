@@ -111,6 +111,17 @@ export default function Header() {
                 >
                   Commercial Storefronts
                 </Link>
+                <div className="border-t border-black/10 my-2"></div>
+                <Link
+                  className="block px-3 py-2 rounded hover:bg-black/5 font-medium"
+                  href="/services/architectural-design-services"
+                >
+                  <span className="text-sm font-normal text-black/60">
+                    Professional
+                  </span>
+                  <br />
+                  Architectural Design Services
+                </Link>
               </div>
             )}
           </div>
@@ -119,6 +130,9 @@ export default function Header() {
           </Link>
           <Link href="/about" className="font-medium">
             About
+          </Link>
+          <Link href="/case-studies" className="font-medium">
+            Case Studies
           </Link>
           <Link href="/blog" className="font-medium">
             Blog
@@ -172,8 +186,17 @@ export default function Header() {
               <Link href="/services" onClick={() => setOpen(false)}>
                 All Services
               </Link>
+              <Link
+                href="/services/architectural-design-services"
+                onClick={() => setOpen(false)}
+              >
+                Architectural Design Services
+              </Link>
               <Link href="/about" onClick={() => setOpen(false)}>
                 About
+              </Link>
+              <Link href="/case-studies" onClick={() => setOpen(false)}>
+                Case Studies
               </Link>
               <Link href="/blog" onClick={() => setOpen(false)}>
                 Blog

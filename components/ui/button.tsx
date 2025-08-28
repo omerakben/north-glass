@@ -12,13 +12,14 @@ export interface ButtonProps
 }
 
 const base =
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-turquoise)]";
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50";
 const variantClasses: Record<Variant, string> = {
-  default: "bg-[var(--brand-turquoise)] text-[#00353f] hover:opacity-90",
+  default:
+    "bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-700 hover:to-blue-600 shadow-lg hover:shadow-xl hover:-translate-y-0.5",
   outline:
-    "border border-black/10 bg-white text-[var(--brand-teal)] hover:bg-[var(--brand-grey)]",
-  ghost: "hover:bg-black/5",
-  link: "underline text-[var(--brand-teal)] hover:opacity-80",
+    "border border-blue-200 bg-white text-blue-700 hover:bg-blue-50 hover:border-blue-300",
+  ghost: "hover:bg-blue-50 text-blue-700",
+  link: "underline text-blue-600 hover:text-blue-700",
 };
 const sizeClasses: Record<Size, string> = {
   sm: "h-8 px-3 text-xs",

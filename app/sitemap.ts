@@ -10,6 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (path === "/contact" || path === "/request-quote") return 0.9; // High conversion pages
     if (path === "/services") return 0.9; // Service index
     if (path.startsWith("/services/")) return 0.8; // Individual service pages
+    if (path.startsWith("/glass-aluminum-")) return 0.8; // Location pages for local SEO
+    if (path === "/case-studies") return 0.8; // Case studies index
+    if (path.startsWith("/case-studies/")) return 0.7; // Individual case studies
     if (path === "/about") return 0.7; // About page
     if (path === "/blog") return 0.6; // Blog
     if (path === "/privacy" || path === "/terms") return 0.3; // Legal pages
@@ -17,7 +20,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   };
 
   // Define change frequency based on content type
-  const getChangeFrequency = (path: string): "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" => {
+  const getChangeFrequency = (
+    path: string
+  ):
+    | "always"
+    | "hourly"
+    | "daily"
+    | "weekly"
+    | "monthly"
+    | "yearly"
+    | "never" => {
     if (path === "" || path === "/blog") return "weekly";
     if (path === "/privacy" || path === "/terms") return "yearly";
     return "monthly";
@@ -35,6 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/glass-office-doors",
     "/services/staircase-glass-railings",
     "/services/commercial-storefronts",
+    "/services/architectural-design-services",
+    "/case-studies",
+    "/case-studies/luxury-master-bath-cary",
+    "/case-studies/commercial-office-raleigh",
+    "/case-studies/modern-staircase-durham",
+    "/glass-aluminum-charlotte",
     "/about",
     "/blog",
     "/contact",

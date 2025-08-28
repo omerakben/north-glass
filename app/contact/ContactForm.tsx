@@ -21,7 +21,10 @@ export default function ContactForm() {
         form.reset();
         const w = window as unknown as { gtag?: (...args: unknown[]) => void };
         if (typeof window !== "undefined" && w.gtag) {
-          w.gtag("event", "contact_submit");
+          w.gtag("event", "contact_submit", {
+            form_type: "contact",
+            source_page: window.location.pathname,
+          });
         }
       } else {
         setStatus("error");
@@ -76,7 +79,9 @@ export default function ContactForm() {
           className="h-11 px-3 rounded-md border border-black/15"
         >
           <option value="">Select a service (optional)</option>
-          <option value="Architectural Design Consultation">Architectural Design Consultation</option>
+          <option value="Architectural Design Consultation">
+            Architectural Design Consultation
+          </option>
           <option value="Frameless Shower Doors">Frameless Shower Doors</option>
           <option value="Window Replacement">Window Replacement</option>
           <option value="Custom Mirrors">Custom Mirrors</option>

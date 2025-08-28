@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Sliding Glass Patio Doors – Raleigh–Durham",
+  title: "Sliding Glass & Aluminum Patio Doors | North Glass",
   description:
-    "New sliding glass door installation and replacement. Enhance your indoor-outdoor living with energy-efficient patio doors.",
+    "Professional sliding glass and aluminum patio door installation across North Carolina. Energy-efficient indoor-outdoor solutions.",
   alternates: { canonical: "/services/sliding-glass-patio-doors" },
 };
 
@@ -60,9 +60,10 @@ export default function SlidingPatioDoorPage() {
         Sliding Glass Patio Doors
       </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Open your home to the outdoors with beautiful sliding glass doors. We
-        install and replace patio doors with smooth-gliding, energy-efficient
-        units that provide seamless indoor-outdoor living.
+        Complete sliding glass door systems engineered for seamless
+        indoor-outdoor living. From energy efficiency consultation and AutoCAD
+        design through precision installation, we deliver comprehensive patio
+        door solutions.
       </p>
 
       {/* Image Carousel */}
@@ -85,25 +86,41 @@ export default function SlidingPatioDoorPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get a Free Estimate
+          Get Free Quote + AutoCAD Design
         </a>
       </div>
       <FAQ
         items={[
           {
+            question: "Do you offer aluminum sliding patio door frames?",
+            answer:
+              "Yes, we specialize in both aluminum and glass sliding door systems across North Carolina. Our Interior Architects design integrated aluminum-glass solutions using AutoCAD for optimal performance and weather resistance.",
+          },
+          {
+            question:
+              "What's better: aluminum or vinyl frames for sliding doors?",
+            answer:
+              "Aluminum frames offer superior durability, weather resistance, and thermal performance with thermal breaks. Our complete system approach helps you choose the best material for your specific application and budget.",
+          },
+          {
             question: "Can you replace just the glass in my sliding door?",
             answer:
-              "Yes, if the frame is in good condition, we can replace just the glass panel, saving you money while restoring clarity and insulation.",
+              "Yes, if the aluminum or existing frame is in good condition, we can replace just the glass panel, saving you money while restoring clarity and insulation performance.",
+          },
+          {
+            question: "How does your design process work for patio doors?",
+            answer:
+              "Our professional Interior Architects create AutoCAD designs that consider your home's architecture, energy efficiency needs, and indoor-outdoor flow for optimal functionality and aesthetics.",
           },
           {
             question: "What brands of sliding doors do you install?",
             answer:
-              "We work with all major brands and can source doors to match your budget and style preferences, from standard to premium options.",
+              "We work with all major brands and can source aluminum or glass doors to match your budget and style preferences, from standard to premium architectural-grade systems.",
           },
           {
             question: "How long does sliding door installation take?",
             answer:
-              "Most sliding door installations are completed in 4-6 hours, including removal of the old door and proper sealing of the new unit.",
+              "Most installations are completed in 4-6 hours, including removal of the old door and proper sealing. Our AutoCAD precision planning reduces installation time and ensures perfect fit.",
           },
         ]}
       />

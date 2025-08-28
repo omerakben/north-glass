@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "North Glass Blog – Tips & Insights",
+  title: "North Glass Blog – Glass & Aluminum Tips | North Carolina",
   description:
-    "Expert tips on shower doors, window replacement, mirrors and commercial glass in the Triangle.",
+    "Expert tips on glass and aluminum solutions across North Carolina. Shower doors, windows, mirrors, and architectural design insights from interior architects.",
   alternates: { canonical: "/blog" },
 };
 

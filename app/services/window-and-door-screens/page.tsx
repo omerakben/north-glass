@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Window & Door Screen Repair – Raleigh–Durham",
+  title: "Window & Door Screens | Aluminum Frames | North Glass",
   description:
-    "Screen repair and replacement for windows and doors. Fix tears, upgrade to pet-resistant screens, or install new screens.",
+    "Professional window and door screen repair with aluminum frames across North Carolina. Custom screens and frame systems.",
   alternates: { canonical: "/services/window-and-door-screens" },
 };
 
@@ -60,9 +60,9 @@ export default function ScreensPage() {
         Window & Door Screens
       </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Keep bugs out and fresh air in with properly fitted screens. We repair
-        torn screens, build custom sizes, and offer upgrades like pet-resistant
-        mesh and solar screening to reduce heat and UV rays.
+        Complete screen system solutions for enhanced home comfort. From
+        consultation and custom sizing through fabrication and installation, we
+        deliver comprehensive screen solutions for windows and doors.
       </p>
 
       {/* Image Carousel */}
@@ -85,25 +85,40 @@ export default function ScreensPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get a Free Estimate
+          Get Free Quote + AutoCAD Design
         </a>
       </div>
       <FAQ
         items={[
           {
-            question: "Do you offer pet-resistant screens?",
+            question: "Do you use aluminum frames for screens?",
             answer:
-              "Yes, we install heavy-duty pet screens that are 7 times stronger than standard screens, perfect for homes with dogs or cats.",
+              "Yes, we specialize in high-quality aluminum screen frames across North Carolina. Our aluminum frames provide superior durability, weather resistance, and long-term performance compared to plastic alternatives.",
           },
           {
-            question: "Can you make custom-sized screens?",
+            question: "What's better: aluminum or plastic screen frames?",
             answer:
-              "Absolutely. We fabricate screens to fit any window or door opening, including unusual shapes and oversized applications.",
+              "Aluminum frames offer superior strength, weather resistance, and longevity. They won't warp, crack, or fade like plastic frames, making them ideal for North Carolina's varied climate conditions.",
+          },
+          {
+            question: "Do you offer pet-resistant screens?",
+            answer:
+              "Yes, we install heavy-duty pet screens that are 7 times stronger than standard screens, perfect for homes with dogs or cats. Combined with our aluminum frames, they provide maximum durability.",
+          },
+          {
+            question: "Can you make custom-sized screens with aluminum frames?",
+            answer:
+              "Absolutely. We fabricate custom aluminum-framed screens to fit any window or door opening, including unusual shapes and oversized applications using precise AutoCAD measurements.",
           },
           {
             question: "What is solar screening?",
             answer:
-              "Solar screens block up to 90% of UV rays and reduce heat gain, lowering cooling costs while maintaining visibility from inside.",
+              "Solar screens block up to 90% of UV rays and reduce heat gain, lowering cooling costs while maintaining visibility from inside. Our aluminum frames ensure long-term solar screen performance.",
+          },
+          {
+            question: "Do you service screens statewide in North Carolina?",
+            answer:
+              "Yes, we provide aluminum screen frame services across all of North Carolina, from the Triangle to the mountains and coast, with the same quality standards everywhere.",
           },
         ]}
       />

@@ -19,21 +19,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://northglassnc.com"),
   title: {
-    default:
-      "North Glass LLC – Residential Glass Experts Across North Carolina",
+    default: "North Glass LLC – Glass and Aluminum Company | North Carolina",
     template: "%s | North Glass LLC",
   },
   description:
-    "Premium residential glass solutions across North Carolina: frameless shower doors, window replacement, custom mirrors. Commercial & aluminum capabilities when needed. Free estimates.",
+    "Professional glass and aluminum company across North Carolina: frameless shower doors, window replacement, custom mirrors, storefronts. Interior architect design. Free estimates.",
   applicationName: "North Glass LLC",
   icons: { icon: "/favicon.ico" },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "https://northglassnc.com/",
-    title: "North Glass LLC – Residential Glass (Showers, Windows, Mirrors) NC",
+    title: "North Glass LLC – Glass and Aluminum Company | North Carolina",
     description:
-      "Frameless showers, window replacement & custom mirrors statewide. Residential-first specialists with design support. Free quote.",
+      "Professional glass and aluminum solutions statewide. Frameless showers, windows, mirrors, storefronts with interior architect design. Free quote.",
     images: [
       {
         url: "/og-image.jpg",
@@ -45,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "North Glass LLC – Residential Glass Specialists NC",
+    title: "North Glass LLC – Glass and Aluminum Company | North Carolina",
     description:
-      "Residential glass: showers, windows, mirrors across North Carolina. Design & aluminum support when projects need it.",
+      "Professional glass and aluminum solutions across North Carolina. Frameless showers, windows, mirrors, storefronts with interior architect design.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -63,24 +62,132 @@ export default function RootLayout({
 }>) {
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "HomeAndConstructionBusiness",
     name: "North Glass LLC",
     url: "https://northglassnc.com/",
     telephone: "+1 (984) 268-8490",
     email: "mailto:info@northglassnc.com",
+    logo: "https://northglassnc.com/favicon.ico",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Raleigh",
       addressRegion: "NC",
       addressCountry: "US",
     },
-    areaServed: ["North Carolina", "Raleigh", "Durham", "Cary", "Chapel Hill"],
+    areaServed: [
+      "North Carolina",
+      "Raleigh",
+      "Durham",
+      "Cary",
+      "Chapel Hill",
+      "Charlotte",
+      "Greensboro",
+      "Winston-Salem",
+      "Asheville",
+      "Wilmington",
+      "High Point",
+      "Apex",
+      "Holly Springs",
+      "Morrisville",
+      "Wake Forest",
+      "Garner",
+      "Fuquay-Varina",
+    ],
     sameAs: [
       "https://www.facebook.com/profile.php?id=61580048543297",
       "https://www.instagram.com/northglassraleigh",
     ],
     description:
-      "Residential glass specialists (frameless showers, windows, mirrors) serving all of North Carolina with supporting commercial & aluminum capabilities.",
+      "Professional glass and aluminum company serving all of North Carolina. Frameless showers, windows, mirrors, storefronts with interior architect design capabilities.",
+    serviceOffered: [
+      {
+        "@type": "Service",
+        name: "Frameless Glass Shower Doors",
+        description:
+          "Custom frameless glass shower enclosures with professional installation",
+        serviceType: "Glass shower door installation",
+        areaServed: "North Carolina",
+      },
+      {
+        "@type": "Service",
+        name: "Window Replacement",
+        description:
+          "Energy-efficient window replacement with aluminum framing systems",
+        serviceType: "Window installation and replacement",
+        areaServed: "North Carolina",
+      },
+      {
+        "@type": "Service",
+        name: "Commercial Glass Storefronts",
+        description:
+          "Custom glass and aluminum storefront systems for commercial buildings",
+        serviceType: "Commercial glass installation",
+        areaServed: "North Carolina",
+      },
+      {
+        "@type": "Service",
+        name: "Custom Mirrors",
+        description:
+          "Precision-cut custom mirrors with professional installation",
+        serviceType: "Mirror installation",
+        areaServed: "North Carolina",
+      },
+      {
+        "@type": "Service",
+        name: "Glass Staircase Railings",
+        description: "Modern tempered glass railings with aluminum framework",
+        serviceType: "Glass railing installation",
+        areaServed: "North Carolina",
+      },
+      {
+        "@type": "Service",
+        name: "Architectural Design Services",
+        description:
+          "Professional interior architect consultation with AutoCAD design capabilities",
+        serviceType: "Architectural design consultation",
+        areaServed: "North Carolina",
+      },
+      {
+        "@type": "Service",
+        name: "AutoCAD Design Consultation",
+        description:
+          "Detailed architectural drafting and design using AutoCAD for glass and aluminum projects",
+        serviceType: "AutoCAD drafting services",
+        areaServed: "North Carolina",
+      },
+      {
+        "@type": "Service",
+        name: "Aluminum System Integration",
+        description:
+          "Custom aluminum framing and curtain wall systems for residential and commercial projects",
+        serviceType: "Aluminum construction systems",
+        areaServed: "North Carolina",
+      },
+    ],
+    employee: [
+      {
+        "@type": "Person",
+        name: "Professional Interior Architect Team",
+        jobTitle: "Interior Architect",
+        description:
+          "Licensed interior architects specializing in glass and aluminum architectural integration",
+      },
+    ],
+    knowsAbout: [
+      "Interior Architecture",
+      "AutoCAD Design",
+      "Glass Installation",
+      "Aluminum Systems",
+      "Commercial Storefronts",
+      "Residential Glass Solutions",
+      "Architectural Integration",
+      "Custom Design Consultation",
+    ],
+    hasCredential: [
+      "Licensed Interior Architects",
+      "Professional Glass Installation",
+      "AutoCAD Certified Design",
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
