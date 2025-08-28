@@ -149,7 +149,7 @@ export default function Header() {
             }}
             data-cta="header_nav"
           >
-            Free Quote + Design
+            Get Free Estimate
           </Link>
         </nav>
         <div className="md:hidden flex items-center gap-3">
@@ -213,7 +213,7 @@ export default function Header() {
                   color: "#00353f",
                 }}
               >
-                Free Quote + Design
+                Get Free Estimate
               </Link>
             </nav>
           </div>

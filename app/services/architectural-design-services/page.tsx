@@ -396,7 +396,7 @@ export default function ArchitecturalDesignServicesPage() {
           Ready for Professional Architectural Design?
         </h2>
         <p className="text-lg mb-6">
-          Get a free AutoCAD design consultation with our Professional Interior
+          Get a free professional design consultation with our Interior
           Architects
         </p>
         <div className="flex flex-wrap justify-center gap-4">

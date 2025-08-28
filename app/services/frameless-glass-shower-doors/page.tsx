@@ -61,9 +61,9 @@ export default function FramelessShowersPage() {
         Frameless Glass Shower Doors
       </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Complete frameless shower enclosure systems designed by our Interior
-        Architects. We deliver comprehensive solutions from AutoCAD design
-        through precision fabrication and professional installation.
+        Transform your bathroom with beautiful frameless shower enclosures. We
+        deliver comprehensive solutions from custom design through precision
+        fabrication and professional installation.
       </p>
 
       {/* Image Carousel */}
@@ -90,7 +90,7 @@ export default function FramelessShowersPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get Free Quote + AutoCAD Design
+          Transform Your Bathroom - Free Estimate
         </a>
       </div>
 

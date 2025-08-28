@@ -61,9 +61,10 @@ export default function WindowReplacementPage() {
         Window Replacement & Repair
       </h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Complete window replacement systems delivered by our expert team. From
-        energy efficiency consulting and AutoCAD design through precision
-        installation, we provide comprehensive solutions for your home.
+        Improve your home&apos;s energy efficiency and curb appeal with
+        professional window replacement. From consultation and custom design
+        through precision installation, we provide comprehensive solutions for
+        your home.
       </p>
 
       {/* Image Carousel */}
@@ -86,7 +87,7 @@ export default function WindowReplacementPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get Free Quote + AutoCAD Design
+          Upgrade Your Windows - Free Estimate
         </a>
       </div>
 

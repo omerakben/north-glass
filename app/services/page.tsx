@@ -31,7 +31,7 @@ const services: Array<{
   {
     href: "/services/architectural-design-services",
     title: "Architectural Design Services",
-    blurb: "Professional Interior Architects with AutoCAD precision design.",
+    blurb: "Professional custom design consultation and planning services.",
     icon: PenTool,
   },
   {

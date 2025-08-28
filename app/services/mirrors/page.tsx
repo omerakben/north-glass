@@ -85,7 +85,7 @@ export default function MirrorsPage() {
 
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
-          Get Free Quote + AutoCAD Design
+          Beautiful Custom Mirrors - Free Estimate
         </a>
       </div>
       <FAQ

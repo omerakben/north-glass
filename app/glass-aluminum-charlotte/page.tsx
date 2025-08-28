@@ -442,16 +442,16 @@ export default function CharlotteLocationPage() {
               Ready to Start Your Charlotte Glass & Aluminum Project?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Get your free estimate with AutoCAD design consultation. Our
-              professional interior architects are ready to transform your
-              Charlotte space with premium glass and aluminum solutions.
+              Get your free estimate with custom design consultation. Our
+              professional team is ready to transform your Charlotte space with
+              premium glass and aluminum solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/request-quote"
                 className="bg-[#40E0D0] text-[#00353f] px-8 py-4 rounded-lg font-semibold hover:bg-[#36c5d0] transition-colors text-lg"
               >
-                Get Free Charlotte Quote + AutoCAD Design
+                Get Free Charlotte Estimate
               </Link>
               <a
                 href="tel:+19842688490"

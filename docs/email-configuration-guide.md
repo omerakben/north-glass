@@ -1,6 +1,7 @@
 # Email Configuration and Testing Guide
 
 ## Overview
+
 North Glass website uses nodemailer with Google Workspace SMTP for email delivery. This guide covers configuration, testing, and troubleshooting.
 
 ## Environment Setup
@@ -33,6 +34,7 @@ LEADS_FROM=info@northglassnc.com
 ## Testing Email Delivery
 
 ### 1. Configuration Test
+
 Test the email configuration without sending emails:
 
 ```bash
@@ -40,10 +42,12 @@ curl -X POST http://localhost:3000/api/test-email
 ```
 
 Expected responses:
+
 - **Not configured**: Returns error with configuration details
 - **Configured**: Returns success with connection verification
 
 ### 2. Contact Form Test
+
 Test the contact form email delivery:
 
 ```bash
@@ -55,6 +59,7 @@ curl -X POST http://localhost:3000/api/contact \
 ```
 
 ### 3. Quote Form Test
+
 Test the quote request email delivery:
 
 ```bash
@@ -69,6 +74,7 @@ curl -X POST http://localhost:3000/api/quote \
 ## Expected Email Flow
 
 ### Contact Form Submission
+
 1. **Lead Email** → `LEADS_TO` address
    - Subject: "New Contact Message — [Name]"
    - Content: Name, email, phone, message
@@ -78,6 +84,7 @@ curl -X POST http://localhost:3000/api/quote \
    - Content: Acknowledgment with copy of submission
 
 ### Quote Form Submission
+
 1. **Lead Email** → `LEADS_TO` address
    - Subject: "New Quote Request: [Service] — [Name]"
    - Content: Name, email, phone, service, message
@@ -137,6 +144,7 @@ curl -X POST http://localhost:3000/api/contact \
 ## Analytics Integration
 
 Email events are tracked with these analytics events:
+
 - `email_send_success`: Successful email delivery
 - `email_send_error`: Failed email delivery
 - `quote_submit`: Quote form submission
