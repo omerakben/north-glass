@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Gallery from "./(site)/_components/Gallery";
+import { HomeHero } from "./(site)/_components/HomeHero";
 import ScrollAnimations from "./(site)/_components/ScrollAnimations";
 
 export const metadata: Metadata = {
@@ -112,27 +113,7 @@ export default function Home() {
   return (
     <main>
       <ScrollAnimations />
-      {/* Hero Section */}
-      <section className="hero-section container mx-auto px-6 py-20">
-        <div className="hero-content text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Custom Residential Glass Across North Carolina
-          </h1>
-          <p className="text-[18px] max-w-2xl text-balance mb-8">
-            Frameless showers, efficient window replacement & custom mirrors for
-            homeowners statewide. Commercial & aluminum capabilities available
-            when your project needs them.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/request-quote" className="btn-primary">
-              Request a Free Quote
-            </Link>
-            <Link href="/services" className="btn-secondary">
-              View Services
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HomeHero />
 
       {/* Services Overview */}
       <section className="services-section bg-white py-16 fade-in-section">
