@@ -45,22 +45,35 @@ export default function ScrollAnimations() {
         ease: "power2.out",
       });
 
-      // Services section animation - use querySelector with section containing services
+      // Services section animation
+      // Previous implementation used gsap.from(...) with ScrollTrigger, which
+      // applied the "from" (opacity: 0) styles immediately on load. If the
+      // trigger didn't run yet (or refresh timing was off), the service cards
+      // appeared invisible. Switching to onEnter ensures elements stay visible
+      // until the animation actually starts.
       const servicesSection = document.querySelector(".services-section");
       if (servicesSection) {
-        const serviceLinks = servicesSection.querySelectorAll("a[href^='/services/']");
+        const serviceLinks = servicesSection.querySelectorAll(
+          "a[href^='/services/']"
+        );
         if (serviceLinks.length > 0) {
-          gsap.from(serviceLinks, {
-            scrollTrigger: {
-              trigger: servicesSection,
-              start: "top 80%",
-              once: true,
+          ScrollTrigger.create({
+            trigger: servicesSection,
+            start: "top 80%",
+            once: true,
+            onEnter: () => {
+              gsap.fromTo(
+                serviceLinks,
+                { opacity: 0, y: 40 },
+                {
+                  opacity: 1,
+                  y: 0,
+                  duration: 0.8,
+                  stagger: 0.1,
+                  ease: "power2.out",
+                }
+              );
             },
-            opacity: 0,
-            y: 40,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: "power2.out",
           });
         }
       }

@@ -113,10 +113,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Residential Services */}
             <div className="relative">
-              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-br from-[var(--brand-teal)]/30 to-[var(--brand-turquoise)]/30 rounded-2xl" />
-              <div className="relative bg-white/80 backdrop-blur-lg border border-white/60 rounded-2xl p-8 shadow-xl ring-1 ring-black/5">
-                <h3 className="text-2xl font-semibold mb-6 text-[var(--brand-teal)] flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-lg flex items-center justify-center">
+              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-br from-[var(--brand-blue-primary)]/10 to-[var(--brand-blue-secondary)]/10 rounded-2xl" />
+              <div className="relative bg-white/95 backdrop-blur-lg border border-gray-200 rounded-2xl p-8 shadow-xl ring-1 ring-black/5">
+                <h3 className="text-2xl font-semibold mb-6 text-[var(--brand-blue-primary)] flex items-center gap-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] rounded-lg flex items-center justify-center">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   Residential Services
@@ -126,20 +126,20 @@ export default function Home() {
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="group block p-6 bg-white/95 backdrop-blur-sm border border-gray-200/60 rounded-xl hover:shadow-lg hover:bg-white transition-all duration-300 hover:scale-[1.02] shadow-sm"
+                      className="group block p-6 bg-white backdrop-blur-sm border border-gray-200 rounded-xl hover:shadow-lg hover:bg-gray-50 transition-all duration-300 hover:scale-[1.02] shadow-sm"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-to-br from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] rounded-lg flex items-center justify-center flex-shrink-0">
                           <CheckCircle className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-semibold text-lg mb-2 text-gray-900 group-hover:text-[var(--brand-teal)] transition-colors">
+                          <h4 className="font-semibold text-lg mb-2 text-gray-900 group-hover:text-[var(--brand-blue-primary)] transition-colors">
                             {service.title}
                           </h4>
-                          <p className="text-sm text-gray-800 leading-relaxed">
+                          <p className="text-sm text-gray-600 leading-relaxed">
                             {service.description}
                           </p>
-                          <div className="flex items-center gap-2 mt-3 text-[var(--brand-turquoise)] font-medium">
+                          <div className="flex items-center gap-2 mt-3 text-[var(--brand-blue-secondary)] font-medium">
                             <span className="text-sm">Learn more</span>
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                           </div>
@@ -150,7 +150,7 @@ export default function Home() {
                 </div>
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 mt-6 text-[var(--brand-turquoise)] font-medium hover:text-[var(--brand-teal)] transition-colors group"
+                  className="inline-flex items-center gap-2 mt-6 text-[var(--brand-blue-secondary)] font-medium hover:text-[var(--brand-blue-primary)] transition-colors group"
                 >
                   View All Residential Services
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -160,10 +160,10 @@ export default function Home() {
 
             {/* Commercial Services */}
             <div className="relative">
-              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-br from-[var(--brand-teal)]/30 to-[var(--brand-turquoise)]/30 rounded-2xl" />
-              <div className="relative bg-white/80 backdrop-blur-lg border border-white/60 rounded-2xl p-8 shadow-xl ring-1 ring-black/5">
-                <h3 className="text-2xl font-semibold mb-6 text-[var(--brand-teal)] flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-lg flex items-center justify-center">
+              <div className="absolute -top-2 -left-2 w-full h-full bg-gradient-to-br from-[var(--brand-blue-primary)]/10 to-[var(--brand-blue-secondary)]/10 rounded-2xl" />
+              <div className="relative bg-white/95 backdrop-blur-lg border border-gray-200 rounded-2xl p-8 shadow-xl ring-1 ring-black/5">
+                <h3 className="text-2xl font-semibold mb-6 text-[var(--brand-blue-primary)] flex items-center gap-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] rounded-lg flex items-center justify-center">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   Commercial Services
@@ -173,20 +173,20 @@ export default function Home() {
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="group block p-6 bg-white/95 backdrop-blur-sm border border-gray-200/60 rounded-xl hover:shadow-lg hover:bg-white transition-all duration-300 hover:scale-[1.02] shadow-sm"
+                      className="group block p-6 bg-white backdrop-blur-sm border border-gray-200 rounded-xl hover:shadow-lg hover:bg-gray-50 transition-all duration-300 hover:scale-[1.02] shadow-sm"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-to-br from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] rounded-lg flex items-center justify-center flex-shrink-0">
                           <CheckCircle className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-semibold text-lg mb-2 text-gray-900 group-hover:text-[var(--brand-teal)] transition-colors">
+                          <h4 className="font-semibold text-lg mb-2 text-gray-900 group-hover:text-[var(--brand-blue-primary)] transition-colors">
                             {service.title}
                           </h4>
-                          <p className="text-sm text-gray-800 leading-relaxed">
+                          <p className="text-sm text-gray-600 leading-relaxed">
                             {service.description}
                           </p>
-                          <div className="flex items-center gap-2 mt-3 text-[var(--brand-turquoise)] font-medium">
+                          <div className="flex items-center gap-2 mt-3 text-[var(--brand-blue-secondary)] font-medium">
                             <span className="text-sm">Learn more</span>
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                           </div>
@@ -197,7 +197,7 @@ export default function Home() {
                 </div>
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 mt-6 text-[var(--brand-turquoise)] font-medium hover:text-[var(--brand-teal)] transition-colors group"
+                  className="inline-flex items-center gap-2 mt-6 text-[var(--brand-blue-secondary)] font-medium hover:text-[var(--brand-blue-primary)] transition-colors group"
                 >
                   View All Commercial Services
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -216,7 +216,7 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Licensed & Insured</h3>
@@ -226,7 +226,7 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Star className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Quality Guaranteed</h3>
@@ -236,7 +236,7 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Fast & Reliable</h3>
@@ -260,7 +260,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center group">
-                <div className="relative w-12 h-12 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] text-white rounded-xl flex items-center justify-center mx-auto mb-4 text-lg font-bold group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="relative w-12 h-12 bg-gradient-to-br from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] text-white rounded-xl flex items-center justify-center mx-auto mb-4 text-lg font-bold group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   {step.step}
                   <div className="absolute inset-0 bg-white/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -288,7 +288,7 @@ export default function Home() {
       </section>
 
       {/* Service Area + CTA */}
-      <section className="py-16 bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] text-white relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] text-white relative overflow-hidden">
         {/* Glassmorphism overlay */}
         <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
 
@@ -312,7 +312,7 @@ export default function Home() {
             </p>
             <Link
               href="/request-quote"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-[var(--brand-teal)] rounded-xl font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-[var(--brand-blue-primary)] rounded-xl font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Transform Your Space - Free Estimate
               <ArrowRight className="w-5 h-5" />
