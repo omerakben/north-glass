@@ -69,12 +69,32 @@ export default function ContactForm() {
         </div>
       </div>
       <div className="grid gap-2">
+        <label htmlFor="service">Service Interest</label>
+        <select
+          id="service"
+          name="service"
+          className="h-11 px-3 rounded-md border border-black/15"
+        >
+          <option value="">Select a service (optional)</option>
+          <option value="Architectural Design Consultation">Architectural Design Consultation</option>
+          <option value="Frameless Shower Doors">Frameless Shower Doors</option>
+          <option value="Window Replacement">Window Replacement</option>
+          <option value="Custom Mirrors">Custom Mirrors</option>
+          <option value="Glass Office Doors">Glass Office Doors</option>
+          <option value="Commercial Storefronts">Commercial Storefronts</option>
+          <option value="Glass Railings">Glass Railings</option>
+          <option value="Aluminum Systems">Aluminum Systems</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div className="grid gap-2">
         <label htmlFor="message">How can we help?</label>
         <textarea
           id="message"
           name="message"
           rows={5}
           className="px-3 py-2 rounded-md border border-black/15"
+          placeholder="Tell us about your project. For architectural design consultations, please include project details and any inspiration photos or requirements."
         />
       </div>
       <div className="flex gap-3 items-center">
