@@ -2,7 +2,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Award, PenTool, Shield } from "lucide-react";
+import { ArrowRight, Award, Calculator, PenTool, Shield } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -25,17 +25,17 @@ export function HomeHero({
     {
       title: "AutoCAD Design",
       desc: "Precision planning & measurement",
-      icon: <PenTool className="h-4 w-4" />,
+      icon: <PenTool className="h-5 w-5" />,
     },
     {
       title: "Complete Systems",
       desc: "Glass & aluminum expertise",
-      icon: <Shield className="h-4 w-4" />,
+      icon: <Shield className="h-5 w-5" />,
     },
     {
       title: "Interior Architect",
       desc: "Professional design guidance",
-      icon: <Award className="h-4 w-4" />,
+      icon: <Award className="h-5 w-5" />,
     },
   ],
   primaryHref = "/request-quote",
@@ -48,77 +48,98 @@ export function HomeHero({
   return (
     <section
       className={cn(
-        "relative overflow-hidden py-20 md:py-28 px-6 container mx-auto",
-        "gradient-subtle",
+        "relative overflow-hidden py-20 md:py-28 px-4",
+        "bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)]",
         className
       )}
       aria-labelledby="home-hero-heading"
     >
-      {/* Modern gradient background with grid pattern */}
-      <div className="absolute inset-0 opacity-30 grid-pattern" />
+      {/* Glassmorphism overlay */}
+      <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
 
-      {/* Professional gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-primary/5 via-transparent to-brand-blue-secondary/5" />
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.3) 1px, transparent 0)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+      </div>
 
-      <div className="max-w-5xl relative z-10">
+      <div className="container mx-auto relative z-10">
         <Badge
           variant="outline"
-          className="mb-6 border-brand-secondary/30 text-brand-primary bg-brand-light/50"
+          className="mb-6 border-white/30 text-white bg-white/10 backdrop-blur-sm"
         >
           Professional Glass & Aluminum Company
         </Badge>
         <h1
           id="home-hero-heading"
-          className="text-4xl md:text-5xl font-bold tracking-tight mb-6 gradient-text-shadow-dramatic"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white leading-tight"
         >
           {heading}
         </h1>
-        <p className="text-lg md:text-xl max-w-2xl mb-8 text-brand-dark">
-          {subheading} Complete design-to-installation solutions across
-          residential and commercial projects.
+        <p className="text-lg md:text-xl max-w-2xl mb-8 text-white/90 leading-relaxed">
+          {subheading}
         </p>
         <div className="grid sm:grid-cols-3 gap-6 mb-10">
           {bullets.map((b, i) => (
             <div
               key={i}
-              className="flex flex-col gap-1 p-4 rounded-lg glass-effect-premium"
+              className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105"
             >
-              <div className="flex items-center gap-2 font-medium text-brand-dark">
-                <span className="text-brand-primary">{b.icon}</span>
+              <div className="flex items-center gap-3 font-semibold text-white mb-2">
+                <span className="text-white/90">{b.icon}</span>
                 {b.title}
               </div>
-              <p className="text-sm text-brand-gray-medium">{b.desc}</p>
+              <p className="text-sm text-white/80 leading-relaxed">{b.desc}</p>
             </div>
           ))}
         </div>
         <div className="flex flex-wrap gap-4 mb-4">
-          <Button asChild size="lg" className="h-12 px-8 text-base btn-primary">
-            <Link href={primaryHref}>{primaryText}</Link>
+          <Button
+            asChild
+            size="lg"
+            className="h-12 px-8 text-base bg-white text-[var(--brand-teal)] hover:bg-white/90 font-semibold shadow-lg"
+          >
+            <Link href={primaryHref} className="inline-flex items-center gap-2">
+              <Calculator size={20} />
+              {primaryText}
+            </Link>
           </Button>
           <Button
             asChild
             variant="outline"
             size="lg"
-            className="h-12 px-8 text-base border-brand-secondary/30 text-brand-primary hover:bg-brand-light/50 hover:border-brand-secondary/50 transition-all duration-300"
+            className="h-12 px-8 text-base border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
           >
-            <Link href={secondaryHref}>{secondaryText}</Link>
+            <Link
+              href={secondaryHref}
+              className="inline-flex items-center gap-2"
+            >
+              <ArrowRight size={18} />
+              {secondaryText}
+            </Link>
           </Button>
         </div>
         {optionalLine && (
-          <p className="text-sm text-brand-gray-medium italic">
+          <p className="text-sm text-white/70 italic max-w-xl">
             {optionalLine}
           </p>
         )}
       </div>
 
-      {/* Modern gradient decorative elements with sophisticated colors */}
+      {/* Modern glassmorphism decorative elements */}
       <div
         aria-hidden
-        className="pointer-events-none select-none absolute -top-10 -right-10 w-72 h-72 bg-gradient-to-br from-brand-blue-secondary/20 to-brand-blue-primary/10 rounded-full blur-3xl"
+        className="pointer-events-none select-none absolute -top-10 -right-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none select-none absolute bottom-0 right-1/3 w-40 h-40 bg-gradient-to-tl from-brand-blue-light/15 to-brand-blue-secondary/5 rounded-full blur-2xl"
+        className="pointer-events-none select-none absolute bottom-0 right-1/3 w-40 h-40 bg-white/5 rounded-full blur-2xl"
       />
     </section>
   );

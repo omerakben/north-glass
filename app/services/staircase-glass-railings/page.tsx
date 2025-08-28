@@ -1,5 +1,6 @@
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
+import { Calculator } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -85,7 +86,8 @@ export default function GlassRailingsPage() {
       </div>
 
       <div className="text-center mb-8">
-        <a href="/request-quote" className="btn-primary inline-block">
+        <a href="/request-quote" className="btn-primary inline-flex gap-2">
+          <Calculator size={18} />
           Get Free Quote + AutoCAD Design
         </a>
       </div>

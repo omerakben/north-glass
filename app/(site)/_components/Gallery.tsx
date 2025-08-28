@@ -237,7 +237,7 @@ export default function Gallery() {
             onClick={() => setSelectedImage(null)}
           >
             <div
-              className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto"
+              className="bg-white rounded-lg max-w-6xl w-full max-h-[95vh] overflow-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="p-4 border-b flex justify-between items-center">
@@ -279,7 +279,7 @@ export default function Gallery() {
               </div>
               <div className="p-4">
                 {selectedImage.type === "before-after" ? (
-                  <div className="aspect-w-16 aspect-h-9 relative h-96">
+                  <div className="relative w-full h-[60vh] min-h-[500px]">
                     <BeforeAfterSlider
                       beforeImage={selectedImage.beforeImage!}
                       afterImage={selectedImage.afterImage!}
@@ -289,7 +289,7 @@ export default function Gallery() {
                     />
                   </div>
                 ) : (
-                  <div className="relative h-96 bg-gray-200">
+                  <div className="relative w-full h-[60vh] min-h-[500px] bg-gray-200">
                     <Image
                       src={selectedImage.image!}
                       alt={selectedImage.alt!}

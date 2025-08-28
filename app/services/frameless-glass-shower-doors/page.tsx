@@ -1,6 +1,7 @@
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
 import ProcessStepper from "@/components/ProcessStepper";
+import { Calculator } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -89,7 +90,8 @@ export default function FramelessShowersPage() {
       </div>
 
       <div className="text-center mb-8">
-        <a href="/request-quote" className="btn-primary inline-block">
+        <a href="/request-quote" className="btn-primary inline-flex gap-2">
+          <Calculator size={18} />
           Transform Your Bathroom - Free Estimate
         </a>
       </div>

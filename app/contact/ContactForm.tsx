@@ -1,4 +1,5 @@
 "use client";
+import { Send } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactForm() {
@@ -105,12 +106,13 @@ export default function ContactForm() {
       <div className="flex gap-3 items-center">
         <button
           disabled={status === "submitting"}
-          className="inline-flex items-center h-11 px-5 rounded-md text-white"
+          className="inline-flex items-center gap-2 h-11 px-5 rounded-md text-white"
           style={{
             backgroundColor: "var(--brand-turquoise)",
             color: "#00353f",
           }}
         >
+          <Send size={16} />
           {status === "submitting" ? "Submitting..." : "Send Message"}
         </button>
         <a

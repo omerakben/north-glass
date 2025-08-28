@@ -2,6 +2,8 @@ import {
   Building2,
   DoorOpen,
   Grid3X3,
+  Home,
+  MapPin,
   Navigation,
   PenTool,
   RectangleHorizontal,
@@ -92,39 +94,73 @@ const services: Array<{
 
 export default function ServicesPage() {
   return (
-    <main className="container mx-auto px-6 py-16">
-      <h1 className="text-4xl md:text-5xl font-bold mb-8 gradient-text-shadow">
-        Our Glass & Aluminum Services
-      </h1>
-      <p className="text-lg md:text-xl max-w-prose mb-12 text-brand-dark leading-relaxed">
-        North Glass LLC provides end-to-end custom glass and aluminum solutions
-        for homes and businesses across North Carolina. Explore our
-        comprehensive services below.
-      </p>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((s) => {
-          const IconComponent = s.icon;
-          return (
-            <Link
-              key={s.href}
-              href={s.href}
-              className="group block rounded-xl card-professional p-6 focus:outline-none focus-brand"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 rounded-lg bg-brand-light group-hover:bg-brand-secondary/20 transition-colors">
-                  <IconComponent className="h-6 w-6 text-brand-primary" />
-                </div>
-                <div className="font-semibold text-lg md:text-xl text-brand-primary group-hover:text-brand-secondary transition-colors text-shadow-soft">
-                  {s.title}
-                </div>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)] text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Complete Glass & Aluminum Services
+            </h1>
+            <p className="text-xl mb-8 text-white/90">
+              Professional residential and commercial glass and aluminum
+              solutions across North Carolina. From custom design to expert
+              installation, we deliver exceptional results with Interior
+              Architect precision.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-white/80">
+              <div className="flex items-center gap-2">
+                <Home size={20} />
+                <span>Residential Solutions</span>
               </div>
-              <div className="text-base text-brand-gray-medium leading-relaxed">
-                {s.blurb}
+              <div className="flex items-center gap-2">
+                <Building2 size={20} />
+                <span>Commercial Services</span>
               </div>
-            </Link>
-          );
-        })}
-      </div>
-    </main>
+              <div className="flex items-center gap-2">
+                <MapPin size={20} />
+                <span>Statewide Coverage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-4">Our Services</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            North Glass LLC provides end-to-end custom glass and aluminum
+            solutions for homes and businesses across North Carolina. Explore
+            our comprehensive services below.
+          </p>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s) => {
+              const IconComponent = s.icon;
+              return (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  className="group block rounded-xl card-professional p-6 focus:outline-none focus-brand"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-lg bg-brand-light group-hover:bg-brand-secondary/20 transition-colors">
+                      <IconComponent className="h-6 w-6 text-brand-primary" />
+                    </div>
+                    <div className="font-semibold text-lg md:text-xl text-brand-primary group-hover:text-brand-secondary transition-colors text-shadow-soft">
+                      {s.title}
+                    </div>
+                  </div>
+                  <div className="text-base text-brand-gray-medium leading-relaxed">
+                    {s.blurb}
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

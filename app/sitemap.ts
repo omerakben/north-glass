@@ -1,3 +1,4 @@
+import { getAllPosts } from "@/lib/blogData";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -14,7 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (path === "/case-studies") return 0.8; // Case studies index
     if (path.startsWith("/case-studies/")) return 0.7; // Individual case studies
     if (path === "/about") return 0.7; // About page
-    if (path === "/blog") return 0.6; // Blog
+    if (path === "/blog") return 0.7; // Blog index - increased priority for SEO
+    if (path.startsWith("/blog/")) return 0.6; // Individual blog posts
     if (path === "/privacy" || path === "/terms") return 0.3; // Legal pages
     return 0.5; // Default
   };
@@ -31,11 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     | "yearly"
     | "never" => {
     if (path === "" || path === "/blog") return "weekly";
+    if (path.startsWith("/blog/")) return "monthly"; // Blog posts
     if (path === "/privacy" || path === "/terms") return "yearly";
     return "monthly";
   };
 
-  const routes = [
+  const staticRoutes = [
     "",
     "/services",
     "/services/frameless-glass-shower-doors",
@@ -61,7 +64,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms",
   ];
 
-  return routes.map((path) => ({
+  // Get all blog posts for dynamic blog routes
+  const blogPosts = getAllPosts();
+  const blogRoutes = blogPosts.map((post) => post.href);
+
+  // Combine static routes with dynamic blog routes
+  const allRoutes = [...staticRoutes, ...blogRoutes];
+
+  return allRoutes.map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: currentDate,
     changeFrequency: getChangeFrequency(path),

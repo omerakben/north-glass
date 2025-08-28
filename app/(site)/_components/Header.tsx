@@ -1,5 +1,5 @@
 "use client";
-import { ChevronDown, Menu, Phone } from "lucide-react";
+import { Calculator, ChevronDown, Menu, Phone } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -28,7 +28,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-6" aria-label="Primary">
           <div className="relative" ref={resRef}>
             <button
-              className="font-medium inline-flex items-center gap-1"
+              className="font-medium inline-flex items-center gap-1 h-10"
               aria-haspopup="true"
               aria-expanded={residentialOpen}
               onClick={() => setResidentialOpen((v) => !v)}
@@ -81,7 +81,7 @@ export default function Header() {
           </div>
           <div className="relative" ref={comRef}>
             <button
-              className="font-medium inline-flex items-center gap-1"
+              className="font-medium inline-flex items-center gap-1 h-10"
               aria-haspopup="true"
               aria-expanded={commercialOpen}
               onClick={() => setCommercialOpen((v) => !v)}
@@ -125,30 +125,46 @@ export default function Header() {
               </div>
             )}
           </div>
-          <Link href="/services" className="font-medium">
+          <Link
+            href="/services"
+            className="font-medium inline-flex items-center h-10"
+          >
             All Services
           </Link>
-          <Link href="/about" className="font-medium">
+          <Link
+            href="/about"
+            className="font-medium inline-flex items-center h-10"
+          >
             About
           </Link>
-          <Link href="/case-studies" className="font-medium">
+          <Link
+            href="/case-studies"
+            className="font-medium inline-flex items-center h-10"
+          >
             Case Studies
           </Link>
-          <Link href="/blog" className="font-medium">
+          <Link
+            href="/blog"
+            className="font-medium inline-flex items-center h-10"
+          >
             Blog
           </Link>
-          <Link href="/contact" className="font-medium">
+          <Link
+            href="/contact"
+            className="font-medium inline-flex items-center h-10"
+          >
             Contact
           </Link>
           <Link
             href="/request-quote"
-            className="ml-4 inline-flex items-center h-10 px-4 rounded-md text-white"
+            className="ml-4 inline-flex items-center gap-2 h-10 px-4 rounded-md text-white"
             style={{
               backgroundColor: "var(--brand-turquoise)",
               color: "#00353f",
             }}
             data-cta="header_nav"
           >
+            <Calculator size={18} />
             Get Free Estimate
           </Link>
         </nav>
@@ -207,12 +223,13 @@ export default function Header() {
               <Link
                 href="/request-quote"
                 onClick={() => setOpen(false)}
-                className="mt-2 inline-flex items-center h-10 px-4 rounded-md text-white"
+                className="mt-2 inline-flex items-center gap-2 h-10 px-4 rounded-md text-white"
                 style={{
                   backgroundColor: "var(--brand-turquoise)",
                   color: "#00353f",
                 }}
               >
+                <Calculator size={18} />
                 Get Free Estimate
               </Link>
             </nav>

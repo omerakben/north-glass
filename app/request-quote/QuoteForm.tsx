@@ -1,6 +1,6 @@
 "use client";
 import { trackServiceInquiry } from "@/lib/analytics";
-import { FileImage, Upload, X } from "lucide-react";
+import { Calculator, FileImage, Upload, X } from "lucide-react";
 import { useState } from "react";
 
 export default function QuoteForm() {
@@ -211,8 +211,9 @@ export default function QuoteForm() {
       <div className="flex gap-4 items-center">
         <button
           disabled={status === "submitting"}
-          className="inline-flex items-center h-12 px-6 rounded-lg text-white font-medium bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transition-all duration-300 touch-manipulation tap-highlight-transparent min-h-[44px]"
+          className="inline-flex items-center gap-2 h-12 px-6 rounded-lg text-white font-medium bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transition-all duration-300 touch-manipulation tap-highlight-transparent min-h-[44px]"
         >
+          <Calculator size={18} />
           <span className="hidden sm:inline">
             {status === "submitting"
               ? "Submitting..."
