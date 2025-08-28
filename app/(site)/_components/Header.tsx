@@ -157,10 +157,9 @@ export default function Header() {
           </Link>
           <Link
             href="/request-quote"
-            className="ml-4 inline-flex items-center gap-2 h-10 px-4 rounded-md text-white"
+            className="ml-4 inline-flex items-center gap-2 h-10 px-4 rounded-md text-white hover:text-white/90 transition-colors"
             style={{
               backgroundColor: "var(--brand-turquoise)",
-              color: "#00353f",
             }}
             data-cta="header_nav"
           >
@@ -223,10 +222,9 @@ export default function Header() {
               <Link
                 href="/request-quote"
                 onClick={() => setOpen(false)}
-                className="mt-2 inline-flex items-center gap-2 h-10 px-4 rounded-md text-white"
+                className="mt-2 inline-flex items-center gap-2 h-10 px-4 rounded-md text-white hover:text-white/90 transition-colors"
                 style={{
                   backgroundColor: "var(--brand-turquoise)",
-                  color: "#00353f",
                 }}
               >
                 <Calculator size={18} />

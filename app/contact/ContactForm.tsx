@@ -106,10 +106,9 @@ export default function ContactForm() {
       <div className="flex gap-3 items-center">
         <button
           disabled={status === "submitting"}
-          className="inline-flex items-center gap-2 h-11 px-5 rounded-md text-white"
+          className="inline-flex items-center gap-2 h-11 px-5 rounded-md text-white hover:text-white/90 transition-colors disabled:opacity-50"
           style={{
             backgroundColor: "var(--brand-turquoise)",
-            color: "#00353f",
           }}
         >
           <Send size={16} />

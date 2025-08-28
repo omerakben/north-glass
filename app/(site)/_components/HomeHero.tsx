@@ -112,9 +112,9 @@ export function HomeHero({
           </Button>
           <Button
             asChild
-            variant="outline"
+            variant="ghost"
             size="lg"
-            className="h-12 px-8 text-base border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
+            className="h-12 px-8 text-base border border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm bg-transparent"
           >
             <Link
               href={secondaryHref}
