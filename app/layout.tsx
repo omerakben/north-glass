@@ -24,6 +24,14 @@ export const metadata: Metadata = {
   },
   description:
     "Professional glass and aluminum company across North Carolina: frameless shower doors, window replacement, custom mirrors, storefronts. Interior architect design. Free estimates.",
+  keywords: [
+    "glass company",
+    "aluminum company",
+    "Hotel",
+    "Hotel Shower",
+    "Hotel Shower Door",
+    "Hotel Projects",
+  ],
   applicationName: "North Glass LLC",
   icons: { icon: "/favicon.ico" },
   alternates: { canonical: "/" },

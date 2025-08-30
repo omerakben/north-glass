@@ -1,6 +1,7 @@
 "use client";
 import { Calculator, ChevronDown, Menu, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
@@ -22,8 +23,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-black/5">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="font-semibold text-[18px] tracking-tight">
-          North Glass
+        <Link href="/" className="flex items-center h-10" aria-label="North Glass home">
+          <Image
+            src="/images/logo.png"
+            alt="North Glass logo"
+            width={120}
+            height={32}
+            className="h-9 w-auto md:h-12 lg:h-14"
+            priority
+          />
         </Link>
         <nav className="hidden md:flex items-center gap-6" aria-label="Primary">
           <div className="relative" ref={resRef}>
@@ -35,49 +43,61 @@ export default function Header() {
             >
               Residential <ChevronDown size={16} />
             </button>
-            {residentialOpen && (
-              <div
-                role="menu"
-                className="absolute left-0 mt-2 w-72 rounded-md border border-black/10 bg-white p-2 shadow-lg"
+          {residentialOpen && (
+            <div
+              role="menu"
+              className="absolute left-0 mt-2 w-72 rounded-md border border-black/10 bg-white p-2 shadow-lg"
+            >
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5"
+                href="/services/frameless-glass-shower-doors"
               >
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/frameless-glass-shower-doors"
-                >
-                  Frameless Shower Doors
-                </Link>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/window-replacement"
-                >
-                  Window Replacement
-                </Link>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/mirrors"
-                >
-                  Mirrors &amp; Mirrored Walls
-                </Link>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/sliding-glass-patio-doors"
-                >
-                  Sliding Patio Doors
-                </Link>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/window-and-door-screens"
-                >
-                  Window &amp; Door Screens
-                </Link>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/glass-table-tops-and-shelves"
-                >
-                  Glass Table Tops &amp; Shelves
-                </Link>
-              </div>
-            )}
+                Frameless Shower Doors
+              </Link>
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5"
+                href="/services/window-replacement"
+              >
+                Window Replacement
+              </Link>
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5"
+                href="/services/aluminum-windows"
+              >
+                Aluminum Windows
+              </Link>
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5"
+                href="/services/mirrors"
+              >
+                Mirrors &amp; Mirrored Walls
+              </Link>
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5"
+                href="/services/sliding-glass-patio-doors"
+              >
+                Sliding Patio Doors
+              </Link>
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5"
+                href="/services/window-and-door-screens"
+              >
+                Window &amp; Door Screens
+              </Link>
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5"
+                href="/services/window-and-door-screens"
+              >
+                Bug Screens
+              </Link>
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5"
+                href="/services/glass-table-tops-and-shelves"
+              >
+                Glass Table Tops &amp; Shelves
+              </Link>
+            </div>
+          )}
           </div>
           <div className="relative" ref={comRef}>
             <button
@@ -105,17 +125,23 @@ export default function Header() {
                 >
                   Staircase Glass Railings
                 </Link>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/commercial-storefronts"
-                >
-                  Commercial Storefronts
-                </Link>
-                <div className="border-t border-black/10 my-2"></div>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5 font-medium"
-                  href="/services/architectural-design-services"
-                >
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5"
+                href="/services/commercial-storefronts"
+              >
+                Commercial Storefronts
+              </Link>
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5"
+                href="/services/pergolas"
+              >
+                Pergolas
+              </Link>
+              <div className="border-t border-black/10 my-2"></div>
+              <Link
+                className="block px-3 py-2 rounded hover:bg-black/5 font-medium"
+                href="/services/architectural-design-services"
+              >
                   <span className="text-sm font-normal text-black/60">
                     Professional
                   </span>

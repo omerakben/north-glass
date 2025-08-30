@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Award, Calculator, PenTool, Shield } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export interface HomeHeroProps {
   heading?: string;
@@ -16,6 +17,8 @@ export interface HomeHeroProps {
   secondaryText?: string;
   optionalLine?: string;
   className?: string;
+  backgroundImages?: { src: string; alt: string }[];
+  rotationMs?: number;
 }
 
 export function HomeHero({
@@ -23,8 +26,8 @@ export function HomeHero({
   subheading = "Professional glass and aluminum company serving all of North Carolina. Frameless showers, windows, custom mirrors with interior architect design.",
   bullets = [
     {
-      title: "AutoCAD Design",
-      desc: "Precision planning & measurement",
+      title: "Bathroom Renovation",
+      desc: "Modern showers, mirrors, windows",
       icon: <PenTool className="h-5 w-5" />,
     },
     {
@@ -44,7 +47,31 @@ export function HomeHero({
   secondaryText = "View All Services",
   optionalLine = "Complete design-to-installation solutions for residential and commercial projects",
   className,
+  backgroundImages = [
+    {
+      src: "/images/frameless-glass-shower-doors/shower-big.png",
+      alt: "Frameless hotel-style glass shower",
+    },
+    {
+      src: "/images/glass-office-doors/commercial-front.png",
+      alt: "Modern glass office doors and partitions",
+    },
+    {
+      src: "/images/window-replacement/after-window-replacement.png",
+      alt: "Aluminum window replacement in residential home",
+    },
+  ],
+  rotationMs = 4000,
 }: HomeHeroProps) {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    if (!backgroundImages?.length) return;
+    const t = setInterval(
+      () => setIdx((i) => (i + 1) % backgroundImages.length),
+      rotationMs
+    );
+    return () => clearInterval(t);
+  }, [backgroundImages?.length, rotationMs]);
   return (
     <section
       className={cn(
@@ -54,6 +81,28 @@ export function HomeHero({
       )}
       aria-labelledby="home-hero-heading"
     >
+      {/* Background slideshow */}
+      <div className="absolute inset-0 -z-10">
+        {backgroundImages.map((img, i) => (
+          <div
+            key={img.src}
+            className={cn(
+              "absolute inset-0 transition-opacity duration-700",
+              i === idx ? "opacity-40" : "opacity-0"
+            )}
+            aria-hidden
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority={i === 0}
+            />
+          </div>
+        ))}
+      </div>
       {/* Glassmorphism overlay */}
       <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
 

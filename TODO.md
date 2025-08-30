@@ -21,6 +21,19 @@
 - [x] task-008: Update sitemap.xml to include aluminum service variations ✅ COMPLETED (integrated approach optimal)
 - [x] task-009: Update robots.txt for enhanced crawling of aluminum-related content ✅ COMPLETED
 
+### New Client Requests — August 30, 2025
+
+- [x] task-101: Navbar – show company logo in header ✅ COMPLETED
+- [x] task-102: Hero – change first feature from "AutoCAD Design" to "Bathroom Renovation" ✅ COMPLETED
+- [x] task-103: Hero – add background image slider (shower, office door, aluminum window) ✅ COMPLETED
+- [x] task-104: SEO – add additional keywords: "Hotel", "Hotel Shower", "Hotel Shower Door", "Hotel Projects" ✅ COMPLETED
+- [x] task-105: Navigation – add Pergolas under Commercial ✅ COMPLETED
+- [x] task-106: Navigation – add Bug Screens under Residential (alias to Window & Door Screens) ✅ COMPLETED
+- [x] task-107: Navigation – add Aluminum Windows under Residential ✅ COMPLETED
+- [x] task-108: Services – create Aluminum Windows service page ✅ COMPLETED
+- [x] task-109: Services – create Pergolas service page ✅ COMPLETED
+- [x] task-110: Sitemap – include new service routes ✅ COMPLETED
+
 ## Priority 2: High (Service Expansion & Differentiation)
 
 ### UI/UX & Visual Excellence Enhancement

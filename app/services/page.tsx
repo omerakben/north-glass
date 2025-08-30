@@ -11,6 +11,7 @@ import {
   Sparkles,
   Store,
   Table2,
+  Sun,
   type LucideIcon,
 } from "lucide-react";
 import type { Metadata } from "next";
@@ -49,6 +50,12 @@ const services: Array<{
     icon: RectangleHorizontal,
   },
   {
+    href: "/services/aluminum-windows",
+    title: "Aluminum Windows",
+    blurb: "Durable, low-maintenance frames with modern profiles.",
+    icon: RectangleHorizontal,
+  },
+  {
     href: "/services/mirrors",
     title: "Mirrors & Mirrored Walls",
     blurb: "Custom-cut mirrors for baths, gyms, and decor.",
@@ -62,7 +69,7 @@ const services: Array<{
   },
   {
     href: "/services/window-and-door-screens",
-    title: "Window & Door Screens",
+    title: "Window & Door Screens (Bug Screens)",
     blurb: "Custom screen repair and fabrication.",
     icon: Grid3X3,
   },
@@ -89,6 +96,12 @@ const services: Array<{
     title: "Commercial Storefronts",
     blurb: "Storefront glass and door services for businesses.",
     icon: Store,
+  },
+  {
+    href: "/services/pergolas",
+    title: "Pergolas",
+    blurb: "Aluminum shade structures for commercial and hospitality.",
+    icon: Sun,
   },
 ];
 

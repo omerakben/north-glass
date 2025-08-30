@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   title: "North Glass LLC – Glass and Aluminum Company | North Carolina",
   description:
     "Glass and aluminum company serving all of North Carolina. Frameless showers, windows, mirrors with professional interior architect design. Free quote.",
+  keywords: [
+    "glass",
+    "aluminum",
+    "Hotel",
+    "Hotel Shower",
+    "Hotel Shower Door",
+    "Hotel Projects",
+  ],
 };
 
 const residentialServices = [
@@ -24,9 +32,19 @@ const residentialServices = [
     href: "/services/window-replacement",
   },
   {
+    title: "Aluminum Windows",
+    description: "Durable, modern frames with excellent longevity",
+    href: "/services/aluminum-windows",
+  },
+  {
     title: "Custom Mirrors",
     description: "Bathroom vanities, gym walls, and decorative mirrors",
     href: "/services/mirrors",
+  },
+  {
+    title: "Bug Screens",
+    description: "Window and door screen repair and fabrication",
+    href: "/services/window-and-door-screens",
   },
 ];
 
@@ -45,6 +63,11 @@ const commercialServices = [
     title: "Glass Railings",
     description: "Sleek glass balustrades for stairs and balconies",
     href: "/services/staircase-glass-railings",
+  },
+  {
+    title: "Pergolas",
+    description: "Aluminum shade structures for hospitality and retail",
+    href: "/services/pergolas",
   },
 ];
 
