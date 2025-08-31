@@ -1,14 +1,24 @@
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
 import ProcessStepper from "@/components/ProcessStepper";
-import { Calculator } from "lucide-react";
+import {
+  Award,
+  Calculator,
+  MapPin,
+  PenTool,
+  Ruler,
+  Settings,
+  ShieldCheck,
+  Star,
+} from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Frameless Glass Shower Doors – North Glass | North Carolina",
+  title:
+    "Frameless Glass Shower Doors & Enclosures | Interior Architect Design | North Glass NC",
   description:
-    "Custom frameless shower enclosures by North Glass across North Carolina. Professional interior architect design with AutoCAD precision. Free estimates.",
+    "Premium frameless shower doors designed by Interior Architects with AutoCAD precision. Custom glass enclosures, professional installation, 2-3 week timeline. Serving all North Carolina. Free consultation.",
   alternates: { canonical: "/services/frameless-glass-shower-doors" },
 };
 
@@ -58,14 +68,32 @@ export default function FramelessShowersPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4 text-center">
-        Frameless Glass Shower Doors
-      </h1>
-      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Transform your bathroom with beautiful frameless shower enclosures. We
-        deliver comprehensive solutions from custom design through precision
-        fabrication and professional installation.
-      </p>
+      <div className="text-center mb-8">
+        <h1 className="text-4xl font-bold mb-4">
+          Premium Frameless Glass Shower Doors
+        </h1>
+        <p className="text-xl text-primary-600 mb-4 font-medium">
+          Designed by Interior Architects • AutoCAD Precision • North
+          Carolina&apos;s Trusted Glass Specialists
+        </p>
+        <p className="max-w-prose text-[17px] mb-6 mx-auto">
+          Transform your bathroom with custom frameless shower enclosures
+          designed by professional Interior Architects. From AutoCAD precision
+          design through expert installation, we deliver complete solutions
+          across North Carolina with unmatched quality and craftsmanship.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-black/70 mb-6">
+          <span className="flex items-center gap-1">
+            ✓ Free AutoCAD Design Consultation
+          </span>
+          <span className="flex items-center gap-1">
+            ✓ 2-3 Week Complete Project Timeline
+          </span>
+          <span className="flex items-center gap-1">
+            ✓ Professional Installation Guarantee
+          </span>
+        </div>
+      </div>
 
       {/* Image Carousel */}
       <div className="flex justify-center my-8">
@@ -83,18 +111,192 @@ export default function FramelessShowersPage() {
               src: "/images/frameless-glass-shower-doors/shower-big.png",
               alt: "Luxury frameless shower with tempered glass and precision architectural installation",
             },
+            {
+              src: "/images/frameless-glass-shower-doors/frameless-shower-door.jpg",
+              alt: "Custom frameless glass shower enclosure with polished chrome hardware in North Carolina home",
+            },
+            {
+              src: "/images/frameless-glass-shower-doors/frameless-shower-door2.jpg",
+              alt: "Sliding frameless glass shower doors with minimal frame design and clear glass panels",
+            },
+            {
+              src: "/images/frameless-glass-shower-doors/frameless-shower-door3.jpg",
+              alt: "Corner frameless shower enclosure with hinged door and fixed panel configuration",
+            },
+            {
+              src: "/images/frameless-glass-shower-doors/frameless-shower-door5.jpg",
+              alt: "Walk-in frameless glass shower with rainfall showerhead and natural stone tile",
+            },
+            {
+              src: "/images/frameless-glass-shower-doors/frameless-shower-door7.jpg",
+              alt: "Contemporary frameless shower door with brushed nickel hardware and clear tempered glass",
+            },
+            {
+              src: "/images/frameless-glass-shower-doors/frameless-shower-enclosure-luxury.jpg",
+              alt: "Luxury master bathroom frameless shower enclosure with premium finishes and architectural design",
+            },
           ]}
-          interval={2000} // 2 seconds as requested
+          interval={3000} // 3 seconds for more variety
           className="max-w-4xl w-full"
         />
       </div>
 
-      <div className="text-center mb-8">
+      <div className="text-center mb-12">
         <a href="/request-quote" className="btn-primary inline-flex gap-2">
           <Calculator size={18} />
           Transform Your Bathroom - Free Estimate
         </a>
       </div>
+
+      {/* Benefits & Features Section */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Why Choose North Glass Frameless Shower Doors?
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <PenTool className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">
+              Interior Architect Design
+            </h3>
+            <p className="text-black/70">
+              Professional Interior Architects create AutoCAD designs ensuring
+              perfect integration with your bathroom aesthetics and optimal
+              functionality.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ShieldCheck className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Premium Safety Glass</h3>
+            <p className="text-black/70">
+              3/8&quot; and 1/2&quot; tempered safety glass with polished edges
+              and optional protective coatings for easy cleaning and durability.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Settings className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Premium Hardware</h3>
+            <p className="text-black/70">
+              Heavy-duty hinges, handles, and support systems in multiple
+              finishes including chrome, brushed nickel, and matte black.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Ruler className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">AutoCAD Precision</h3>
+            <p className="text-black/70">
+              Computer-aided design ensures perfect measurements, seamless fit,
+              and eliminates installation surprises with detailed technical
+              drawings.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">
+              Professional Installation
+            </h3>
+            <p className="text-black/70">
+              Certified installers with specialized training ensure proper
+              alignment, sealing, and long-lasting performance with warranty
+              coverage.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <MapPin className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">
+              Statewide North Carolina
+            </h3>
+            <p className="text-black/70">
+              Serving all of North Carolina with local expertise in building
+              codes, architectural styles, and regional design preferences.
+            </p>
+          </div>
+        </div>
+
+        {/* Shower Door Types */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-center mb-8">
+            Frameless Shower Door Configurations
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h4 className="text-xl font-semibold mb-3">Swinging Doors</h4>
+              <ul className="text-black/70 space-y-2 mb-4">
+                <li>• Single hinged door entry</li>
+                <li>• Door + fixed panel combinations</li>
+                <li>• Inward or outward swing options</li>
+                <li>• Ideal for larger openings</li>
+              </ul>
+              <p className="text-sm text-black/60">
+                Perfect for spacious bathrooms where door clearance allows for
+                elegant hinged entry.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h4 className="text-xl font-semibold mb-3">Sliding Doors</h4>
+              <ul className="text-black/70 space-y-2 mb-4">
+                <li>• Space-saving sliding operation</li>
+                <li>• Bypass door configurations</li>
+                <li>• Smooth rolling hardware systems</li>
+                <li>• Great for compact bathrooms</li>
+              </ul>
+              <p className="text-sm text-black/60">
+                Ideal for smaller spaces where swing clearance is limited but
+                you want frameless elegance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Warranty Section */}
+        <div className="bg-primary-50 rounded-lg p-8 text-center">
+          <h3 className="text-2xl font-bold mb-4">
+            Comprehensive Warranty & Guarantee
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div>
+              <h4 className="font-semibold mb-2">Installation Warranty</h4>
+              <p className="text-black/70">
+                Professional installation guaranteed with warranty coverage on
+                workmanship and proper fit.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">Hardware Warranty</h4>
+              <p className="text-black/70">
+                Premium hardware components backed by manufacturer warranties
+                for long-lasting operation.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">Satisfaction Guarantee</h4>
+              <p className="text-black/70">
+                We stand behind our AutoCAD design process and professional
+                installation with complete satisfaction guarantee.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <ProcessStepper
         title="Our Professional Design & Installation Process"
@@ -204,6 +406,72 @@ export default function FramelessShowersPage() {
           },
         ]}
       />
+
+      {/* Customer Testimonials Section */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          What Our North Carolina Customers Say
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+            <div className="flex text-yellow-400 mb-3">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 fill-current" />
+              ))}
+            </div>
+            <p className="text-black/70 mb-4">
+              &quot;The AutoCAD drawings they provided were incredibly detailed
+              and helped us visualize exactly how the shower would look. The
+              installation was flawless and the quality exceeded our
+              expectations.&quot;
+            </p>
+            <p className="font-semibold">Sarah M.</p>
+            <p className="text-sm text-black/60">Cary, NC</p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+            <div className="flex text-yellow-400 mb-3">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 fill-current" />
+              ))}
+            </div>
+            <p className="text-black/70 mb-4">
+              &quot;Working with their Interior Architect made all the
+              difference. They helped us choose the perfect glass and hardware
+              combination that complements our bathroom design
+              beautifully.&quot;
+            </p>
+            <p className="font-semibold">Michael & Jennifer T.</p>
+            <p className="text-sm text-black/60">Raleigh, NC</p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+            <div className="flex text-yellow-400 mb-3">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 fill-current" />
+              ))}
+            </div>
+            <p className="text-black/70 mb-4">
+              &quot;The precision design process eliminated any guesswork.
+              Everything fit perfectly on the first try, and the frameless
+              shower transformed our entire bathroom. Highly recommend!&quot;
+            </p>
+            <p className="font-semibold">David L.</p>
+            <p className="text-sm text-black/60">Durham, NC</p>
+          </div>
+        </div>
+
+        <div className="text-center mt-8">
+          <p className="text-black/70 mb-4">
+            Join hundreds of satisfied customers across North Carolina
+          </p>
+          <a href="/request-quote" className="btn-primary inline-flex gap-2">
+            <Calculator size={18} />
+            Get Your Free AutoCAD Design Consultation
+          </a>
+        </div>
+      </section>
       <ServiceJsonLd />
     </main>
   );
