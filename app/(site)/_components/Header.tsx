@@ -52,11 +52,10 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-6" aria-label="Primary">
           <div className="relative" ref={resRef}>
             <button
-              onMouseEnter={() => setResidentialOpen(true)}
-              onMouseLeave={() => setResidentialOpen(false)}
               className="font-medium inline-flex items-center gap-1 h-10"
               aria-expanded={residentialOpen}
               aria-haspopup="true"
+              onClick={() => setResidentialOpen((v) => !v)}
             >
               <Home size={16} />
               Residential
