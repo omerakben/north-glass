@@ -12,14 +12,14 @@ export interface ButtonProps
 }
 
 const base =
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50";
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-blue-primary)]/50";
 const variantClasses: Record<Variant, string> = {
   default:
-    "bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-700 hover:to-blue-600 shadow-lg hover:shadow-xl hover:-translate-y-0.5",
+    "bg-gradient-to-r from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] text-white hover:from-[var(--brand-blue-dark)] hover:to-[var(--brand-blue-primary)] shadow-lg hover:shadow-xl hover:-translate-y-0.5",
   outline:
-    "border border-blue-200 bg-white text-blue-700 hover:bg-blue-50 hover:border-blue-300",
-  ghost: "hover:bg-blue-50 text-blue-700",
-  link: "underline text-blue-600 hover:text-blue-700",
+    "border border-[var(--brand-blue-secondary)] bg-white text-[var(--brand-blue-primary)] hover:bg-[var(--brand-blue-light)] hover:border-[var(--brand-blue-primary)]",
+  ghost: "hover:bg-[var(--brand-blue-light)] text-[var(--brand-blue-primary)]",
+  link: "underline text-[var(--brand-blue-primary)] hover:text-[var(--brand-blue-dark)]",
 };
 const sizeClasses: Record<Size, string> = {
   sm: "h-8 px-3 text-xs",

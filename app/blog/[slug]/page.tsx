@@ -170,7 +170,7 @@ export default async function BlogPost({ params }: Props) {
       </article>
 
       {/* Call to Action */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16">
+      <section className="bg-gradient-to-r from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] text-white py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>

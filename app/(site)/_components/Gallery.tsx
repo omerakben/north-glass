@@ -77,8 +77,8 @@ export default function Gallery() {
               onClick={() => setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full transition-all duration-300 font-medium animate-delay-dynamic ${
                 selectedCategory === category.id
-                  ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg"
-                  : "glass-effect text-gray-700 hover:text-blue-600 hover-lift"
+                  ? "bg-gradient-to-r from-[var(--brand-blue-primary)] to-[var(--brand-blue-secondary)] text-white shadow-lg"
+                  : "glass-effect text-gray-700 hover:text-[var(--brand-blue-primary)] hover-lift"
               }`}
             >
               {category.label}
