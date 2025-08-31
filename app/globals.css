@@ -849,3 +849,13 @@ body {
 .btn-secondary:hover {
   background-color: var(--brand-grey);
 }
+
+/* Custom grid pattern for hero background */
+.hero-grid-pattern {
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(255, 255, 255, 0.3) 1px,
+    transparent 0
+  );
+  background-size: 24px 24px;
+}

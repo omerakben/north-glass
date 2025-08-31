@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, Award, Calculator, PenTool, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export interface HomeHeroProps {
   heading?: string;
@@ -17,8 +17,6 @@ export interface HomeHeroProps {
   secondaryText?: string;
   optionalLine?: string;
   className?: string;
-  backgroundImages?: { src: string; alt: string }[];
-  rotationMs?: number;
 }
 
 export function HomeHero({
@@ -47,75 +45,25 @@ export function HomeHero({
   secondaryText = "View All Services",
   optionalLine = "Complete design-to-installation solutions for residential and commercial projects",
   className,
-  backgroundImages = [
-    {
-      src: "/images/frameless-glass-shower-doors/shower-big.png",
-      alt: "Frameless hotel-style glass shower",
-    },
-    {
-      src: "/images/glass-office-doors/commercial-aluminum-door-system.png",
-      alt: "Modern glass office doors and partitions",
-    },
-    {
-      src: "/images/window-replacement/after-window-replacement.png",
-      alt: "Aluminum window replacement in residential home",
-    },
-  ],
-  rotationMs = 4000,
 }: HomeHeroProps) {
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    if (!backgroundImages?.length) return;
-    const t = setInterval(
-      () => setIdx((i) => (i + 1) % backgroundImages.length),
-      rotationMs
-    );
-    return () => clearInterval(t);
-  }, [backgroundImages?.length, rotationMs]);
   return (
     <section
-      className={cn(
-        "relative overflow-hidden py-20 md:py-28 px-4",
-        "bg-gradient-to-br from-[var(--brand-teal)] to-[var(--brand-turquoise)]",
-        className
-      )}
+      className={cn("relative overflow-hidden py-20 md:py-28 px-4", className)}
       aria-labelledby="home-hero-heading"
     >
-      {/* Background slideshow */}
+      {/* Custom background with technical blueprint design */}
       <div className="absolute inset-0 -z-10">
-        {backgroundImages.map((img, i) => (
-          <div
-            key={img.src}
-            className={cn(
-              "absolute inset-0 transition-opacity duration-700",
-              i === idx ? "opacity-40" : "opacity-0"
-            )}
-            aria-hidden
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              sizes="100vw"
-              className="object-cover"
-              priority={i === 0}
-            />
-          </div>
-        ))}
-      </div>
-      {/* Glassmorphism overlay */}
-      <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
-
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.3) 1px, transparent 0)",
-            backgroundSize: "24px 24px",
-          }}
-        />
+        {/* Main background image */}
+        <div className="absolute inset-0" aria-hidden>
+          <Image
+            src="/images/background.png"
+            alt="Technical blueprint showing glass and aluminum systems"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-100"
+            priority
+          />
+        </div>
       </div>
 
       <div className="container mx-auto relative z-10">

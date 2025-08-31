@@ -1,6 +1,8 @@
 import { ArrowRight, CheckCircle, Shield, Star, Zap } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import FeaturedProjects from "./(site)/_components/FeaturedProjects";
 import Gallery from "./(site)/_components/Gallery";
 import { HomeHero } from "./(site)/_components/HomeHero";
 import TestimonialCarousel from "./(site)/_components/TestimonialCarousel";
@@ -39,11 +41,6 @@ const residentialServices = [
     title: "Custom Mirrors",
     description: "Bathroom vanities, gym walls, and decorative mirrors",
     href: "/services/mirrors",
-  },
-  {
-    title: "Bug Screens",
-    description: "Window and door screen repair and fabrication",
-    href: "/services/window-and-door-screens",
   },
 ];
 
@@ -117,9 +114,24 @@ export default function Home() {
     <main>
       <HomeHero />
 
+      {/* Featured Projects Gallery */}
+      <FeaturedProjects />
+
       {/* Services Overview */}
-      <section className="services-section bg-gradient-to-b from-slate-100 to-slate-200 py-20 fade-in-section">
-        <div className="container mx-auto px-6">
+      <section className="services-section bg-gradient-to-b from-slate-100 to-slate-200 py-20 fade-in-section relative overflow-hidden">
+        {/* Large Logo Background Watermark */}
+        {/* Background logo watermark */}
+        <div className="absolute inset-0 flex items-center justify-center -z-10 overflow-hidden">
+          <Image
+            src="/images/logo.png"
+            alt=""
+            width={800}
+            height={600}
+            className="opacity-[0.08] transform rotate-12 scale-150"
+            style={{ filter: "grayscale(100%)", width: "auto" }}
+          />
+        </div>{" "}
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Residential & Commercial Services

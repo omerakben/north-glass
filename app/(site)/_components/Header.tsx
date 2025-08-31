@@ -105,12 +105,6 @@ export default function Header() {
                 </Link>
                 <Link
                   className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/window-and-door-screens"
-                >
-                  Bug Screens
-                </Link>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
                   href="/services/glass-table-tops-and-shelves"
                 >
                   Glass Table Tops &amp; Shelves

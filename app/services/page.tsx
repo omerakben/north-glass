@@ -10,8 +10,8 @@ import {
   ShowerHead,
   Sparkles,
   Store,
-  Table2,
   Sun,
+  Table2,
   type LucideIcon,
 } from "lucide-react";
 import type { Metadata } from "next";
@@ -69,7 +69,7 @@ const services: Array<{
   },
   {
     href: "/services/window-and-door-screens",
-    title: "Window & Door Screens (Bug Screens)",
+    title: "Window & Door Screens",
     blurb: "Custom screen repair and fabrication.",
     icon: Grid3X3,
   },
