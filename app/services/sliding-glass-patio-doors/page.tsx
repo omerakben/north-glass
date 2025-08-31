@@ -1,4 +1,3 @@
-import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -66,22 +65,16 @@ export default function SlidingPatioDoorPage() {
         door solutions.
       </p>
 
-      {/* Image Carousel */}
+      {/* Image Display */}
       <div className="flex justify-center my-8">
-        <AutoCarousel
-          images={[
-            {
-              src: "/images/sliding-glass-patio-doors/after-stairs.png",
-              alt: "Modern sliding glass patio door",
-            },
-            {
-              src: "/images/sliding-glass-patio-doors/before-stairs.png",
-              alt: "Patio door installation",
-            },
-          ]}
-          interval={2000}
-          className="max-w-4xl w-full"
-        />
+        <div className="max-w-4xl w-full bg-gray-100 rounded-lg p-8 text-center">
+          <p className="text-gray-600 mb-4">
+            Professional sliding glass patio door solutions
+          </p>
+          <p className="text-sm text-gray-500">
+            Contact us for a free consultation and custom design
+          </p>
+        </div>
       </div>
 
       <div className="text-center mb-8">

@@ -410,7 +410,7 @@ export default function CharlotteLocationPage() {
                 <div className="bg-gray-100 rounded-lg overflow-hidden">
                   <div className="relative h-48">
                     <Image
-                      src="/images/glass-office-doors/commercial-front.png"
+                      src="/images/glass-office-doors/commercial-aluminum-door-system.png"
                       alt="Professional glass office doors in Charlotte"
                       fill
                       className="object-cover"

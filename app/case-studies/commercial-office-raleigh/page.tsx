@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       "See how our Interior Architect and AutoCAD design process optimized workflow in a Raleigh corporate office renovation.",
     images: [
       {
-        url: "/images/glass-office-doors/commercial-front.png",
+        url: "/images/glass-office-doors/commercial-aluminum-door-system.png",
         width: 1200,
         height: 630,
         alt: "Modern corporate office glass partition system with interior architect design",
@@ -42,7 +42,7 @@ const CaseStudySchema = {
   description:
     "Detailed case study showcasing Interior Architect workflow optimization and AutoCAD system design for multi-floor office renovation in Raleigh, NC",
   image:
-    "https://northglassnc.com/images/glass-office-doors/commercial-front.png",
+    "https://northglassnc.com/images/glass-office-doors/commercial-aluminum-door-system.png",
   author: {
     "@type": "Organization",
     name: "North Glass LLC",
@@ -192,7 +192,7 @@ export default function CommercialOfficeRaleighCaseStudy() {
             </h2>
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/glass-office-doors/commercial-front.png"
+                src="/images/glass-office-doors/commercial-aluminum-door-system.png"
                 alt="Modern corporate office with glass partition systems designed by interior architect"
                 fill
                 className="object-cover"

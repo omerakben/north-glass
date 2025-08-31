@@ -7,7 +7,6 @@ import ConsentBanner from "./(site)/_components/ConsentBanner";
 import Footer from "./(site)/_components/Footer";
 import Header from "./(site)/_components/Header";
 import "./globals.css";
-import { ScrollProvider } from "./providers";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -251,12 +250,9 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <ScrollProvider>
-          <Header />
-          <main id="main-content">{children}</main>
-          <Footer />
-        </ScrollProvider>
-        <ConsentBanner />
+        <Header />
+        <main id="main-content">{children}</main>
+        <Footer />        <ConsentBanner />
         <AnalyticsEvents />
         <Analytics />
         <script

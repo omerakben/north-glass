@@ -715,7 +715,7 @@ export default function ModernStaircaseDurhamCaseStudy() {
               >
                 <div className="relative h-48 bg-gray-200">
                   <Image
-                    src="/images/glass-office-doors/commercial-front.png"
+                    src="/images/glass-office-doors/commercial-aluminum-door-system.png"
                     alt="Commercial office glass partition system"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

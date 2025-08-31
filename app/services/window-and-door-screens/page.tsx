@@ -1,6 +1,6 @@
-import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -65,22 +65,17 @@ export default function ScreensPage() {
         deliver comprehensive screen solutions for windows and doors.
       </p>
 
-      {/* Image Carousel */}
+      {/* Image Display */}
       <div className="flex justify-center my-8">
-        <AutoCarousel
-          images={[
-            {
-              src: "/images/window-and-door-screens/before-windows.png",
-              alt: "Window screen installation",
-            },
-            {
-              src: "/images/window-and-door-screens/before-stairs.png",
-              alt: "Door screen repair",
-            },
-          ]}
-          interval={2000}
-          className="max-w-4xl w-full"
-        />
+        <div className="max-w-4xl w-full">
+          <Image
+            src="/images/window-and-door-screens/bug-screen-installation-nc.jpg"
+            alt="Professional window and door screen installation with aluminum frames in North Carolina"
+            width={800}
+            height={600}
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
       </div>
 
       <div className="text-center mb-8">

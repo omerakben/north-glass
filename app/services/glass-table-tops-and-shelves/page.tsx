@@ -1,4 +1,3 @@
-import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -66,22 +65,16 @@ export default function TableTopsShelvesPage() {
         solutions.
       </p>
 
-      {/* Image Carousel */}
+      {/* Image Display */}
       <div className="flex justify-center my-8">
-        <AutoCarousel
-          images={[
-            {
-              src: "/images/glass-table-tops-and-shelves/commercial-front.png",
-              alt: "Custom glass table top",
-            },
-            {
-              src: "/images/glass-table-tops-and-shelves/before-shower-door.png",
-              alt: "Glass shelving display",
-            },
-          ]}
-          interval={2000}
-          className="max-w-4xl w-full"
-        />
+        <div className="max-w-4xl w-full bg-gray-100 rounded-lg p-8 text-center">
+          <p className="text-gray-600 mb-4">
+            Custom glass table tops and shelving solutions
+          </p>
+          <p className="text-sm text-gray-500">
+            Contact us for precision-cut glass furniture solutions
+          </p>
+        </div>
       </div>
 
       <div className="text-center mb-8">

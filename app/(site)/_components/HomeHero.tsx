@@ -3,9 +3,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Award, Calculator, PenTool, Shield } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 
 export interface HomeHeroProps {
   heading?: string;
@@ -53,7 +53,7 @@ export function HomeHero({
       alt: "Frameless hotel-style glass shower",
     },
     {
-      src: "/images/glass-office-doors/commercial-front.png",
+      src: "/images/glass-office-doors/commercial-aluminum-door-system.png",
       alt: "Modern glass office doors and partitions",
     },
     {

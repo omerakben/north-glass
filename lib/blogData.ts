@@ -412,7 +412,7 @@ Ready to optimize your North Carolina office with the perfect partition solution
       "workspace design",
       "north carolina business",
     ],
-    featuredImage: "/images/commercial-storefronts/office-partitions.png",
+    featuredImage: "/images/commercial-storefronts/commercial-front.png",
     featuredImageAlt:
       "Modern office space with aluminum and glass partition systems designed by Interior Architects",
     seoKeywords:
@@ -1576,7 +1576,8 @@ Ready to experience the AutoCAD advantage for your glass or aluminum project?
       "aluminum design",
       "north carolina",
     ],
-    featuredImage: "/images/glass-office-doors/autocad-design.png",
+    featuredImage:
+      "/images/glass-office-doors/commercial-aluminum-door-system.png",
     featuredImageAlt:
       "AutoCAD technical drawing showing precision design for glass and aluminum installation",
     seoKeywords:

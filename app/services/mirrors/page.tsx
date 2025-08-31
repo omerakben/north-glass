@@ -70,15 +70,31 @@ export default function MirrorsPage() {
         <AutoCarousel
           images={[
             {
-              src: "/images/mirrors/custom-bathroom-mirror.png",
+              src: "/images/mirrors/custom-bathroom-mirror-design.jpg",
               alt: "Custom bathroom vanity mirror with precision-cut edges and architectural design by interior architects",
             },
             {
-              src: "/images/mirrors/before-shower-door.png",
-              alt: "Professional mirror installation with aluminum mounting system and architectural integration",
+              src: "/images/mirrors/frameless-bathroom-mirror-modern.jpg",
+              alt: "Modern frameless bathroom mirror installation with sleek mounting system in Raleigh",
+            },
+            {
+              src: "/images/mirrors/luxury-vanity-mirror-cary.jpg",
+              alt: "Luxury vanity mirror installation with custom lighting integration in Cary home",
+            },
+            {
+              src: "/images/mirrors/bathroom-mirror-installation-raleigh.jpg",
+              alt: "Professional bathroom mirror installation with architectural precision in Raleigh",
+            },
+            {
+              src: "/images/mirrors/custom-bathroom-mirror-large.jpg",
+              alt: "Large custom bathroom mirror with aluminum mounting system and design integration",
+            },
+            {
+              src: "/images/mirrors/commercial-mirror.jpg",
+              alt: "Commercial mirror installation with professional craftsmanship and durability",
             },
           ]}
-          interval={2000}
+          interval={4000}
           className="max-w-4xl w-full"
         />
       </div>

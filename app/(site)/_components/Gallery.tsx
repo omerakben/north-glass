@@ -1,5 +1,6 @@
 "use client";
 
+import { enhancedGalleryItems } from "@/lib/galleryData";
 import Image from "next/image";
 import { useState } from "react";
 import BeforeAfterSlider from "./BeforeAfterSlider";
@@ -17,7 +18,9 @@ interface GalleryItem {
     | "railing"
     | "storefront"
     | "aluminum-systems"
-    | "architectural-design";
+    | "architectural-design"
+    | "pergola"
+    | "screen";
   // For single images
   image?: string;
   alt?: string;
@@ -27,120 +30,6 @@ interface GalleryItem {
   beforeAlt?: string;
   afterAlt?: string;
 }
-
-// Gallery data with actual images from public directory
-const galleryItems: GalleryItem[] = [
-  {
-    id: "1",
-    type: "before-after",
-    title: "Frameless Shower Transformation",
-    location: "Cary, NC",
-    category: "shower",
-    beforeImage: "/images/frameless-glass-shower-doors/before-shower-door.png",
-    afterImage: "/images/frameless-glass-shower-doors/after-shower-door.png",
-    beforeAlt:
-      "Outdated framed shower enclosure before renovation in Cary home",
-    afterAlt:
-      "Modern frameless glass shower enclosure with premium hardware in Cary bathroom renovation",
-  },
-  {
-    id: "2",
-    type: "single",
-    title: "Commercial Storefront",
-    location: "Raleigh, NC",
-    category: "storefront",
-    image: "/images/commercial-storefronts/commercial-front.png",
-    alt: "Modern glass and aluminum commercial storefront installation in Raleigh business district",
-  },
-  {
-    id: "3",
-    type: "before-after",
-    title: "Glass Staircase Railing",
-    location: "Durham, NC",
-    category: "railing",
-    beforeImage: "/images/staircase-glass-railings/before-stairs.png",
-    afterImage: "/images/staircase-glass-railings/after-stairs.png",
-    beforeAlt:
-      "Traditional closed staircase railing before architectural renovation in Durham home",
-    afterAlt:
-      "Modern tempered glass staircase railing with aluminum framework maximizing light flow in Durham residence",
-  },
-  {
-    id: "4",
-    type: "before-after",
-    title: "Window Replacement",
-    location: "Chapel Hill, NC",
-    category: "window",
-    beforeImage: "/images/window-replacement/before-windows.png",
-    afterImage: "/images/window-replacement/after-window-replacement.png",
-    beforeAlt:
-      "Old single-pane windows with outdated aluminum frames before replacement in Chapel Hill home",
-    afterAlt:
-      "Energy-efficient double-pane windows with modern aluminum framing system in Chapel Hill renovation",
-  },
-  {
-    id: "5",
-    type: "single",
-    title: "Custom Bathroom Mirror",
-    location: "Apex, NC",
-    category: "mirror",
-    image: "/images/mirrors/custom-bathroom-mirror.png",
-    alt: "Large custom frameless bathroom mirror with precision-cut edges by interior architects in Apex home",
-  },
-  {
-    id: "6",
-    type: "single",
-    title: "Luxury Shower Enclosure",
-    location: "Morrisville, NC",
-    category: "shower",
-    image: "/images/frameless-glass-shower-doors/shower-big.png",
-    alt: "Premium frameless glass shower enclosure with architectural design elements in luxury Morrisville bathroom",
-  },
-  {
-    id: "7",
-    type: "single",
-    title: "Custom Aluminum Storefront System",
-    location: "Raleigh, NC",
-    category: "aluminum-systems",
-    image: "/images/commercial-storefronts/commercial-front.png",
-    alt: "Custom aluminum and glass commercial storefront system with architectural design integration in Raleigh business",
-  },
-  {
-    id: "8",
-    type: "before-after",
-    title: "Architectural Glass & Aluminum Renovation",
-    location: "Charlotte, NC",
-    category: "architectural-design",
-    beforeImage: "/images/window-replacement/before-windows.png",
-    afterImage: "/images/commercial-storefronts/commercial-front.png",
-    beforeAlt:
-      "Traditional building facade before comprehensive architectural renovation in Charlotte",
-    afterAlt:
-      "Modern architectural design featuring integrated glass and aluminum curtain wall system in Charlotte renovation",
-  },
-  {
-    id: "9",
-    type: "single",
-    title: "Aluminum Window & Door Integration",
-    location: "Asheville, NC",
-    category: "aluminum-systems",
-    image: "/images/glass-office-doors/commercial-front.png",
-    alt: "Custom aluminum window and door system with architectural design precision in Asheville commercial project",
-  },
-  {
-    id: "10",
-    type: "before-after",
-    title: "AutoCAD-Designed Glass & Aluminum Facade",
-    location: "Greensboro, NC",
-    category: "architectural-design",
-    beforeImage: "/images/staircase-glass-railings/before-stairs.png",
-    afterImage: "/images/commercial-storefronts/commercial-front.png",
-    beforeAlt:
-      "Original building exterior design before professional AutoCAD renovation planning in Greensboro",
-    afterAlt:
-      "Professional AutoCAD-designed glass and aluminum facade transformation with architectural integration in Greensboro",
-  },
-];
 
 const categories = [
   { id: "all", label: "All Projects" },
@@ -152,6 +41,8 @@ const categories = [
   { id: "storefront", label: "Storefronts" },
   { id: "aluminum-systems", label: "Aluminum Systems" },
   { id: "architectural-design", label: "Architectural Design" },
+  { id: "pergola", label: "Pergolas" },
+  { id: "screen", label: "Screens" },
 ];
 
 export default function Gallery() {
@@ -160,8 +51,10 @@ export default function Gallery() {
 
   const filteredItems =
     selectedCategory === "all"
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === selectedCategory);
+      ? enhancedGalleryItems
+      : enhancedGalleryItems.filter(
+          (item) => item.category === selectedCategory
+        );
 
   return (
     <section className="py-16 bg-gradient-to-br from-blue-50 via-white to-blue-50">

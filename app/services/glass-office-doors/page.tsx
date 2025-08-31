@@ -71,15 +71,27 @@ export default function GlassOfficeDoorsPage() {
         <AutoCarousel
           images={[
             {
-              src: "/images/glass-office-doors/commercial-front.png",
-              alt: "Modern glass office entrance",
+              src: "/images/glass-office-doors/commercial-aluminum-door-system.png",
+              alt: "Commercial aluminum and glass door system for office building in Raleigh",
             },
             {
-              src: "/images/glass-office-doors/before-shower-door.png",
-              alt: "Glass office partition",
+              src: "/images/glass-office-doors/commercial-office.jpg",
+              alt: "Modern glass office door installation with aluminum framework in Charlotte",
+            },
+            {
+              src: "/images/glass-office-doors/commercial-office2.jpg",
+              alt: "Professional glass office door with contemporary design in Durham",
+            },
+            {
+              src: "/images/glass-office-doors/commercial-office3.jpg",
+              alt: "Elegant glass office door system for corporate environment in Greensboro",
+            },
+            {
+              src: "/images/glass-office-doors/commercial-office4.png",
+              alt: "Premium glass office door with architectural integration in Asheville",
             },
           ]}
-          interval={2000} // 2 seconds as requested
+          interval={4000}
           className="max-w-4xl w-full"
         />
       </div>

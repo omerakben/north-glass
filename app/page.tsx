@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Gallery from "./(site)/_components/Gallery";
 import { HomeHero } from "./(site)/_components/HomeHero";
-import ScrollAnimations from "./(site)/_components/ScrollAnimations";
 import TestimonialCarousel from "./(site)/_components/TestimonialCarousel";
 
 export const metadata: Metadata = {
@@ -116,7 +115,6 @@ const serviceAreas = [
 export default function Home() {
   return (
     <main>
-      <ScrollAnimations />
       <HomeHero />
 
       {/* Services Overview */}

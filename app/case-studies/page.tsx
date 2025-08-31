@@ -66,7 +66,8 @@ const caseStudies: CaseStudy[] = [
     serviceCategory: "Glass Office Doors",
     completionDate: "2024",
     clientType: "Corporate Office",
-    thumbnailImage: "/images/glass-office-doors/commercial-front.png",
+    thumbnailImage:
+      "/images/glass-office-doors/commercial-aluminum-door-system.png",
     thumbnailAlt:
       "Modern glass office partition system designed with AutoCAD precision in Raleigh",
     featured: true,
