@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 interface Testimonial {
@@ -81,6 +82,7 @@ export default function TestimonialCarousel({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -150,16 +152,33 @@ export default function TestimonialCarousel({
           {/* Customer photo and info */}
           <div className="text-center">
             <div className="relative w-24 h-24 mx-auto mb-4">
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-50 to-blue-100 rounded-full flex items-center justify-center border-2 border-blue-200">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">
-                    {currentTestimonial.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </span>
+              {!imageErrors[currentTestimonial.name] ? (
+                <Image
+                  src={currentTestimonial.image}
+                  alt={currentTestimonial.imageAlt}
+                  width={96}
+                  height={96}
+                  className="rounded-full object-cover border-2 border-blue-200"
+                  onError={() => {
+                    setImageErrors((prev) => ({
+                      ...prev,
+                      [currentTestimonial.name]: true,
+                    }));
+                  }}
+                />
+              ) : (
+                /* Fallback gradient avatar */
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-50 to-blue-100 rounded-full flex items-center justify-center border-2 border-blue-200">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">
+                      {currentTestimonial.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </span>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
             <h3 className="font-semibold text-lg text-gray-900 mb-1">
               {currentTestimonial.name}
@@ -194,16 +213,33 @@ export default function TestimonialCarousel({
         {/* Mobile layout: Stacked */}
         <div className="md:hidden text-center">
           <div className="relative w-20 h-20 mx-auto mb-4">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-full flex items-center justify-center border-2 border-blue-200">
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">
-                  {currentTestimonial.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </span>
+            {!imageErrors[currentTestimonial.name] ? (
+              <Image
+                src={currentTestimonial.image}
+                alt={currentTestimonial.imageAlt}
+                width={80}
+                height={80}
+                className="rounded-full object-cover border-2 border-blue-200"
+                onError={() => {
+                  setImageErrors((prev) => ({
+                    ...prev,
+                    [currentTestimonial.name]: true,
+                  }));
+                }}
+              />
+            ) : (
+              /* Fallback gradient avatar */
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-full flex items-center justify-center border-2 border-blue-200">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">
+                    {currentTestimonial.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           <div className="flex justify-center gap-1 mb-4">
