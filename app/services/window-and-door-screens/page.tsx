@@ -1,6 +1,8 @@
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
+import ProcessStepper from "@/components/ProcessStepper";
+import { ShieldCheck, Sun, Settings } from "lucide-react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -65,17 +67,17 @@ export default function ScreensPage() {
         deliver comprehensive screen solutions for windows and doors.
       </p>
 
-      {/* Image Display */}
+      {/* Image Carousel */}
       <div className="flex justify-center my-8">
-        <div className="max-w-4xl w-full">
-          <Image
-            src="/images/window-and-door-screens/bug-screen-installation-nc.jpg"
-            alt="Professional window and door screen installation with aluminum frames in North Carolina"
-            width={800}
-            height={600}
-            className="w-full h-auto rounded-lg shadow-lg"
-          />
-        </div>
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/window-and-door-screens/bug-screen-installation-nc.jpg",
+              alt: "Professional window and door screen installation with aluminum frames in North Carolina",
+            },
+          ]}
+          className="max-w-4xl w-full"
+        />
       </div>
 
       <div className="text-center mb-8">
@@ -83,6 +85,74 @@ export default function ScreensPage() {
           Screen Solutions - Free Estimate
         </a>
       </div>
+
+      {/* Features */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Why Choose Our Screen Services?
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ShieldCheck className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Custom Aluminum Frames</h3>
+            <p className="text-black/70">
+              Strong, long-lasting frames built to your exact openings.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Sun className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Pet & Solar Screens</h3>
+            <p className="text-black/70">
+              Options to resist pet damage or block heat and UV.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Settings className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Fast Installation</h3>
+            <p className="text-black/70">
+              Quick turnaround with professional results.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <ProcessStepper
+        steps={[
+          {
+            title: "Consultation & Measurement",
+            description:
+              "We inspect your existing screens and take precise measurements.",
+            details: [
+              "On-site evaluation",
+              "Material and mesh recommendations",
+              "Budget discussion",
+            ],
+          },
+          {
+            title: "Fabrication",
+            description: "Screens and frames are built to your specifications.",
+            details: [
+              "Aluminum frame cutting",
+              "Screen mesh selection",
+            ],
+          },
+          {
+            title: "Installation",
+            description: "Our team installs and adjusts each screen for a perfect fit.",
+            details: [
+              "Removal of old screens",
+              "Final inspection",
+            ],
+          },
+        ]}
+      />
+
       <FAQ
         items={[
           {
@@ -121,3 +191,4 @@ export default function ScreensPage() {
     </main>
   );
 }
+

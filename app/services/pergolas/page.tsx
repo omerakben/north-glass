@@ -1,3 +1,7 @@
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
+import FAQ from "@/app/(site)/_components/FAQ";
+import ProcessStepper from "@/components/ProcessStepper";
+import { Sun, ShieldCheck, Settings } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -67,27 +71,133 @@ export default function PergolasPage() {
         premium look.
       </p>
 
+      {/* Image Carousel */}
+      <div className="flex justify-center my-8">
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/pergolas/commercial-pergola.jpg",
+              alt: "Commercial aluminum pergola covering outdoor seating",
+            },
+            {
+              src: "/images/pergolas/commercial-pergola-two.jpg",
+              alt: "Custom pergola providing shade for restaurant patio",
+            },
+            {
+              src: "/images/pergolas/commercial-pergola2.jpg",
+              alt: "Modern pergola structure with integrated lighting",
+            },
+            {
+              src: "/images/pergolas/pergola.jpg",
+              alt: "Freestanding aluminum pergola in landscaped courtyard",
+            },
+          ]}
+          className="max-w-4xl w-full"
+        />
+      </div>
+
       <div className="text-center mb-8">
         <a href="/request-quote" className="btn-primary inline-block">
           Get Free Estimate
         </a>
       </div>
 
-      <section className="max-w-3xl mx-auto prose">
-        <h2>Commercial-Grade Pergolas</h2>
-        <ul>
-          <li>Aluminum structures for strength and longevity</li>
-          <li>Fixed or adjustable louver options</li>
-          <li>Integrated lighting and privacy screens available</li>
-          <li>Designed for restaurants, hotels, and shared outdoor spaces</li>
-        </ul>
-        <h3>Turnkey Delivery</h3>
-        <p>
-          We handle design, permitting coordination, and professional
-          installation statewide. Ask about our hotel and hospitality project
-          experience.
-        </p>
+      {/* Features */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Why Choose Our Aluminum Pergolas?
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Sun className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Comfortable Shade</h3>
+            <p className="text-black/70">
+              Create usable outdoor space with stylish, functional shade.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ShieldCheck className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Durable Aluminum</h3>
+            <p className="text-black/70">
+              Powder-coated frames resist weather and require minimal upkeep.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Settings className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Integrated Options</h3>
+            <p className="text-black/70">
+              Add lighting, fans, or privacy screens for a complete solution.
+            </p>
+          </div>
+        </div>
       </section>
+
+      <ProcessStepper
+        steps={[
+          {
+            title: "Consultation & Site Review",
+            description:
+              "We evaluate your outdoor space and discuss shade and design goals.",
+            details: [
+              "On-site measurement",
+              "Use-case planning",
+              "Budget alignment",
+            ],
+          },
+          {
+            title: "AutoCAD Design",
+            description: "Our team drafts a custom pergola layout for approval.",
+            details: [
+              "Detailed structural drawings",
+              "Integration with existing architecture",
+            ],
+          },
+          {
+            title: "Fabrication",
+            description: "Aluminum components are manufactured with precision.",
+            details: [
+              "Powder-coated finishes",
+              "Quality inspections",
+            ],
+          },
+          {
+            title: "Installation",
+            description:
+              "Professional installers assemble and secure your pergola on-site.",
+            details: [
+              "Efficient construction",
+              "Final alignment and cleanup",
+            ],
+          },
+        ]}
+      />
+
+      <FAQ
+        items={[
+          {
+            question: "Do you design pergolas for commercial properties?",
+            answer:
+              "Yes, we specialize in commercial pergola systems for restaurants, hotels, and corporate campuses across North Carolina.",
+          },
+          {
+            question: "What materials are used?",
+            answer:
+              "Our pergolas are built from powder-coated aluminum for long-lasting durability and minimal maintenance.",
+          },
+          {
+            question: "Can pergolas include lighting or privacy screens?",
+            answer:
+              "Absolutely. We can integrate lighting, fans, heaters, and privacy panels into the design for a complete outdoor environment.",
+          },
+        ]}
+      />
+
       <ServiceJsonLd />
     </main>
   );

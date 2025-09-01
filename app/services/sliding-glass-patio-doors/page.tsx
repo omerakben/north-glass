@@ -1,4 +1,7 @@
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
+import ProcessStepper from "@/components/ProcessStepper";
+import { ShieldCheck, Ruler, Settings } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -65,16 +68,25 @@ export default function SlidingPatioDoorPage() {
         door solutions.
       </p>
 
-      {/* Image Display */}
+      {/* Image Carousel */}
       <div className="flex justify-center my-8">
-        <div className="max-w-4xl w-full bg-gray-100 rounded-lg p-8 text-center">
-          <p className="text-gray-600 mb-4">
-            Professional sliding glass patio door solutions
-          </p>
-          <p className="text-sm text-gray-500">
-            Contact us for a free consultation and custom design
-          </p>
-        </div>
+        <AutoCarousel
+          images={[
+            {
+              src: "/images/sliding-glass-patio-doors/slide1.jpg",
+              alt: "Modern sliding glass patio door opening to outdoor living space",
+            },
+            {
+              src: "/images/sliding-glass-patio-doors/slide2.jpg",
+              alt: "Energy-efficient sliding patio door with slim aluminum frame",
+            },
+            {
+              src: "/images/sliding-glass-patio-doors/slide3.jpg",
+              alt: "Large glass patio door providing clear outdoor views",
+            },
+          ]}
+          className="max-w-4xl w-full"
+        />
       </div>
 
       <div className="text-center mb-8">
@@ -82,6 +94,81 @@ export default function SlidingPatioDoorPage() {
           Get Free Quote + AutoCAD Design
         </a>
       </div>
+
+      {/* Features */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Why Choose Our Sliding Patio Doors?
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ShieldCheck className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Durable Aluminum Frames</h3>
+            <p className="text-black/70">
+              Engineered for strength and long-term weather resistance.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Ruler className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Energy-Efficient Glass</h3>
+            <p className="text-black/70">
+              Low-E options keep interiors comfortable year-round.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Settings className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Smooth Operation</h3>
+            <p className="text-black/70">
+              Precision rollers and hardware for effortless sliding.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <ProcessStepper
+        steps={[
+          {
+            title: "Consultation & Measurement",
+            description: "We assess your opening and discuss design goals.",
+            details: [
+              "On-site or virtual consultation",
+              "Energy efficiency evaluation",
+              "Budget and timeline planning",
+            ],
+          },
+          {
+            title: "AutoCAD Design",
+            description: "Detailed drawings ensure a perfect fit and smooth operation.",
+            details: [
+              "Precise measurements and layout",
+              "Hardware and glass specification",
+            ],
+          },
+          {
+            title: "Fabrication & Preparation",
+            description: "Your door system is manufactured and prepped for install.",
+            details: [
+              "Quality-controlled fabrication",
+              "Hardware preparation",
+            ],
+          },
+          {
+            title: "Professional Installation",
+            description: "Certified installers deliver a clean, efficient install.",
+            details: [
+              "Removal of existing unit",
+              "Precise alignment and sealing",
+            ],
+          },
+        ]}
+      />
+
       <FAQ
         items={[
           {
@@ -90,8 +177,7 @@ export default function SlidingPatioDoorPage() {
               "Yes, we specialize in both aluminum and glass sliding door systems across North Carolina. Our Interior Architects design integrated aluminum-glass solutions using AutoCAD for optimal performance and weather resistance.",
           },
           {
-            question:
-              "What's better: aluminum or vinyl frames for sliding doors?",
+            question: "What's better: aluminum or vinyl frames for sliding doors?",
             answer:
               "Aluminum frames offer superior durability, weather resistance, and thermal performance with thermal breaks. Our complete system approach helps you choose the best material for your specific application and budget.",
           },
@@ -121,3 +207,4 @@ export default function SlidingPatioDoorPage() {
     </main>
   );
 }
+

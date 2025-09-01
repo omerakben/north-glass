@@ -1,6 +1,9 @@
+import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
+import FAQ from "@/app/(site)/_components/FAQ";
+import ProcessStepper from "@/components/ProcessStepper";
+import { ShieldCheck, Ruler, Settings } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 
 export const metadata: Metadata = {
   title: "Aluminum Windows – Energy Efficient Replacement | North Glass",
@@ -65,10 +68,11 @@ export default function AluminumWindowsPage() {
       <h1 className="text-3xl font-bold mb-4 text-center">Aluminum Windows</h1>
       <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
         Upgrade your home with durable, energy-efficient aluminum windows. Our
-        team measures, fabricates, and installs precision-fit systems for
-        better comfort, security, and curb appeal.
+        team measures, fabricates, and installs precision-fit systems for better
+        comfort, security, and curb appeal.
       </p>
 
+      {/* Image Carousel */}
       <div className="flex justify-center my-8">
         <AutoCarousel
           images={[
@@ -96,20 +100,100 @@ export default function AluminumWindowsPage() {
         </a>
       </div>
 
-      <section className="max-w-3xl mx-auto prose">
-        <h2>Why Aluminum Windows?</h2>
-        <ul>
-          <li>Strong, slim profiles maximize glass and light</li>
-          <li>Low maintenance and long service life</li>
-          <li>Excellent weather resistance across North Carolina climates</li>
-          <li>Available in thermal break options for improved efficiency</li>
-        </ul>
-        <h3>Professional Installation</h3>
-        <p>
-          We handle everything from measurement to installation and sealing, and
-          we remove and dispose of old units responsibly.
-        </p>
+      {/* Features */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Benefits of Aluminum Windows
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ShieldCheck className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Energy Efficiency</h3>
+            <p className="text-black/70">
+              Thermal-break frames and insulated glass reduce energy costs.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Ruler className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Slim Modern Profiles</h3>
+            <p className="text-black/70">
+              Narrow sightlines maximize natural light and views.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Settings className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Professional Installation</h3>
+            <p className="text-black/70">
+              Expert installers ensure a perfect fit and finish.
+            </p>
+          </div>
+        </div>
       </section>
+
+      <ProcessStepper
+        steps={[
+          {
+            title: "Consultation & Measurement",
+            description:
+              "We evaluate existing openings and gather precise measurements.",
+            details: [
+              "On-site assessment",
+              "Style and performance discussion",
+              "Budget planning",
+            ],
+          },
+          {
+            title: "AutoCAD Design",
+            description: "Detailed plans ensure windows fit and operate flawlessly.",
+            details: [
+              "Exact sizing and configuration",
+              "Energy efficiency considerations",
+            ],
+          },
+          {
+            title: "Fabrication",
+            description: "Windows are manufactured to specification with quality checks.",
+            details: [
+              "Custom frame production",
+              "Glass unit assembly",
+            ],
+          },
+          {
+            title: "Installation",
+            description: "Certified technicians install and seal each unit.",
+            details: [
+              "Removal of old windows",
+              "Weatherproofing and insulation",
+            ],
+          },
+        ]}
+      />
+
+      <FAQ
+        items={[
+          {
+            question: "Are aluminum windows energy efficient?",
+            answer:
+              "Yes, modern aluminum windows with thermal breaks and insulated glass can meet or exceed energy codes across North Carolina.",
+          },
+          {
+            question: "Can you match existing window styles?",
+            answer:
+              "We offer a variety of frame colors and profiles to match or upgrade your home's look.",
+          },
+          {
+            question: "How long does installation take?",
+            answer:
+              "Most homes are completed in one to two days depending on the number of windows and site conditions.",
+          },
+        ]}
+      />
       <ServiceJsonLd />
     </main>
   );
