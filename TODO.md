@@ -61,7 +61,14 @@
 ### Performance & Monitoring
 
 - [ ] **task-PRE-004**: Run Lighthouse audit (target: 90+ all scores)
-- [ ] **task-PRE-005**: Verify Vercel Analytics configuration
+- [x] **task-PRE-005**: Verify Vercel Analytics configuration ✅ COMPLETED
+  - **Status**: ✅ @vercel/analytics package installed and configured
+  - **Implementation**: Analytics component added to root layout using @vercel/analytics/next
+  - **Integration**: Working alongside existing Google Analytics 4 tracking
+- [x] **task-PRE-005a**: Fix logo aspect ratio issue ✅ COMPLETED
+  - **Issue**: Logo displaying at incorrect aspect ratio (48x120 vs natural 1:1)
+  - **Fix**: Updated Header logo dimensions to maintain proper aspect ratio with object-contain
+  - **Result**: Should improve Lighthouse performance score from 96 to higher
 - [ ] **task-PRE-006**: Test Google Analytics 4 event tracking
 - [ ] **task-PRE-007**: Confirm SMTP email delivery (nodemailer + Google Workspace)
 
