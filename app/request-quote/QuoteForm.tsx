@@ -176,7 +176,7 @@ export default function QuoteForm() {
 
       <form
         onSubmit={onSubmit}
-        className="grid gap-6 max-w-xl p-6 rounded-xl glass-effect shadow-lg bg-white/90 backdrop-blur-sm"
+        className="grid gap-6 max-w-xl mx-auto p-6 rounded-xl glass-effect shadow-lg bg-white/90 backdrop-blur-sm"
       >
         {/* Honeypot */}
         <input

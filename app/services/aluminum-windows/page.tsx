@@ -1,7 +1,7 @@
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
 import ProcessStepper from "@/components/ProcessStepper";
-import { ShieldCheck, Ruler, Settings } from "lucide-react";
+import { Ruler, Settings, ShieldCheck } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -77,15 +77,15 @@ export default function AluminumWindowsPage() {
         <AutoCarousel
           images={[
             {
-              src: "/images/window-replacement/after-window-replacement.png",
+              src: "/images/aluminum-windows/commercial-aluminum-window-installation.jpg",
               alt: "After aluminum window replacement",
             },
             {
-              src: "/images/window-replacement/windows-replacment.png",
+              src: "/images/aluminum-windows/commercial-window.png",
               alt: "New energy efficient window units",
             },
             {
-              src: "/images/window-replacement/aluminum-maintenance.png",
+              src: "/images/aluminum-windows/residential-aluminum-windows-nc.jpg",
               alt: "Low-maintenance aluminum window frames",
             },
           ]}
@@ -128,7 +128,9 @@ export default function AluminumWindowsPage() {
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Settings className="w-8 h-8 text-primary-600" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Professional Installation</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              Professional Installation
+            </h3>
             <p className="text-black/70">
               Expert installers ensure a perfect fit and finish.
             </p>
@@ -150,7 +152,8 @@ export default function AluminumWindowsPage() {
           },
           {
             title: "AutoCAD Design",
-            description: "Detailed plans ensure windows fit and operate flawlessly.",
+            description:
+              "Detailed plans ensure windows fit and operate flawlessly.",
             details: [
               "Exact sizing and configuration",
               "Energy efficiency considerations",
@@ -158,11 +161,9 @@ export default function AluminumWindowsPage() {
           },
           {
             title: "Fabrication",
-            description: "Windows are manufactured to specification with quality checks.",
-            details: [
-              "Custom frame production",
-              "Glass unit assembly",
-            ],
+            description:
+              "Windows are manufactured to specification with quality checks.",
+            details: ["Custom frame production", "Glass unit assembly"],
           },
           {
             title: "Installation",
@@ -198,4 +199,3 @@ export default function AluminumWindowsPage() {
     </main>
   );
 }
-
