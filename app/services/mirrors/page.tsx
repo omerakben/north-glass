@@ -1,5 +1,7 @@
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
+import ProcessStepper from "@/components/ProcessStepper";
+import { Award, Calculator, PenTool, Ruler, Settings, ShieldCheck } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -56,14 +58,17 @@ export default function MirrorsPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4 text-center">
-        Custom Mirrors & Mirrored Walls
-      </h1>
-      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Complete custom mirror solutions designed to transform your space. Our
-        Interior Architects create precision AutoCAD designs for mirrors that
-        enhance both function and aesthetics throughout your home.
-      </p>
+      <div className="text-center mb-8">
+        <h1 className="text-4xl font-bold mb-4">Custom Mirrors & Mirrored Walls</h1>
+        <p className="text-xl text-primary-600 mb-4 font-medium">
+          Interior Architect Design • Precision Cut • Professional Install
+        </p>
+        <p className="max-w-prose text-[17px] mb-6 mx-auto">
+          Elevate bathrooms, gyms, and living spaces with custom mirrors cut to
+          size and designed to fit perfectly. We provide AutoCAD layouts,
+          premium materials, and clean, professional installation.
+        </p>
+      </div>
 
       {/* Image Carousel */}
       <div className="flex justify-center my-8">
@@ -100,10 +105,82 @@ export default function MirrorsPage() {
       </div>
 
       <div className="text-center mb-8">
-        <a href="/request-quote" className="btn-primary inline-block">
-          Beautiful Custom Mirrors - Free Estimate
+        <a href="/request-quote" className="btn-primary inline-flex gap-2">
+          <Calculator size={18} /> Beautiful Custom Mirrors - Free Estimate
         </a>
       </div>
+
+      {/* Benefits */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">Why North Glass Mirrors?</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <PenTool className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Design Precision</h3>
+            <p className="text-black/70">AutoCAD drawings guarantee exact sizing around tile, outlets, and fixtures.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ShieldCheck className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Safety Options</h3>
+            <p className="text-black/70">Safety backing and tempered options where appropriate for added protection.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Settings className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Clean Installation</h3>
+            <p className="text-black/70">Professional mounting systems with polished edges and seamless finish.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Ruler className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Custom Shapes</h3>
+            <p className="text-black/70">Cut to size, with notches and cutouts for a perfect fit every time.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Premium Finish</h3>
+            <p className="text-black/70">Crisp, polished edges and clear reflection with quality control.</p>
+          </div>
+        </div>
+      </section>
+
+      <ProcessStepper
+        title="Our Mirror Design & Install Process"
+        steps={[
+          {
+            title: "Consultation & Measurement",
+            description:
+              "We review your space, style, and functional needs, then take precise measurements.",
+            details: ["Placement and lighting review", "Field measurements", "Edge and finish preferences"],
+          },
+          {
+            title: "AutoCAD Layout",
+            description:
+              "We create a detailed drawing to coordinate edges, cutouts, and alignment.",
+            details: ["Outlet and sconce allowances", "Exact sizing around tile", "Mounting approach"],
+          },
+          {
+            title: "Fabrication",
+            description:
+              "Your mirror is cut, notched, and polished to specification with quality checks.",
+            details: ["Edge polishing", "Cutouts/notches", "Safety backing as needed"],
+          },
+          {
+            title: "Installation",
+            description:
+              "We mount, level, and secure the mirror using professional adhesives and hardware.",
+            details: ["Clean surface prep", "Secure mounting", "Final cleaning"],
+          },
+        ]}
+      />
       <FAQ
         items={[
           {

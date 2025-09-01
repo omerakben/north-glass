@@ -1,5 +1,7 @@
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
+import ProcessStepper from "@/components/ProcessStepper";
+import { Award, Calculator, PenTool, Ruler, Settings, ShieldCheck } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -56,15 +58,18 @@ export default function GlassOfficeDoorsPage() {
           </li>
         </ol>
       </nav>
-      <h1 className="text-3xl font-bold mb-4 text-center">
-        Glass Office Doors & Partitions
-      </h1>
-      <p className="max-w-prose text-[17px] mb-6 mx-auto text-center">
-        Complete glass office systems designed for modern workspaces. Our
-        comprehensive approach includes space planning, AutoCAD design,
-        precision glass fabrication, and professional installation for doors,
-        partitions, and interior walls.
-      </p>
+      <div className="text-center mb-8">
+        <h1 className="text-4xl font-bold mb-4">Glass Office Doors & Partitions</h1>
+        <p className="text-xl text-primary-600 mb-4 font-medium">
+          Modern Interiors • AutoCAD Space Planning • Professional Installation
+        </p>
+        <p className="max-w-prose text-[17px] mb-6 mx-auto">
+          Complete glass office systems designed for clarity, privacy, and
+          performance. From space planning and AutoCAD design through
+          fabrication and installation, we deliver turnkey commercial interior
+          solutions across North Carolina.
+        </p>
+      </div>
 
       {/* Image Carousel */}
       <div className="flex justify-center my-8">
@@ -97,10 +102,108 @@ export default function GlassOfficeDoorsPage() {
       </div>
 
       <div className="text-center mb-8">
-        <a href="/request-quote" className="btn-primary inline-block">
-          Get Free Quote + AutoCAD Design
+        <a href="/request-quote" className="btn-primary inline-flex gap-2">
+          <Calculator size={18} /> Get Free Quote + AutoCAD Design
         </a>
       </div>
+
+      {/* Benefits & Features */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">Why Choose North Glass for Offices?</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <PenTool className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Architect-Led Planning</h3>
+            <p className="text-black/70">AutoCAD space planning optimizes layouts for flow, light, and compliance.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ShieldCheck className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Privacy & Safety</h3>
+            <p className="text-black/70">Tempered glass and privacy options (frosted/film) meet office needs.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Settings className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Hardware & Performance</h3>
+            <p className="text-black/70">Quality hinges, sliders, and closers for smooth, long-lasting operation.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Ruler className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Precision Fit</h3>
+            <p className="text-black/70">Exact measurements and details reduce downtime during buildouts.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Professional Install</h3>
+            <p className="text-black/70">Experienced commercial crews deliver clean, on-schedule installations.</p>
+          </div>
+        </div>
+      </section>
+
+      <ProcessStepper
+        title="Our Commercial Interior Process"
+        steps={[
+          {
+            title: "Consultation & Space Assessment",
+            description:
+              "We review your floor plan, workflows, and privacy needs to define a clear scope.",
+            details: [
+              "On-site or plan review",
+              "Acoustic and visibility goals",
+              "Budget and schedule targets",
+            ],
+          },
+          {
+            title: "AutoCAD Design & Detailing",
+            description:
+              "We produce drawings for door swings, partition lines, glazing, and hardware.",
+            details: [
+              "Door/partition specifications",
+              "Hardware and finish schedules",
+              "Code and ADA considerations",
+            ],
+          },
+          {
+            title: "Material Selection",
+            description:
+              "We help select glass types and hardware that balance clarity, privacy, and cost.",
+            details: [
+              "Tempered, laminated, or frosted",
+              "Film/branding options",
+              "Hinges, sliders, closers",
+            ],
+          },
+          {
+            title: "Fabrication & Logistics",
+            description:
+              "Glass is cut/tempered and hardware is staged for efficient on-site work.",
+            details: [
+              "Shop drawings and QA",
+              "Delivery coordination",
+              "Site readiness checks",
+            ],
+          },
+          {
+            title: "Installation & Turnover",
+            description:
+              "Our crew installs, adjusts, and cleans, then walks your team through operation and care.",
+            details: [
+              "Clean, low-disruption work",
+              "Final adjustments and testing",
+              "Care and warranty handoff",
+            ],
+          },
+        ]}
+      />
       <FAQ
         items={[
           {

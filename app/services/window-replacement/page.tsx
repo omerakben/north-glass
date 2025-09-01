@@ -1,6 +1,7 @@
 import AutoCarousel from "@/app/(site)/_components/AutoCarousel";
 import FAQ from "@/app/(site)/_components/FAQ";
 import ProcessStepper from "@/components/ProcessStepper";
+import { Award, Ruler, Settings, ShieldCheck } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -78,6 +79,18 @@ export default function WindowReplacementPage() {
             {
               src: "/images/window-replacement/windows-replacment.png",
               alt: "Professional window replacement process with interior architect consultation and aluminum system integration",
+            },
+            {
+              src: "/images/window-replacement/energy-efficiency.png",
+              alt: "Low-E and insulated glass options improve energy efficiency and comfort",
+            },
+            {
+              src: "/images/window-replacement/window-comparison.png",
+              alt: "Window performance comparison and upgrade options",
+            },
+            {
+              src: "/images/window-replacement/aluminum-maintenance.png",
+              alt: "Durable, low-maintenance aluminum frames for window replacement",
             },
           ]}
           interval={2000}
@@ -162,6 +175,41 @@ export default function WindowReplacementPage() {
           },
         ]}
       />
+
+      {/* Benefits */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">Why Replace Windows with North Glass?</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <ShieldCheck className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Energy Savings</h3>
+            <p className="text-black/70">Low‑E, insulated glass reduces heat loss and improves comfort.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Settings className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Pro Installation</h3>
+            <p className="text-black/70">Proper shimming, sealing, and weatherproofing ensure long-term performance.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Ruler className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Precision Fit</h3>
+            <p className="text-black/70">Exact measurements and AutoCAD specs eliminate gaps and drafts.</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Award className="w-8 h-8 text-primary-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Quality Materials</h3>
+            <p className="text-black/70">Durable frames and high‑performance glazing for years of reliability.</p>
+          </div>
+        </div>
+      </section>
 
       <FAQ
         items={[
