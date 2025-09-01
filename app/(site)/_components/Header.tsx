@@ -17,6 +17,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -26,6 +27,7 @@ export default function Header() {
   const [mobileCommercialOpen, setMobileCommercialOpen] = useState(false);
   const resRef = useRef<HTMLDivElement>(null);
   const comRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
     const onDoc = (e: MouseEvent) => {
       if (resRef.current && !resRef.current.contains(e.target as Node))
@@ -36,6 +38,23 @@ export default function Header() {
     document.addEventListener("click", onDoc);
     return () => document.removeEventListener("click", onDoc);
   }, []);
+
+  // Ensure portal is only rendered client-side and lock body scroll when menu is open
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  useEffect(() => {
+    if (!mounted) return;
+    const original = document.body.style.overflow;
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = original || "";
+    }
+    return () => {
+      document.body.style.overflow = original || "";
+    };
+  }, [open, mounted]);
   return (
     <header className="sticky top-0 z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-black/5">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
@@ -234,17 +253,18 @@ export default function Header() {
           </button>
         </div>
       </div>
-      {open && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          className="fixed inset-0 z-[9999] bg-black/40"
-          onClick={() => setOpen(false)}
-        >
+      {mounted && open &&
+        createPortal(
           <div
-            className="absolute left-0 top-0 bottom-0 w-80 max-w-[85vw] bg-white overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            className="fixed inset-0 z-[10000] bg-black/40"
+            onClick={() => setOpen(false)}
           >
+            <div
+              className="absolute left-0 top-0 bottom-0 w-80 max-w-[85vw] bg-white overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between p-6 border-b border-black/10">
               <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
@@ -484,9 +504,10 @@ export default function Header() {
                 </div>
               </div>
             </nav>
-          </div>
-        </div>
-      )}
+            </div>
+          </div>,
+          document.body
+        )}
     </header>
   );
 }
