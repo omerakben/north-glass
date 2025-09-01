@@ -32,7 +32,33 @@ export const metadata: Metadata = {
     "Hotel Projects",
   ],
   applicationName: "North Glass LLC",
-  icons: { icon: "/favicon.ico" },
+  icons: {
+    icon: [
+      { url: "/images/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      {
+        url: "/images/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+    other: [
+      {
+        url: "/images/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/images/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+  },
+  manifest: "/site.webmanifest",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -214,7 +240,10 @@ export default function RootLayout({
   } as const;
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+      <body
+        className={`${inter.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white text-black px-3 py-2 rounded"
@@ -252,7 +281,7 @@ export default function RootLayout({
         </noscript>
         <Header />
         <main id="main-content">{children}</main>
-        <Footer />        <ConsentBanner />
+        <Footer /> <ConsentBanner />
         <AnalyticsEvents />
         <Analytics />
         <script
