@@ -1,4 +1,5 @@
 "use client";
+import { CheckCircle, ChevronDown, HelpCircle } from "lucide-react";
 import { useState } from "react";
 
 export type FAQItem = { question: string; answer: string };
@@ -41,16 +42,32 @@ export default function FAQ({
         {items.map((item, idx) => (
           <div key={idx}>
             <button
-              className="w-full text-left px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-turquoise)]"
+              className="w-full text-left px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-turquoise)] hover:bg-black/5 transition-colors duration-200 flex items-center justify-between group"
               aria-expanded={openIndex === idx ? "true" : "false"}
               aria-controls={`faq-panel-${idx}`}
               onClick={() => setOpenIndex((v) => (v === idx ? null : idx))}
             >
-              <span className="font-medium">{item.question}</span>
+              <div className="flex items-center gap-3">
+                <HelpCircle className="w-5 h-5 text-[var(--brand-turquoise)] flex-shrink-0" />
+                <span className="font-medium">{item.question}</span>
+              </div>
+              <ChevronDown
+                className={`w-5 h-5 text-black/60 transition-transform duration-200 flex-shrink-0 ${
+                  openIndex === idx ? "rotate-180" : ""
+                }`}
+              />
             </button>
             {openIndex === idx && (
-              <div id={`faq-panel-${idx}`} className="px-4 pb-4 text-black/80">
-                {item.answer}
+              <div
+                id={`faq-panel-${idx}`}
+                className="px-4 pb-4 animate-in slide-in-from-top-2 duration-200"
+              >
+                <div className="flex items-start gap-3 pt-2">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div className="text-black/80 leading-relaxed">
+                    {item.answer}
+                  </div>
+                </div>
               </div>
             )}
           </div>
