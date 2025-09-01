@@ -87,12 +87,14 @@
   --font-sans: var(--font-inter);
 }
 
+/* Dark mode disabled for consistent professional appearance
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+*/
 
 body {
   background: var(--background);
