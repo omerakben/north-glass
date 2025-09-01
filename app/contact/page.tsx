@@ -69,57 +69,74 @@ export default function ContactPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-blue-100">
-                    <Phone className="h-5 w-5 text-blue-600" />
+            <div className="space-y-6">
+              <div className="grid gap-6">
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-blue-50/50 border border-blue-100">
+                  <div className="flex-shrink-0">
+                    <div className="p-3 rounded-lg bg-blue-100">
+                      <Phone className="h-6 w-6 text-blue-600" />
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Phone</h3>
+                  <div className="flex-1">
+                    <h3 className="font-semibold mb-2 text-gray-900">Phone</h3>
                     <a
-                      className="text-[var(--brand-turquoise)] hover:underline text-lg"
+                      className="text-[var(--brand-turquoise)] hover:underline text-lg font-medium"
                       href="tel:+19842688490"
                     >
                       (984) 268-8490
                     </a>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-blue-100">
-                    <Mail className="h-5 w-5 text-blue-600" />
+
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-blue-50/50 border border-blue-100">
+                  <div className="flex-shrink-0">
+                    <div className="p-3 rounded-lg bg-blue-100">
+                      <Mail className="h-6 w-6 text-blue-600" />
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
+                  <div className="flex-1">
+                    <h3 className="font-semibold mb-2 text-gray-900">Email</h3>
                     <a
-                      className="text-[var(--brand-turquoise)] hover:underline"
+                      className="text-[var(--brand-turquoise)] hover:underline font-medium"
                       href="mailto:info@northglassnc.com"
                     >
                       info@northglassnc.com
                     </a>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-blue-100">
-                    <MapPin className="h-5 w-5 text-blue-600" />
+
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-blue-50/50 border border-blue-100">
+                  <div className="flex-shrink-0">
+                    <div className="p-3 rounded-lg bg-blue-100">
+                      <MapPin className="h-6 w-6 text-blue-600" />
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Service Area</h3>
-                    <p className="text-gray-700">All of North Carolina</p>
+                  <div className="flex-1">
+                    <h3 className="font-semibold mb-2 text-gray-900">
+                      Service Area
+                    </h3>
+                    <p className="text-gray-700 font-medium">
+                      All of North Carolina
+                    </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-blue-100">
-                    <Facebook className="h-5 w-5 text-blue-600" />
+
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-blue-50/50 border border-blue-100">
+                  <div className="flex-shrink-0">
+                    <div className="p-3 rounded-lg bg-blue-100">
+                      <Facebook className="h-6 w-6 text-blue-600" />
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Follow Us</h3>
-                    <div className="flex gap-4">
+                  <div className="flex-1">
+                    <h3 className="font-semibold mb-2 text-gray-900">
+                      Follow Us
+                    </h3>
+                    <div className="flex flex-col gap-2">
                       <a
                         href="https://www.facebook.com/profile.php?id=61580048543297"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[var(--brand-turquoise)] hover:underline inline-flex items-center gap-1"
+                        className="text-[var(--brand-turquoise)] hover:underline inline-flex items-center gap-2 font-medium"
                       >
                         <Facebook className="h-4 w-4" />
                         Facebook
@@ -128,11 +145,62 @@ export default function ContactPage() {
                         href="https://www.instagram.com/northglassraleigh"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[var(--brand-turquoise)] hover:underline inline-flex items-center gap-1"
+                        className="text-[var(--brand-turquoise)] hover:underline inline-flex items-center gap-2 font-medium"
                       >
                         <Instagram className="h-4 w-4" />
                         Instagram
                       </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* What Happens Next Section */}
+              <div className="mt-8 p-6 bg-gray-50 rounded-lg border">
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">
+                  What Happens Next?
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-6 h-6 bg-[var(--brand-teal)] text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      1
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900">
+                        Initial Response
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        We&apos;ll contact you within 24 hours to discuss your
+                        project
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-6 h-6 bg-[var(--brand-teal)] text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      2
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900">
+                        Free Consultation
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        Our Interior Architect will assess your needs and
+                        provide expert recommendations
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-6 h-6 bg-[var(--brand-teal)] text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      3
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900">
+                        Custom Design & Quote
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        Receive your AutoCAD design and detailed project
+                        estimate
+                      </p>
                     </div>
                   </div>
                 </div>
