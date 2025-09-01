@@ -31,7 +31,7 @@ const defaultTestimonials: Testimonial[] = [
     location: "Durham, NC",
     projectType: "Staircase Glass Railing",
     rating: 5,
-    image: "/images/testimonials/kim-family.jpg", // Placeholder - would need real photos
+    image: "/images/testimonials/kim-family.jpg",
     imageAlt:
       "Amanda and David Kim, satisfied North Glass customers from Durham",
   },
@@ -43,7 +43,7 @@ const defaultTestimonials: Testimonial[] = [
     location: "Cary, NC",
     projectType: "Frameless Shower Enclosure",
     rating: 5,
-    image: "/images/testimonials/jennifer-martinez.jpg", // Placeholder - would need real photos
+    image: "/images/testimonials/jennifer-martinez.jpg",
     imageAlt: "Jennifer Martinez, satisfied North Glass customer from Cary",
   },
   {
@@ -54,7 +54,7 @@ const defaultTestimonials: Testimonial[] = [
     location: "Raleigh, NC",
     projectType: "Commercial Glass Partitions",
     rating: 5,
-    image: "/images/testimonials/michael-chen.jpg", // Placeholder - would need real photos
+    image: "/images/testimonials/michael-chen.jpg",
     imageAlt:
       "Michael Chen, satisfied North Glass commercial customer from Raleigh",
   },
@@ -66,7 +66,7 @@ const defaultTestimonials: Testimonial[] = [
     location: "Chapel Hill, NC",
     projectType: "Window Replacement",
     rating: 5,
-    image: "/images/testimonials/wilson-family.jpg", // Placeholder - would need real photos
+    image: "/images/testimonials/wilson-family.jpg",
     imageAlt:
       "Sarah and Tom Wilson, satisfied North Glass customers from Chapel Hill",
   },
@@ -150,9 +150,15 @@ export default function TestimonialCarousel({
           {/* Customer photo and info */}
           <div className="text-center">
             <div className="relative w-24 h-24 mx-auto mb-4">
-              <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center">
-                {/* Placeholder for customer photo */}
-                <span className="text-gray-500 text-sm">Photo</span>
+              <div className="w-24 h-24 bg-gradient-to-br from-blue-50 to-blue-100 rounded-full flex items-center justify-center border-2 border-blue-200">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">
+                    {currentTestimonial.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </span>
+                </div>
               </div>
             </div>
             <h3 className="font-semibold text-lg text-gray-900 mb-1">
@@ -188,9 +194,15 @@ export default function TestimonialCarousel({
         {/* Mobile layout: Stacked */}
         <div className="md:hidden text-center">
           <div className="relative w-20 h-20 mx-auto mb-4">
-            <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center">
-              {/* Placeholder for customer photo */}
-              <span className="text-gray-500 text-xs">Photo</span>
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-full flex items-center justify-center border-2 border-blue-200">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-sm">
+                  {currentTestimonial.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                </span>
+              </div>
             </div>
           </div>
 
