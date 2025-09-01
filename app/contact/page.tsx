@@ -4,9 +4,9 @@ import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title:
-    "Contact North Glass – Free Glass & Aluminum Estimates | North Carolina",
+    "Contact North Glass – Free Consultation & AutoCAD Design | North Carolina",
   description:
-    "Contact North Glass for a free estimate on glass and aluminum services. Professional Interior Architects serving all of North Carolina. Call (984) 268-8490.",
+    "Get a free consultation with our Interior Architects. Professional glass and aluminum solutions across North Carolina. 24-hour response guarantee. Call (984) 268-8490.",
   alternates: { canonical: "/contact" },
 };
 
@@ -18,26 +18,29 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Contact North Glass: Free Design Consultation
+              Get Your Free Design Consultation Today
             </h1>
             <p className="text-xl mb-8 text-white/90">
               Connect with our professional Interior Architects for expert glass
-              and aluminum solutions across North Carolina. Get your free
-              consultation and AutoCAD design today.
+              and aluminum solutions across North Carolina. Start with your free
+              consultation and AutoCAD design – no obligation required.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-white/80">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-white/80 mb-6">
               <div className="flex items-center gap-2">
                 <Phone size={20} />
-                <span>Call Us Today</span>
+                <span>24-Hour Response</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={20} />
-                <span>Email Response</span>
+                <span>Licensed & Insured</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={20} />
-                <span>Quick Response</span>
+                <span>Free Consultation</span>
               </div>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full text-white/90 text-sm">
+              <span>✓ Serving all of North Carolina</span>
             </div>
           </div>
         </div>
@@ -46,14 +49,24 @@ export default function ContactPage() {
       {/* Contact Content */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-4">
-            Get Your Free Estimate
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            Ready to discuss your glass and aluminum project? Our Professional
-            Interior Architects are standing by to provide expert consultation
-            and free AutoCAD design for your North Carolina project.
-          </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to Transform Your Space?
+            </h2>
+            <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+              Our Professional Interior Architects are standing by to provide
+              expert consultation and free AutoCAD design for your North
+              Carolina project. Start your journey to beautiful, functional
+              glass and aluminum solutions.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+              <span>✓ Licensed & Insured</span>
+              <span>✓ 24-Hour Response Guarantee</span>
+              <span>✓ Free Design Consultation</span>
+              <span>✓ AutoCAD Precision Design</span>
+              <span>✓ Statewide Service</span>
+            </div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
