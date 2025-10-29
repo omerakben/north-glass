@@ -20,7 +20,7 @@ export interface HomeHeroProps {
 }
 
 export function HomeHero({
-  heading = "Premium Glass & Aluminum Solutions",
+  heading = "Premium Glass & Aluminum Solution!",
   subheading = "Professional glass and aluminum company serving all of North Carolina. Frameless showers, windows, custom mirrors with interior architect design.",
   bullets = [
     {
