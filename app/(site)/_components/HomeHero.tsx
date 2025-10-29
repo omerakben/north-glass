@@ -20,7 +20,7 @@ export interface HomeHeroProps {
 }
 
 export function HomeHero({
-  heading = "Premium Glass & Aluminum Solution!",
+  heading = "Glass Solutions & Shower Doors",
   subheading = "Professional glass and aluminum company serving all of North Carolina. Frameless showers, windows, custom mirrors with interior architect design.",
   bullets = [
     {
@@ -80,7 +80,6 @@ export function HomeHero({
           {heading}
           <br />
           <span className="text-3xl md:text-4xl lg:text-5xl text-white/90">
-            Frameless Shower Doors
           </span>
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mb-8 text-white/90 leading-relaxed">
