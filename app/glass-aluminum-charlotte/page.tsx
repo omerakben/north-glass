@@ -41,7 +41,7 @@ const charlotteLocationSchema = {
   description:
     "Professional glass and aluminum construction services in Charlotte, NC",
   url: "https://northglassnc.com/glass-aluminum-charlotte",
-  telephone: "+1-984-268-8490",
+  telephone: "+1-984-900-6201",
   email: "info@northglassnc.com",
   address: {
     "@type": "PostalAddress",

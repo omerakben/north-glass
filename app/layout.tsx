@@ -128,7 +128,7 @@ export default function RootLayout({
     ],
     sameAs: [
       "https://www.facebook.com/profile.php?id=61580048543297",
-      "https://www.instagram.com/northglassraleigh",
+      "https://www.instagram.com/northglassnc/",
     ],
     description:
       "Professional glass and aluminum company serving all of North Carolina. Frameless showers, windows, mirrors, storefronts with interior architect design capabilities.",
