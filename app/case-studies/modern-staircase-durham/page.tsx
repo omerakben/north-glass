@@ -55,7 +55,7 @@ const CaseStudySchema = {
     name: "North Glass LLC",
     logo: {
       "@type": "ImageObject",
-      url: "https://northglassnc.com/images/logo.png",
+      url: "https://northglassnc.com/images/north-glass-logo.png",
     },
   },
   datePublished: "2024-01-01",
@@ -688,7 +688,7 @@ export default function ModernStaircaseDurhamCaseStudy() {
               >
                 <div className="relative h-48 bg-gray-200">
                   <Image
-                    src="/images/frameless-glass-shower-doors/after-shower-door.png"
+                    src="/images/frameless-glass-shower-doors/frameless-shower-door11.jpg"
                     alt="Luxury master bathroom transformation"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -715,7 +715,7 @@ export default function ModernStaircaseDurhamCaseStudy() {
               >
                 <div className="relative h-48 bg-gray-200">
                   <Image
-                    src="/images/glass-office-doors/commercial-aluminum-door-system.png"
+                    src="/images/glass-office-doors/commercial-office2.jpg"
                     alt="Commercial office glass partition system"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

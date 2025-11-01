@@ -24,7 +24,7 @@ const featuredImages = [
     alt: "Premium frameless glass shower enclosure - Chapel Hill, NC",
   },
   {
-    src: "/images/frameless-glass-shower-doors/frameless-shower-door13.png",
+    src: "/images/frameless-glass-shower-doors/frameless-shower-door14.png",
     alt: "Contemporary frameless shower door - Morrisville, NC",
   },
   {
@@ -52,17 +52,17 @@ const featuredImages = [
 export default function FeaturedProjects() {
   return (
     <section className="bg-white py-16 md:py-20 overflow-hidden relative">
-      {/* Large Logo Background Watermark */}
+      {/* Background logo watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
         <div className="relative w-80 h-80 lg:w-96 lg:h-96 opacity-[0.06] -rotate-12">
           <Image
-            src="/images/logo.png"
+            src="/images/north-glass-logo.png"
             alt=""
             fill
-            className="object-contain"
+            className="object-contain grayscale"
             sizes="(max-width: 1024px) 320px, 384px"
             aria-hidden="true"
-            style={{ filter: "grayscale(100%)" }}
+            priority={false}
           />
         </div>
       </div>

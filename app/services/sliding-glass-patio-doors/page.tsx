@@ -22,7 +22,7 @@ function ServiceJsonLd() {
     provider: {
       "@type": "LocalBusiness",
       name: "North Glass LLC",
-      telephone: "+1 (984) 268-8490",
+      telephone: "+1 (984) 900-6201",
     },
     url: "https://northglassnc.com/services/sliding-glass-patio-doors",
     description:

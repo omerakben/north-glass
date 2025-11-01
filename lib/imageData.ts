@@ -21,7 +21,7 @@ export const showerDoorImages: ImageData[] = [
     location: "Cary, NC"
   },
   {
-    src: "/images/frameless-glass-shower-doors/after-shower-door.png", 
+    src: "/images/frameless-glass-shower-doors/after-shower-door1.png", 
     alt: "Modern frameless glass shower enclosure after renovation",
     title: "After: Frameless Glass Shower",
     location: "Cary, NC"

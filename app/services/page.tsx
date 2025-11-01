@@ -1,7 +1,6 @@
 import {
   Building2,
   DoorOpen,
-  Grid3X3,
   Home,
   MapPin,
   Navigation,
@@ -11,7 +10,6 @@ import {
   Sparkles,
   Store,
   Sun,
-  Table2,
   type LucideIcon,
 } from "lucide-react";
 import type { Metadata } from "next";
@@ -66,18 +64,6 @@ const services: Array<{
     title: "Sliding Glass Patio Doors",
     blurb: "New or replacement sliding door units and panels.",
     icon: DoorOpen,
-  },
-  {
-    href: "/services/window-and-door-screens",
-    title: "Window & Door Screens",
-    blurb: "Custom screen repair and fabrication.",
-    icon: Grid3X3,
-  },
-  {
-    href: "/services/glass-table-tops-and-shelves",
-    title: "Glass Table Tops & Shelves",
-    blurb: "Protective tops and floating shelves cut to size.",
-    icon: Table2,
   },
   {
     href: "/services/glass-office-doors",

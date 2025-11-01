@@ -159,10 +159,10 @@ export default function CharlotteLocationPage() {
                   Get Free Charlotte Estimate
                 </Link>
                 <a
-                  href="tel:+19842688490"
+                  href="tel:+19849006201"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#00353f] transition-colors text-lg"
                 >
-                  Call (984) 268-8490
+                  Call (984) 900-6201
                 </a>
               </div>
             </div>
@@ -410,7 +410,7 @@ export default function CharlotteLocationPage() {
                 <div className="bg-gray-100 rounded-lg overflow-hidden">
                   <div className="relative h-48">
                     <Image
-                      src="/images/glass-office-doors/commercial-aluminum-door-system.png"
+                      src="/images/glass-office-doors/commercial-office3.jpg"
                       alt="Professional glass office doors in Charlotte"
                       fill
                       className="object-cover"
@@ -454,7 +454,7 @@ export default function CharlotteLocationPage() {
                 Get Free Charlotte Estimate
               </Link>
               <a
-                href="tel:+19842688490"
+                href="tel:+19849006201"
                 className="border-2 border-[#40E0D0] text-[#40E0D0] px-8 py-4 rounded-lg font-semibold hover:bg-[#40E0D0] hover:text-[#00353f] transition-colors text-lg"
               >
                 Call Our Charlotte Team
@@ -474,10 +474,10 @@ export default function CharlotteLocationPage() {
                 <div>
                   <h4 className="font-semibold text-[#00353f] mb-2">Phone</h4>
                   <a
-                    href="tel:+19842688490"
+                    href="tel:+19849006201"
                     className="text-[#40E0D0] hover:underline"
                   >
-                    (984) 268-8490
+                    (984) 900-6201
                   </a>
                 </div>
                 <div>

@@ -32,7 +32,7 @@ function ServiceJsonLd() {
     provider: {
       "@type": "LocalBusiness",
       name: "North Glass LLC",
-      telephone: "+1 (984) 268-8490",
+      telephone: "+1 (984) 900-6201",
     },
     url: "https://northglassnc.com/services/frameless-glass-shower-doors",
     description:
@@ -100,7 +100,7 @@ export default function FramelessShowersPage() {
         <AutoCarousel
           images={[
             {
-              src: "/images/frameless-glass-shower-doors/after-shower-door.png",
+              src: "/images/frameless-glass-shower-doors/after-shower-door1.png",
               alt: "Modern frameless glass shower enclosure with premium hardware and architectural design elements",
             },
             {
@@ -128,7 +128,7 @@ export default function FramelessShowersPage() {
               alt: "Walk-in frameless glass shower with rainfall showerhead and natural stone tile",
             },
             {
-              src: "/images/frameless-glass-shower-doors/frameless-shower-door7.jpg",
+              src: "/images/frameless-glass-shower-doors/frameless-shower-door8.jpg",
               alt: "Contemporary frameless shower door with brushed nickel hardware and clear tempered glass",
             },
             {
@@ -147,6 +147,339 @@ export default function FramelessShowersPage() {
           Transform Your Bathroom - Free Estimate
         </a>
       </div>
+
+      {/* Understanding Shower Door Types Comparison */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Understanding Shower Door Types: Making the Right Choice
+        </h2>
+        <p className="text-center max-w-3xl mx-auto mb-12 text-black/70">
+          Choosing between framed, semi-frameless, and frameless shower doors is
+          one of the most important decisions in your bathroom renovation. Our
+          Interior Architects help you understand the differences and select the
+          perfect option for your space, budget, and design vision.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-8 pt-6">
+          {/* Framed Doors */}
+          <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+            <h3 className="text-xl font-bold mb-4 text-center">
+              Framed Shower Doors
+            </h3>
+            <div className="mb-4 text-center">
+              <span className="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full font-medium">
+                Budget-Friendly
+              </span>
+            </div>
+            <p className="text-black/70 mb-4 text-sm">
+              Traditional design with metal frame providing structural support,
+              allowing for thinner glass panels.
+            </p>
+            <h4 className="font-semibold text-sm mb-2">✓ Advantages:</h4>
+            <ul className="text-sm text-black/70 space-y-1 mb-4">
+              <li>• Most affordable option</li>
+              <li>• Variety of frame finishes</li>
+              <li>• Excellent structural support</li>
+              <li>• Works well for family bathrooms</li>
+            </ul>
+            <h4 className="font-semibold text-sm mb-2">Considerations:</h4>
+            <ul className="text-sm text-black/70 space-y-1">
+              <li>• Requires more cleaning maintenance</li>
+              <li>• Metal frames can show wear</li>
+              <li>• More traditional appearance</li>
+            </ul>
+          </div>
+
+          {/* Semi-Frameless Doors */}
+          <div className="bg-primary-50 rounded-lg p-6 border-2 border-primary-300 relative mt-6">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
+              <span className="bg-primary-600 text-white text-xs px-3 py-1 rounded-full font-bold shadow-lg whitespace-nowrap">
+                POPULAR CHOICE
+              </span>
+            </div>
+            <h3 className="text-xl font-bold mb-4 text-center">
+              Semi-Frameless Doors
+            </h3>
+            <div className="mb-4 text-center">
+              <span className="inline-block bg-primary-100 text-primary-800 text-sm px-3 py-1 rounded-full font-medium">
+                Best Value
+              </span>
+            </div>
+            <p className="text-black/70 mb-4 text-sm">
+              Modern compromise with minimal framing for support while
+              maintaining a clean, contemporary aesthetic.
+            </p>
+            <h4 className="font-semibold text-sm mb-2">✓ Advantages:</h4>
+            <ul className="text-sm text-black/70 space-y-1 mb-4">
+              <li>• Balanced price-to-style ratio</li>
+              <li>• Modern, clean appearance</li>
+              <li>• Easier maintenance than framed</li>
+              <li>• Good structural support</li>
+            </ul>
+            <h4 className="font-semibold text-sm mb-2">Considerations:</h4>
+            <ul className="text-sm text-black/70 space-y-1">
+              <li>• Some metal cleaning required</li>
+              <li>• Mid-range investment</li>
+            </ul>
+          </div>
+
+          {/* Frameless Doors */}
+          <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+            <h3 className="text-xl font-bold mb-4 text-center">
+              Frameless Doors
+            </h3>
+            <div className="mb-4 text-center">
+              <span className="inline-block bg-amber-100 text-amber-800 text-sm px-3 py-1 rounded-full font-medium">
+                Premium Luxury
+              </span>
+            </div>
+            <p className="text-black/70 mb-4 text-sm">
+              Self-supporting thick tempered glass (3/8&quot; to 1/2&quot;) with
+              minimal hardware for ultimate modern elegance.
+            </p>
+            <h4 className="font-semibold text-sm mb-2">✓ Advantages:</h4>
+            <ul className="text-sm text-black/70 space-y-1 mb-4">
+              <li>• Sleek, modern aesthetic</li>
+              <li>• Easiest to clean and maintain</li>
+              <li>• Increases home resale value</li>
+              <li>• Shows off beautiful tile work</li>
+              <li>• Fully customizable</li>
+            </ul>
+            <h4 className="font-semibold text-sm mb-2">Considerations:</h4>
+            <ul className="text-sm text-black/70 space-y-1">
+              <li>• Higher investment cost</li>
+              <li>• Requires professional installation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-primary-50 border border-primary-200 rounded-lg p-6 text-center">
+          <p className="text-black/90 font-medium mb-2">
+            <strong>North Glass Specialization:</strong> While we offer all
+            three options, we specialize in frameless and semi-frameless designs
+            where our Interior Architect expertise and AutoCAD precision deliver
+            the most dramatic transformations.
+          </p>
+          <p className="text-sm text-black/70">
+            Our team will help you choose based on your budget, bathroom size,
+            design preferences, and long-term maintenance considerations.
+          </p>
+        </div>
+      </section>
+
+      {/* Glass Options & Specifications */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Premium Glass Options & Specifications
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          {/* Glass Types */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6">Glass Type Options</h3>
+            <div className="space-y-4">
+              <div className="border-l-4 border-primary-500 pl-4">
+                <h4 className="font-semibold mb-1">Clear Glass</h4>
+                <p className="text-sm text-black/70">
+                  Classic transparency showcasing your beautiful tile work and
+                  fixtures. Creates open, spacious feel. Most popular choice for
+                  modern bathrooms.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-primary-500 pl-4">
+                <h4 className="font-semibold mb-1">Frosted Glass</h4>
+                <p className="text-sm text-black/70">
+                  Sandblasted or acid-etched for privacy while maintaining light
+                  transmission. Perfect for shared bathrooms or street-facing
+                  windows.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-primary-500 pl-4">
+                <h4 className="font-semibold mb-1">Rain Glass</h4>
+                <p className="text-sm text-black/70">
+                  Textured pattern resembling rain on a window. Provides privacy
+                  with elegant visual interest and hides water spots naturally.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-primary-500 pl-4">
+                <h4 className="font-semibold mb-1">Low-Iron (Ultra-Clear)</h4>
+                <p className="text-sm text-black/70">
+                  Premium crystal-clear glass without the green tint. Ideal for
+                  luxury bathrooms where color accuracy matters.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Glass Thickness & Hardware */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6">
+              Thickness & Hardware Options
+            </h3>
+            <div className="space-y-4">
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h4 className="font-semibold mb-2">3/8&quot; Tempered Glass</h4>
+                <p className="text-sm text-black/70 mb-2">
+                  Standard thickness for most frameless enclosures. Excellent
+                  strength-to-weight ratio.
+                </p>
+                <p className="text-xs text-black/60">
+                  ✓ Best for: Standard showers, budget-conscious projects
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h4 className="font-semibold mb-2">1/2&quot; Tempered Glass</h4>
+                <p className="text-sm text-black/70 mb-2">
+                  Premium thickness for ultimate durability and luxury feel.
+                  Heavier, more substantial appearance.
+                </p>
+                <p className="text-xs text-black/60">
+                  ✓ Best for: Luxury showers, large enclosures, maximum
+                  durability
+                </p>
+              </div>
+
+              <div className="bg-primary-50 rounded-lg p-4">
+                <h4 className="font-semibold mb-2">Hardware Finish Options</h4>
+                <div className="grid grid-cols-2 gap-2 text-sm text-black/70">
+                  <div>• Polished Chrome</div>
+                  <div>• Brushed Nickel</div>
+                  <div>• Matte Black</div>
+                  <div>• Oil-Rubbed Bronze</div>
+                  <div>• Satin Brass</div>
+                  <div>• Custom Finishes</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+          <h4 className="font-semibold mb-2 flex items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-blue-600" />
+            Safety & Quality Standards
+          </h4>
+          <p className="text-sm text-black/70">
+            All our glass is tempered safety glass meeting ANSI Z97.1 and CPSC
+            16 CFR 1201 standards. If broken, it shatters into small, relatively
+            harmless pieces. Each panel includes polished edges and optional
+            protective coatings for easy cleaning and longevity.
+          </p>
+        </div>
+      </section>
+
+      {/* Pricing & Investment Section */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Investment & Pricing Guidance
+        </h2>
+
+        <div className="max-w-4xl mx-auto">
+          <p className="text-center text-black/70 mb-8">
+            Shower door investment varies based on size, glass type, hardware
+            finish, and configuration complexity. Here&apos;s what to expect:
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
+              <h3 className="font-bold text-lg mb-2">Framed Enclosures</h3>
+              <p className="text-3xl font-bold text-primary-600 mb-2">
+                $500-$1,500
+              </p>
+              <p className="text-sm text-black/60">
+                Budget-friendly option with reliable performance
+              </p>
+            </div>
+
+            <div className="bg-primary-50 border-2 border-primary-300 rounded-lg p-6 text-center">
+              <h3 className="font-bold text-lg mb-2">
+                Semi-Frameless Enclosures
+              </h3>
+              <p className="text-3xl font-bold text-primary-600 mb-2">
+                $1,200-$2,800
+              </p>
+              <p className="text-sm text-black/60">
+                Best value combining style and functionality
+              </p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
+              <h3 className="font-bold text-lg mb-2">Frameless Enclosures</h3>
+              <p className="text-3xl font-bold text-primary-600 mb-2">
+                $2,000-$5,000+
+              </p>
+              <p className="text-sm text-black/60">
+                Premium investment with maximum resale value
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-6">
+            <h4 className="font-semibold mb-4">
+              What&apos;s Included in Your Investment:
+            </h4>
+            <div className="grid md:grid-cols-2 gap-4 text-sm text-black/70">
+              <div className="flex items-start gap-2">
+                <span className="text-primary-600">✓</span>
+                <span>
+                  <strong>Free AutoCAD Design Consultation</strong> - Interior
+                  Architect creates detailed technical drawings
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-primary-600">✓</span>
+                <span>
+                  <strong>Professional Measurement</strong> - Precise on-site
+                  assessment and verification
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-primary-600">✓</span>
+                <span>
+                  <strong>Custom Fabrication</strong> - CNC precision cutting
+                  and edge polishing
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-primary-600">✓</span>
+                <span>
+                  <strong>Premium Hardware</strong> - Heavy-duty hinges,
+                  handles, and support systems
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-primary-600">✓</span>
+                <span>
+                  <strong>Expert Installation</strong> - Certified technicians
+                  with warranty coverage
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-primary-600">✓</span>
+                <span>
+                  <strong>Quality Assurance</strong> - Final inspection and
+                  operation testing
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 text-center">
+            <p className="text-sm text-black/60 mb-4">
+              Every project is unique. Get your personalized quote with detailed
+              AutoCAD drawings:
+            </p>
+            <a href="/request-quote" className="btn-primary inline-flex gap-2">
+              <Calculator size={18} />
+              Get Your Free Detailed Quote
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Benefits & Features Section */}
       <section className="mb-16">
@@ -403,6 +736,38 @@ export default function FramelessShowersPage() {
             question: "What thickness of glass do you use?",
             answer:
               'Typically 3/8" or 1/2" tempered safety glass, with thickness determined through our AutoCAD structural analysis based on your specific enclosure configuration and size.',
+          },
+          {
+            question: "What warranty coverage do you provide?",
+            answer:
+              "We provide comprehensive warranty coverage including installation workmanship warranty, manufacturer warranties on premium hardware components, and a complete satisfaction guarantee. All glass meets ANSI Z97.1 and CPSC 16 CFR 1201 safety standards with lifetime breakage coverage under normal use conditions.",
+          },
+          {
+            question:
+              "What preparation is required before shower door installation?",
+            answer:
+              "Your bathroom should have completed tile work with fully cured grout, installed shower pan or base, and finished wall surfaces. We recommend waiting 7-14 days after tile grouting before installation. Our team provides a detailed pre-installation checklist during the design consultation to ensure your space is ready.",
+          },
+          {
+            question: "Can I use bleach or harsh chemicals on my glass shower?",
+            answer:
+              "No, avoid bleach, ammonia, and abrasive cleaners as they can damage protective coatings and hardware finishes. Use mild soap with water or specialized glass cleaners. We provide detailed care instructions and recommend a squeegee after each shower to prevent water spots and maintain crystal-clear appearance.",
+          },
+          {
+            question: "How do I prevent water spots and soap scum buildup?",
+            answer:
+              "Daily squeegeeing after showers (30 seconds) is most effective. We offer optional protective coating treatments during installation that repel water and reduce mineral deposits. Weekly cleaning with vinegar-water solution (50/50 mix) or specialized glass cleaner keeps glass pristine. Proper ventilation also helps minimize moisture buildup.",
+          },
+          {
+            question:
+              "What are common installation mistakes I should watch for?",
+            answer:
+              "Poor installations often show uneven gaps, misaligned doors, inadequate sealing, or loose hardware. Our AutoCAD precision design process and certified installers eliminate these issues through detailed planning, precise measurements, proper anchoring to studs (not just drywall), and comprehensive quality testing before project completion.",
+          },
+          {
+            question: "Do you offer financing options?",
+            answer:
+              "Yes, we offer flexible financing options to make your bathroom transformation more affordable. Contact us during your free consultation to discuss payment plans that fit your budget. Most customers find the investment worthwhile given the dramatic aesthetic improvement and increased home value.",
           },
         ]}
       />

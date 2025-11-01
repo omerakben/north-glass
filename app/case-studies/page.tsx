@@ -43,7 +43,7 @@ const caseStudies: CaseStudy[] = [
     completionDate: "2024",
     clientType: "Homeowner",
     thumbnailImage:
-      "/images/frameless-glass-shower-doors/after-shower-door.png",
+      "/images/frameless-glass-shower-doors/after-shower-door1.png",
     thumbnailAlt:
       "Luxury frameless glass shower with interior architect design in Cary master bathroom",
     featured: true,

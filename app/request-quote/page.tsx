@@ -63,9 +63,9 @@ export default function RequestQuotePage() {
               Prefer to talk? Call{" "}
               <a
                 className="text-[var(--brand-turquoise)] hover:underline font-semibold"
-                href="tel:+19842688490"
+                href="tel:+19849006201"
               >
-                (984) 268-8490
+                (984) 900-6201
               </a>
             </p>
           </div>

@@ -168,10 +168,10 @@ export default function AboutPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
                   <a
-                    href="tel:+19842688490"
+                    href="tel:+19849006201"
                     className="inline-flex items-center px-6 py-3 bg-[var(--brand-turquoise)] text-[var(--brand-teal)] rounded-md font-semibold hover:bg-[var(--brand-turquoise)]/90 transition-colors"
                   >
-                    Call (984) 268-8490
+                    Call (984) 900-6201
                   </a>
                   <a
                     href="/request-quote"

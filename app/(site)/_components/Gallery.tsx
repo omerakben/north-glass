@@ -40,9 +40,6 @@ const categories = [
   { id: "railing", label: "Railings" },
   { id: "storefront", label: "Storefronts" },
   { id: "aluminum-systems", label: "Aluminum Systems" },
-  { id: "architectural-design", label: "Architectural Design" },
-  { id: "pergola", label: "Pergolas" },
-  { id: "screen", label: "Screens" },
 ];
 
 export default function Gallery() {

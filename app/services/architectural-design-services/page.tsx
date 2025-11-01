@@ -18,7 +18,7 @@ function ServiceJsonLd() {
     provider: {
       "@type": "HomeAndConstructionBusiness",
       name: "North Glass LLC",
-      telephone: "+1 (984) 268-8490",
+      telephone: "+1 (984) 900-6201",
       email: "info@northglassnc.com",
       url: "https://northglassnc.com/",
       areaServed: "North Carolina",

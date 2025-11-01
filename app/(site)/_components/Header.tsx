@@ -56,21 +56,33 @@ export default function Header() {
     };
   }, [open, mounted]);
   return (
-    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-black/5">
-      <div className="container mx-auto px-6 h-16 flex items-center justify-between">
+    <header className="sticky top-0 z-40 bg-white shadow-sm border-b border-black/10">
+      <div className="container mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
         <Link
           href="/"
-          className="flex items-center h-10"
+          className="flex items-center gap-3 md:gap-4 group"
           aria-label="North Glass home"
         >
-          <Image
-            src="/images/logo.png"
-            alt="North Glass logo"
-            width={120}
-            height={120}
-            className="h-12 w-12 md:h-16 md:w-16 lg:h-16 lg:w-16 object-contain"
-            priority
-          />
+          {/* Logo Icon */}
+          <div className="relative h-12 w-12 md:h-16 md:w-16 shrink-0 transition-transform duration-300 group-hover:scale-105">
+            <Image
+              src="/images/north-glass-logo.png"
+              alt="North Glass"
+              width={64}
+              height={64}
+              className="h-full w-full object-contain drop-shadow-md"
+              priority
+            />
+          </div>
+          {/* Company Name & Tagline */}
+          <div className="flex flex-col">
+            <span className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight tracking-tight">
+              North Glass
+            </span>
+            <span className="hidden sm:block text-[10px] md:text-xs text-gray-600 font-medium tracking-wide uppercase">
+              Residential · Commercial · Design
+            </span>
+          </div>
         </Link>
         <nav className="hidden md:flex items-center gap-6" aria-label="Primary">
           <div className="relative" ref={resRef}>
@@ -109,27 +121,9 @@ export default function Header() {
                 </Link>
                 <Link
                   className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/mirrors"
-                >
-                  Mirrors &amp; Mirrored Walls
-                </Link>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
                   href="/services/sliding-glass-patio-doors"
                 >
                   Sliding Patio Doors
-                </Link>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/window-and-door-screens"
-                >
-                  Window &amp; Door Screens
-                </Link>
-                <Link
-                  className="block px-3 py-2 rounded hover:bg-black/5"
-                  href="/services/glass-table-tops-and-shelves"
-                >
-                  Glass Table Tops &amp; Shelves
                 </Link>
               </div>
             )}
@@ -236,9 +230,9 @@ export default function Header() {
         </nav>
         <div className="md:hidden flex items-center gap-3">
           <a
-            href="tel:+19842688490"
+            href="tel:+19849006201"
             aria-label="Call North Glass"
-            className="p-2"
+            className="p-3 -mr-2"
             style={{ color: "var(--brand-teal)" }}
             data-placement="header_mobile"
           >
@@ -247,7 +241,7 @@ export default function Header() {
           <button
             aria-label="Open menu"
             onClick={() => setOpen(true)}
-            className="p-2"
+            className="p-3"
           >
             <Menu size={24} />
           </button>
@@ -328,32 +322,11 @@ export default function Header() {
                           Aluminum Windows
                         </Link>
                         <Link
-                          href="/services/mirrors"
-                          onClick={() => setOpen(false)}
-                          className="block p-2 pl-8 text-gray-700 hover:bg-gray-50 rounded-md transition-colors"
-                        >
-                          Mirrors & Mirrored Walls
-                        </Link>
-                        <Link
                           href="/services/sliding-glass-patio-doors"
                           onClick={() => setOpen(false)}
                           className="block p-2 pl-8 text-gray-700 hover:bg-gray-50 rounded-md transition-colors"
                         >
                           Sliding Patio Doors
-                        </Link>
-                        <Link
-                          href="/services/window-and-door-screens"
-                          onClick={() => setOpen(false)}
-                          className="block p-2 pl-8 text-gray-700 hover:bg-gray-50 rounded-md transition-colors"
-                        >
-                          Window & Door Screens
-                        </Link>
-                        <Link
-                          href="/services/glass-table-tops-and-shelves"
-                          onClick={() => setOpen(false)}
-                          className="block p-2 pl-8 text-gray-700 hover:bg-gray-50 rounded-md transition-colors"
-                        >
-                          Glass Table Tops & Shelves
                         </Link>
                       </div>
                     )}
@@ -492,13 +465,13 @@ export default function Header() {
                   {/* Mobile Contact Info */}
                   <div className="mt-6 pt-6 border-t border-gray-200">
                     <a
-                      href="tel:+19842688490"
+                      href="tel:+19849006201"
                       className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-md transition-colors"
                       data-placement="header_mobile_menu"
                     >
                       <Phone size={20} className="text-blue-600" />
                       <div>
-                        <div className="font-medium">(984) 268-8490</div>
+                        <div className="font-medium">(984) 900-6201</div>
                         <div className="text-sm text-gray-500">
                           Call for immediate help
                         </div>

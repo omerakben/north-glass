@@ -24,8 +24,8 @@ export function HomeHero({
   subheading = "Professional glass and aluminum company serving all of North Carolina. Frameless showers, windows, custom mirrors with interior architect design.",
   bullets = [
     {
-      title: "Bathroom Renovation",
-      desc: "Modern showers, mirrors, windows",
+      title: "Frameless Shower Doors",
+      desc: "Custom semi-frameless & frameless designs",
       icon: <PenTool className="h-5 w-5" />,
     },
     {

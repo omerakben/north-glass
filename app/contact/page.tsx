@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "Contact North Glass – Free Consultation & AutoCAD Design | North Carolina",
   description:
-    "Get a free consultation with our Interior Architects. Professional glass and aluminum solutions across North Carolina. 24-hour response guarantee. Call (984) 268-8490.",
+    "Get a free consultation with our Interior Architects. Professional glass and aluminum solutions across North Carolina. 24-hour response guarantee. Call (984) 900-6201.",
   alternates: { canonical: "/contact" },
 };
 
@@ -81,9 +81,9 @@ export default function ContactPage() {
                     <h3 className="font-semibold mb-2 text-gray-900">Phone</h3>
                     <a
                       className="text-[var(--brand-turquoise)] hover:underline text-lg font-medium"
-                      href="tel:+19842688490"
+                      href="tel:+19849006201"
                     >
-                      (984) 268-8490
+                      (984) 900-6201
                     </a>
                   </div>
                 </div>
@@ -113,10 +113,19 @@ export default function ContactPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold mb-2 text-gray-900">
-                      Service Area
+                      Visit Us
                     </h3>
-                    <p className="text-gray-700 font-medium">
-                      All of North Carolina
+                    <a
+                      className="text-[var(--brand-turquoise)] hover:underline font-medium"
+                      href="https://maps.app.goo.gl/yek2U69dXjiMEWYc7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      920 W Chatham St #1<br />
+                      Cary, NC 27511
+                    </a>
+                    <p className="text-sm text-gray-600 mt-2">
+                      Serving All of North Carolina
                     </p>
                   </div>
                 </div>
@@ -153,6 +162,20 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Google Maps */}
+              <div className="mt-8 rounded-lg overflow-hidden border shadow-sm">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.764!2d-78.7815!3d35.7875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89acf5d9f9f9f9f9%3A0x9f9f9f9f9f9f9f9f!2s920%20W%20Chatham%20St%20%231%2C%20Cary%2C%20NC%2027511!5e0!3m2!1sen!2sus!4v1234567890123"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="North Glass LLC Location"
+                />
               </div>
 
               {/* What Happens Next Section */}

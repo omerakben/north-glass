@@ -55,12 +55,12 @@ Apply ONLY when page scope, user request, or strategic positioning benefits from
 2. Statewide wording (“serving all of North Carolina”) appears once in prominent copy (prefer About/Home) – do not echo redundantly on every service detail page.
 3. Interior Architect + AutoCAD mention: About page always; other pages only if design workflow materially enhances user trust for that context (e.g., complex custom systems, design services page, large remodel case study).
 4. Schema: Extend `areaServed` to statewide without removing existing local city signals; never duplicate the entire LocalBusiness block—modify the single source in `layout.tsx`.
-5. Phone number matches authoritative value (+1 (984) 268-8490) everywhere; replace legacy placeholder.
+5. Phone number matches authoritative value (+1 (984) 900-6201) everywhere; replace legacy placeholder.
 6. If aluminum not substantively addressed on a page, omit; do not force token mentions just to “check the box.”
 
 ### 7. Phone & Social Consistency
 
-- Canonical phone: `+1 (984) 268-8490` tel link must be `tel:+19842688490`.
+- Canonical phone: `+1 (984) 900-6201` tel link must be `tel:+19849006201`.
 - Add / maintain social links: Facebook & Instagram from PRD in Footer + LocalBusiness `sameAs`. Keep them DRY via a shared constant if reused.
 
 ### 8. Tool Invocation (Repository-Tailored)

@@ -15,8 +15,7 @@ interface GalleryItem {
     | "storefront"
     | "aluminum-systems"
     | "architectural-design"
-    | "pergola"
-    | "screen";
+    | "pergola";
   // For single images
   image?: string;
   alt?: string;
@@ -37,7 +36,7 @@ export const enhancedGalleryItems: GalleryItem[] = [
     location: "Cary, NC",
     category: "shower",
     beforeImage: "/images/frameless-glass-shower-doors/before-shower-door.png",
-    afterImage: "/images/frameless-glass-shower-doors/after-shower-door.png",
+    afterImage: "/images/frameless-glass-shower-doors/after-shower-door1.png",
     beforeAlt:
       "Outdated framed shower enclosure before renovation in Cary home",
     afterAlt:
@@ -301,7 +300,7 @@ export const enhancedGalleryItems: GalleryItem[] = [
     title: "Customer Window Project",
     location: "Raleigh, NC",
     category: "window",
-    image: "/images/window-replacement/customer-20250830-150432-195.jpg",
+    image: "/images/window-replacement/after-window-replacement.png",
     alt: "Customer window replacement project with improved efficiency in Raleigh",
   },
   {
@@ -332,16 +331,5 @@ export const enhancedGalleryItems: GalleryItem[] = [
     category: "storefront",
     image: "/images/commercial-storefronts/commercial-front.png",
     alt: "Modern commercial storefront with glass and aluminum system in Raleigh business district",
-  },
-
-  // Window and Door Screens
-  {
-    id: "screen-1",
-    type: "single",
-    title: "Bug Screen Installation",
-    location: "North Carolina",
-    category: "screen",
-    image: "/images/window-and-door-screens/bug-screen-installation-nc.jpg",
-    alt: "Professional bug screen installation for windows and doors throughout North Carolina",
   },
 ];

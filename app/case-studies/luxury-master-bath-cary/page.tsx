@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "See how our Interior Architect and AutoCAD design process transformed a Cary master bathroom with custom frameless glass shower.",
     images: [
       {
-        url: "/images/frameless-glass-shower-doors/after-shower-door.png",
+        url: "/images/frameless-glass-shower-doors/after-shower-door1.png",
         width: 1200,
         height: 630,
         alt: "Luxury frameless glass shower transformation with interior architect design",
@@ -41,7 +41,7 @@ const CaseStudySchema = {
   description:
     "Detailed case study showcasing Interior Architect involvement and AutoCAD design process for luxury master bathroom renovation in Cary, NC",
   image:
-    "https://northglassnc.com/images/frameless-glass-shower-doors/after-shower-door.png",
+    "https://northglassnc.com/images/frameless-glass-shower-doors/after-shower-door1.png",
   author: {
     "@type": "Organization",
     name: "North Glass LLC",
@@ -52,7 +52,7 @@ const CaseStudySchema = {
     name: "North Glass LLC",
     logo: {
       "@type": "ImageObject",
-      url: "https://northglassnc.com/images/logo.png",
+      url: "https://northglassnc.com/images/north-glass-logo.png",
     },
   },
   datePublished: "2024-01-01",
@@ -189,7 +189,7 @@ export default function LuxuryMasterBathCaseStudy() {
             <div className="aspect-w-16 aspect-h-9 relative h-96 rounded-lg overflow-hidden">
               <BeforeAfterSlider
                 beforeImage="/images/frameless-glass-shower-doors/before-shower-door.png"
-                afterImage="/images/frameless-glass-shower-doors/after-shower-door.png"
+                afterImage="/images/frameless-glass-shower-doors/after-shower-door1.png"
                 beforeAlt="Outdated master bathroom before renovation"
                 afterAlt="Luxury master bathroom with frameless glass shower after interior architect renovation"
                 className="h-full"
@@ -661,7 +661,7 @@ export default function LuxuryMasterBathCaseStudy() {
               >
                 <div className="relative h-48 bg-gray-200">
                   <Image
-                    src="/images/glass-office-doors/commercial-aluminum-door-system.png"
+                    src="/images/glass-office-doors/commercial-office.jpg"
                     alt="Commercial office glass partition system"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -688,7 +688,7 @@ export default function LuxuryMasterBathCaseStudy() {
               >
                 <div className="relative h-48 bg-gray-200">
                   <Image
-                    src="/images/staircase-glass-railings/after-stairs.png"
+                    src="/images/staircase-glass-railings/staircase-glass.jpg"
                     alt="Modern glass staircase railing"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

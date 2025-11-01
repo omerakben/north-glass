@@ -46,8 +46,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/aluminum-windows",
     "/services/mirrors",
     "/services/sliding-glass-patio-doors",
-    "/services/window-and-door-screens",
-    "/services/glass-table-tops-and-shelves",
     "/services/glass-office-doors",
     "/services/staircase-glass-railings",
     "/services/commercial-storefronts",

@@ -314,8 +314,6 @@ export default function QuoteForm() {
             <option>Window Replacement</option>
             <option>Mirrors</option>
             <option>Sliding Patio Doors</option>
-            <option>Window & Door Screens</option>
-            <option>Glass Table Tops & Shelves</option>
             <option>Glass Office Doors</option>
             <option>Staircase Glass Railings</option>
             <option>Commercial Storefronts</option>

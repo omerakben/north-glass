@@ -119,16 +119,15 @@ export default function Home() {
 
       {/* Services Overview */}
       <section className="services-section bg-gradient-to-b from-slate-100 to-slate-200 py-20 fade-in-section relative overflow-hidden">
-        {/* Large Logo Background Watermark */}
         {/* Background logo watermark */}
         <div className="absolute inset-0 flex items-center justify-center -z-10 overflow-hidden">
           <Image
-            src="/images/logo.png"
+            src="/images/north-glass-logo.png"
             alt=""
             width={800}
-            height={600}
-            className="opacity-[0.08] transform rotate-12 scale-150"
-            style={{ filter: "grayscale(100%)", width: "auto" }}
+            height={800}
+            className="opacity-[0.06] transform rotate-12 scale-150 grayscale"
+            priority={false}
           />
         </div>{" "}
         <div className="container mx-auto px-6 relative z-10">

@@ -75,7 +75,7 @@
 ### Content & Legal
 
 - [ ] **task-PRE-008**: Final content review with client
-- [ ] **task-PRE-009**: Verify all phone numbers: (984) 268-8490
+- [ ] **task-PRE-009**: Verify all phone numbers: (984) 900-6201
 - [ ] **task-PRE-010**: Confirm social media links (Facebook, Instagram)
 - [ ] **task-PRE-011**: Review Privacy Policy and Terms compliance
 
@@ -206,7 +206,7 @@ Build Analysis (npm run build - Next.js 15.5.2):
 
 ### Social Proof & Contact Integration
 
-- [x] task-015: Update contact page with new phone number +1 (984) 268-8490 ✅ COMPLETED (already consistent)
+- [x] task-015: Update contact page with new phone number +1 (984) 900-6201 ✅ COMPLETED (already consistent)
 - [x] task-016: Add Facebook and Instagram links to footer and contact page ✅ COMPLETED (verified existing)
 - [x] task-017: Add "Community-focused values" messaging to About page ✅ COMPLETED (verified existing)
 

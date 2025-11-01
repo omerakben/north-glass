@@ -6,6 +6,7 @@ import {
   Mail,
   MapPin,
   Phone,
+  Star,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -66,13 +67,19 @@ export default function Footer() {
         </div>
 
         {/* Main Footer Grid */}
-        <div className="container mx-auto px-6 py-4">
-          <div className="grid gap-3 lg:grid-cols-4 md:grid-cols-2">
+        <div className="container mx-auto px-6 py-8">
+          <div className="grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
             {/* Company Information Panel */}
-            <div className="lg:col-span-2 glass-effect-premium rounded-lg p-3">
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-                  <MapPin className="h-5 w-5 text-white" />
+            <div className="glass-effect-premium rounded-lg p-6">
+              <div className="flex items-start gap-3 mb-4">
+                <div className="relative h-12 w-12 shrink-0">
+                  <Image
+                    src="/images/north-glass-logo.png"
+                    alt="North Glass logo"
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain drop-shadow-md"
+                  />
                 </div>
                 <div>
                   <div className="text-lg font-bold text-white">
@@ -84,33 +91,59 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="text-sm text-blue-100 mb-2">
+              <div className="text-sm text-blue-100 mb-4">
                 Serving All of North Carolina with Interior Architect expertise
               </div>
 
-              {/* Contact Information Grid */}
-              <div className="grid gap-2 sm:grid-cols-2">
-                <div className="glass-effect rounded-md p-2 border border-white/10">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-[var(--brand-blue-secondary)]/20 rounded-full flex items-center justify-center">
-                      <Phone className="h-4 w-4 text-[var(--brand-blue-secondary)]" />
+              {/* Contact Information - Phone */}
+              <div className="glass-effect rounded-md p-3 border border-white/10">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-[var(--brand-blue-secondary)]/20 rounded-full flex items-center justify-center">
+                    <Phone className="h-4 w-4 text-[var(--brand-blue-secondary)]" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-blue-200 uppercase tracking-wide">
+                      Call Us
                     </div>
-                    <div>
-                      <div className="text-xs text-blue-200 uppercase tracking-wide">
-                        Call Us
-                      </div>
-                      <a
-                        className="text-white font-medium hover:text-[var(--brand-blue-light)] transition-colors"
-                        href="tel:+19842688490"
-                        data-placement="footer"
-                      >
-                        (984) 268-8490
-                      </a>
-                    </div>
+                    <a
+                      className="text-white font-medium hover:text-[var(--brand-blue-light)] transition-colors"
+                      href="tel:+19849006201"
+                      data-placement="footer"
+                    >
+                      (984) 900-6201
+                    </a>
                   </div>
                 </div>
+              </div>
 
-                <div className="glass-effect rounded-md p-2 border border-white/10">
+              {/* Address */}
+              <div className="glass-effect rounded-md p-3 border border-white/10 mt-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-[var(--brand-blue-secondary)]/20 rounded-full flex items-center justify-center">
+                    <MapPin className="h-4 w-4 text-[var(--brand-blue-secondary)]" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-blue-200 uppercase tracking-wide">
+                      Visit Us
+                    </div>
+                    <a
+                      className="text-white font-medium hover:text-[var(--brand-blue-light)] transition-colors"
+                      href="https://maps.app.goo.gl/yek2U69dXjiMEWYc7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      920 W Chatham St #1
+                      <br />
+                      Cary, NC 27511
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Email & Social Media Combined */}
+              <div className="mt-4 pt-4 border-t border-white/10">
+                {/* Email */}
+                <div className="glass-effect rounded-md p-3 border border-white/10 mb-4">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-[var(--brand-blue-secondary)]/20 rounded-full flex items-center justify-center">
                       <Mail className="h-4 w-4 text-[var(--brand-blue-secondary)]" />
@@ -128,45 +161,54 @@ export default function Footer() {
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Social Media */}
-              <div className="mt-2 pt-2 border-t border-white/10">
-                <div className="text-xs text-blue-200 uppercase tracking-wide mb-1">
-                  Follow Us
-                </div>
-                <div className="flex gap-2">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61580048543297"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="glass-effect w-8 h-8 rounded-full flex items-center justify-center text-white hover:bg-[var(--brand-blue-secondary)]/20 hover:text-[var(--brand-blue-light)] transition-all duration-300 group"
-                    aria-label="Follow us on Facebook"
-                  >
-                    <Facebook className="h-3 w-3 group-hover:scale-110 transition-transform" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/northglassraleigh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="glass-effect w-8 h-8 rounded-full flex items-center justify-center text-white hover:bg-[var(--brand-blue-secondary)]/20 hover:text-[var(--brand-blue-light)] transition-all duration-300 group"
-                    aria-label="Follow us on Instagram"
-                  >
-                    <Instagram className="h-3 w-3 group-hover:scale-110 transition-transform" />
-                  </a>
+                {/* Social Media */}
+                <div>
+                  <div className="text-xs text-blue-200 uppercase tracking-wide mb-3">
+                    Follow Us
+                  </div>
+                  <div className="flex gap-3">
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61580048543297"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="glass-effect w-8 h-8 rounded-full flex items-center justify-center text-white hover:bg-[var(--brand-blue-secondary)]/20 hover:text-[var(--brand-blue-light)] transition-all duration-300 group"
+                      aria-label="Follow us on Facebook"
+                    >
+                      <Facebook className="h-3 w-3 group-hover:scale-110 transition-transform" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/northglassNC/#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="glass-effect w-8 h-8 rounded-full flex items-center justify-center text-white hover:bg-[var(--brand-blue-secondary)]/20 hover:text-[var(--brand-blue-light)] transition-all duration-300 group"
+                      aria-label="Follow us on Instagram"
+                    >
+                      <Instagram className="h-3 w-3 group-hover:scale-110 transition-transform" />
+                    </a>
+                    <a
+                      href="https://www.yelp.com/biz/north-glass-cary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="glass-effect w-8 h-8 rounded-full flex items-center justify-center text-white hover:bg-[var(--brand-blue-secondary)]/20 hover:text-[var(--brand-blue-light)] transition-all duration-300 group"
+                      aria-label="Find us on Yelp"
+                    >
+                      <Star className="h-3 w-3 group-hover:scale-110 transition-transform" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Navigation Links */}
             <nav
-              className="glass-effect-premium rounded-lg p-3"
+              className="glass-effect-premium rounded-lg p-6"
               aria-label="Footer Services"
             >
-              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-2">
+              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">
                 Services
               </h4>
-              <div className="grid gap-2">
+              <div className="grid gap-3">
                 <Link
                   href="/services"
                   className="text-blue-100 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm"
@@ -208,13 +250,13 @@ export default function Footer() {
 
             {/* Company & Legal Links */}
             <nav
-              className="glass-effect-premium rounded-lg p-3"
+              className="glass-effect-premium rounded-lg p-6"
               aria-label="Footer Company"
             >
-              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-2">
+              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">
                 Company
               </h4>
-              <div className="grid gap-2 mb-3">
+              <div className="grid gap-3 mb-6">
                 <Link
                   href="/about"
                   className="text-blue-100 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm"
@@ -241,10 +283,10 @@ export default function Footer() {
                 </Link>
               </div>
 
-              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-2">
+              <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-4 pt-4 border-t border-white/10">
                 Legal
               </h4>
-              <div className="grid gap-2">
+              <div className="grid gap-3">
                 <Link
                   href="/privacy"
                   className="text-blue-100 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm"
@@ -264,10 +306,40 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="glass-effect border-t border-white/10">
-          <div className="container mx-auto px-6 py-3">
-            <div className="text-center text-xs text-blue-200">
-              © {new Date().getFullYear()} North Glass LLC. All rights reserved.
-              Professional glass and aluminum solutions across North Carolina.
+          <div className="container mx-auto px-6 py-6">
+            <div className="flex flex-col items-center gap-4">
+              {/* Main Copyright */}
+              <div className="text-center text-xs text-blue-200">
+                © {new Date().getFullYear()} North Glass LLC. All rights
+                reserved. Professional glass and aluminum solutions across North
+                Carolina.
+              </div>
+
+              {/* Signature - Built with Care */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-xs text-blue-200/80">
+                <div className="flex items-center gap-2">
+                  <span>Crafted with</span>
+                  <span
+                    className="text-red-400 animate-pulse"
+                    aria-label="love"
+                  >
+                    ❤️
+                  </span>
+                  <span>by</span>
+                  <a
+                    href="https://omerakben.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-blue-100 hover:text-white transition-colors duration-200 underline decoration-dotted underline-offset-4"
+                  >
+                    Omer Akben
+                  </a>
+                </div>
+                <span className="hidden sm:inline text-blue-300/50">•</span>
+                <span className="text-blue-200/70 text-center sm:text-left">
+                  Built to industry standards, designed for excellence
+                </span>
+              </div>
             </div>
           </div>
         </div>
