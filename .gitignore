@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# development files (keep out of production)
+docs/
+.claude/
+.playwright-mcp/
+PRD.md
+TODO.md
+.github/instructions/
